@@ -10,10 +10,10 @@
       "breakpoints": true
     },
     {
-      "idx": 2,
+      "idx": 7,
       "version": "6",
       "when": 1784962451768,
-      "tag": "0002_harsh_shriek",
+      "tag": "0007_drop_linear_publications_installation_fk",
       "breakpoints": true
     }
   ]
