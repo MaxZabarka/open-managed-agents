@@ -307,16 +307,29 @@ fi
 
 # ── 6. deploy ───────────────────────────────────────────────────────────
 if [ "$DO_DEPLOY" = "1" ]; then
-  say "6. Deploy workers (main, agent, integrations)"
+  say "6. Deploy workers (integrations → main → agent)"
+
+  # main serves the Console as static assets; a fresh clone has no dist.
+  echo "  → console build"
+  npx pnpm --filter managed-agents-console build 2>&1 | tail -2
+
+  # wrangler no longer creates queues lazily on consumer deploy — main's
+  # deploy hard-fails if these don't exist (10061-adjacent validation).
+  echo "  → queues (idempotent)"
+  npx wrangler queues create managed-agents-memory-events 2>&1 | tail -1 || warn "memory-events queue create failed (may already exist)"
+  npx wrangler queues create managed-agents-memory-events-dlq 2>&1 | tail -1 || warn "memory-events-dlq queue create failed (may already exist)"
 
   echo "  → integrations (depended on by main + agent)"
   npx wrangler deploy --config apps/integrations/wrangler.jsonc 2>&1 | tail -3
 
+  # main MUST deploy before agent: agent's sandbox script binds the
+  # RuntimeRoom Durable Object class exported by main ("script 'managed-agents'"),
+  # which doesn't exist on a fresh account until main is deployed once.
+  echo "  → main (exports RuntimeRoom bound by agent)"
+  npx wrangler deploy --config apps/main/wrangler.jsonc 2>&1 | tail -3
+
   echo "  → agent (sandbox)"
   npx wrangler deploy --config apps/agent/wrangler.jsonc 2>&1 | tail -3
-
-  echo "  → main"
-  npx wrangler deploy --config apps/main/wrangler.jsonc 2>&1 | tail -3
 
   # Now that the queue consumer exists, wire the R2 → queue subscription
   say "5b. Wire R2 → queue (post-deploy)"
