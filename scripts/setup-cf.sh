@@ -233,7 +233,7 @@ patch_kv apps/agent/wrangler.jsonc CONFIG_KV "$CONFIG_KV_ID"
 patch_var apps/agent/wrangler.jsonc CLOUDFLARE_ACCOUNT_ID "$ACCOUNT_ID"
 
 # apps/integrations: AUTH_DB + INTEGRATIONS_DB + GATEWAY_ORIGIN
-patch_d1 apps/integrations/wrangler.jsonc AUTH_DB         "$AUTH_DB_ID"
+patch_d1 apps/integrations/wrangler.jsonc MAIN_DB         "$AUTH_DB_ID"
 patch_d1 apps/integrations/wrangler.jsonc INTEGRATIONS_DB "$INTEGRATIONS_DB_ID"
 patch_var apps/integrations/wrangler.jsonc GATEWAY_ORIGIN \
   "https://managed-agents-integrations.${ACCOUNT_ID:0:8}.workers.dev"
