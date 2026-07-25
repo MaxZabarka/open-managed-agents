@@ -63,9 +63,18 @@ async function probeModelCard(opts: {
   const isOai = /^(oai|openai|oai-compatible)$/.test(provider);
   if (!isAnt && !isOai) return { ok: null, reason: "unsupported_provider" };
 
+  // URL join must mirror what the runtime provider actually does
+  // (apps/agent/src/harness/provider.ts): the Anthropic path auto-appends
+  // /v1 to a custom base_url, but createOpenAI uses base_url AS-IS and
+  // appends only /chat/completions — a card whose base_url already ends in
+  // /v1 (OpenRouter's https://openrouter.ai/api/v1, most OpenAI-compatible
+  // gateways) was probed at .../v1/v1/chat/completions and reported a bogus
+  // 404 for a perfectly working card.
   const url = isAnt
     ? `${opts.baseUrl ?? "https://api.anthropic.com"}/v1/messages`
-    : `${opts.baseUrl ?? "https://api.openai.com"}/v1/chat/completions`;
+    : opts.baseUrl
+      ? `${opts.baseUrl}/chat/completions`
+      : "https://api.openai.com/v1/chat/completions";
   const headers: Record<string, string> = {
     "content-type": "application/json",
     ...(opts.customHeaders ?? {}),

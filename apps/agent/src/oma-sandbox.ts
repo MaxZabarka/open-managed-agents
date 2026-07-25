@@ -101,6 +101,23 @@ const injectVaultCredsHandler = async (
   const params = ctx.params ?? {};
   const e = env as Env;
 
+  // GitHub hosts need github_auth's host-specific scheme handling (Basic
+  // x-access-token for smart-HTTP git on github.com, Bearer for the API) —
+  // the generic bearer injection below can't do git-protocol auth, and the
+  // per-host binding that was supposed to route these
+  // (setOutboundByHost("github.com", "github_auth", …) in session-do) is a
+  // silent no-op on @cloudflare/sandbox 0.9.x, so every github.com request
+  // landed here credential-less and git clone/push 401'd. Delegate instead
+  // of silently falling through. (Handler defined below; resolved at call
+  // time, so the forward reference is safe.)
+  if (
+    url.hostname === "github.com" ||
+    url.hostname === "api.github.com" ||
+    url.hostname === "uploads.github.com"
+  ) {
+    return githubAuthHandler(request, env, ctx);
+  }
+
   // Look up credential metadata for this host. Lightweight RPC — only
   // the resolved bearer token crosses the wire. Body + response stay
   // local to the agent worker so transparent forwarding preserves all
