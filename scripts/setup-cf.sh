@@ -145,7 +145,7 @@ create_kv() {
     echo "$id"
   else
     local id
-    id=$(npx wrangler kv namespace list --json 2>/dev/null | jq -r --arg t "$binding" '.[] | select(.title | endswith($t)) | .id' | head -1)
+    id=$(npx wrangler kv namespace list 2>/dev/null | jq -r --arg t "$binding" '.[] | select(.title | endswith($t)) | .id' | head -1)
     [ -n "$id" ] && [ "$id" != "null" ] || die "KV namespace $binding doesn't exist and create failed: $out"
     echo "$id"
   fi
