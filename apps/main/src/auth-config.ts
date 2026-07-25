@@ -55,7 +55,10 @@ export function createAuth(env: Env) {
     secret: env.BETTER_AUTH_SECRET,
     emailAndPassword: {
       enabled: true,
-      requireEmailVerification: true,
+      // Only demand verification when an email provider can actually deliver
+      // the code — with no SEND_EMAIL binding (default self-host) the OTP is
+      // silently skipped and every signup dead-ends on the verify screen.
+      requireEmailVerification: Boolean(env.SEND_EMAIL),
       sendResetPassword: async ({ user, url }) => {
         await sendEmail(
           env,
@@ -76,7 +79,7 @@ export function createAuth(env: Env) {
           `Verify your email: ${url}`,
         );
       },
-      sendOnSignUp: true,
+      sendOnSignUp: Boolean(env.SEND_EMAIL),
       autoSignInAfterVerification: true,
     },
     plugins: [

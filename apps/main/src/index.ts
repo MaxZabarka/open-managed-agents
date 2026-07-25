@@ -114,7 +114,14 @@ app.on(["GET", "POST"], "/auth/*", async (c) => {
 // Auth info endpoint (public — tells the frontend which providers are enabled
 // and surfaces the Turnstile site key so the Login page can render the widget).
 app.get("/auth-info", (c) => {
-  const providers: string[] = ["email", "email-otp"];
+  // "email-otp" routes signup through the verify screen — only advertise it
+  // when an email provider exists to deliver the code (Login.tsx's comment
+  // already documents this contract; the list was hardcoded, stranding fresh
+  // self-hosts on a verify screen whose code never arrives).
+  const providers: string[] = ["email"];
+  if (c.env.SEND_EMAIL) {
+    providers.push("email-otp");
+  }
   if (c.env.GOOGLE_CLIENT_ID && c.env.GOOGLE_CLIENT_SECRET) {
     providers.push("google");
   }

@@ -32,7 +32,7 @@
   //                        / slack_*).
   "d1_databases": [
     { "binding": "MAIN_DB",         "database_name": "openma-auth",         "database_id": "c3494ee7-5095-4654-b744-e71c78880957" },
-    { "binding": "INTEGRATIONS_DB", "database_name": "openma-integrations", "database_id": "aaaae233-d360-4bb9-a646-5eb1d8ffe14b" }
+    { "binding": "INTEGRATIONS_DB", "database_name": "openma-integrations", "database_id": "bd60aba7-b73b-47e8-94d9-f71693cc5eca" }
   ],
 
   // Service binding back to the main worker for session creation / resume.

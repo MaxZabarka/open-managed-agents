@@ -67,7 +67,7 @@
   // and routing work without any shard tables.
   "d1_databases": [
     { "binding": "MAIN_DB",         "database_name": "openma-auth",         "database_id": "c3494ee7-5095-4654-b744-e71c78880957", "migrations_dir": "migrations" },
-    { "binding": "INTEGRATIONS_DB", "database_name": "openma-integrations", "database_id": "aaaae233-d360-4bb9-a646-5eb1d8ffe14b", "migrations_dir": "migrations-integrations" }
+    { "binding": "INTEGRATIONS_DB", "database_name": "openma-integrations", "database_id": "bd60aba7-b73b-47e8-94d9-f71693cc5eca", "migrations_dir": "migrations-integrations" }
   ],
 
   "durable_objects": {
