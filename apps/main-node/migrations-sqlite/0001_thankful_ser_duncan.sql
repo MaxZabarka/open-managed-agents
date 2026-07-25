@@ -27,4 +27,4 @@ ALTER TABLE `__new_linear_publications` RENAME TO `linear_publications`;--> stat
 PRAGMA foreign_keys=ON;--> statement-breakpoint
 CREATE INDEX `idx_linear_publications_installation` ON `linear_publications` (`installation_id`);--> statement-breakpoint
 CREATE INDEX `idx_linear_publications_user_agent` ON `linear_publications` (`user_id`,`agent_id`);--> statement-breakpoint
-CREATE INDEX `idx_linear_publications_tenant` ON `linear_publications` (`tenant_id`,`"created_at" DESC`);
+CREATE INDEX `idx_linear_publications_tenant` ON `linear_publications` (`tenant_id`,"created_at" DESC);
