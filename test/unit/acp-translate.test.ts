@@ -41,8 +41,12 @@ function makeFakeRuntime(): { runtime: HarnessRuntime; events: Broadcast[] } {
   return { runtime, events };
 }
 
+// The daemon relays the BARE update object (its AcpSession unwraps the ACP
+// notification envelope before yielding) — this fixture must match that real
+// wire shape. An enveloped fixture here once let the translator ship while
+// dropping 100% of real daemon events.
 function ev(update: Record<string, unknown>) {
-  return { type: "session.event", event: { sessionId: "s1", update } };
+  return { type: "session.event", event: update };
 }
 
 describe("AcpTranslator tool_call dedup", () => {
@@ -219,5 +223,25 @@ describe("AcpTranslator tool_call dedup", () => {
     expect(toolUses).toHaveLength(1);
     expect(toolUses[0].name).toBe("Mystery");
     expect(typeof toolUses[0].id).toBe("string");
+  });
+});
+
+describe("AcpTranslator non-update auxiliary events", () => {
+  // AcpSession's yield stream also carries auxiliary events that are not
+  // session updates (no `sessionUpdate` tag), e.g. requestPermissionError.
+  // They must be ignored without crashing and without emitting anything.
+  it("ignores auxiliary events that carry no sessionUpdate tag", async () => {
+    const { runtime, events } = makeFakeRuntime();
+    const translator = new AcpTranslator(runtime);
+    await translator.consume({
+      type: "session.event",
+      event: { type: "requestPermissionError", error: "boom" },
+    } as never);
+    await translator.consume(ev({
+      sessionUpdate: "agent_message_chunk",
+      content: { type: "text", text: "still alive" },
+    }));
+    await translator.flush("completed");
+    expect(events.filter((e) => e.type === "agent.message")).toHaveLength(1);
   });
 });

@@ -56,19 +56,18 @@ interface AcpSessionUpdate {
   kind?: string;
 }
 
-/** Wire shape of an ACP `session/update` notification. The agent SDK
- *  yields these to the Client.sessionUpdate callback as
- *  `{ sessionId, update: { sessionUpdate, ... } }` — the actual update
- *  payload is nested one level under `update`. */
-interface AcpNotification {
-  sessionId?: string;
-  update?: AcpSessionUpdate;
-}
-
 interface AcpEvent {
   type?: string;
-  // session.event wrapper
-  event?: AcpNotification;
+  /** The BARE ACP update object — `{ sessionUpdate, ... }` — as yielded by
+   *  the daemon's AcpSession. That library unwraps the `session/update`
+   *  notification envelope (`{ sessionId, update }`) in its sessionUpdate
+   *  client callback before yielding, so the envelope shape never reaches
+   *  this translator; expecting it here silently dropped every agent
+   *  message / thought / tool call from real bridge daemons. Auxiliary
+   *  non-update events the session also yields (e.g. requestPermissionError)
+   *  arrive in this same field and carry no `sessionUpdate` tag.
+   */
+  event?: AcpSessionUpdate;
   // session.error / session.complete carry these
   message?: string;
 }
@@ -102,8 +101,10 @@ export class AcpTranslator {
   /** Process one message from the daemon-relayed stream. */
   async consume(msg: AcpEvent): Promise<void> {
     if (msg.type !== "session.event" || !msg.event) return;
-    const upd = msg.event.update;
-    if (!upd) return;
+    const upd = msg.event;
+    // Auxiliary session events (requestPermissionError etc.) share the wire
+    // field but aren't session updates — nothing to translate.
+    if (typeof upd.sessionUpdate !== "string") return;
     switch (upd.sessionUpdate) {
       case "agent_message_chunk":
         // Agent transitioning from "running tools" to "talking" — flush any
