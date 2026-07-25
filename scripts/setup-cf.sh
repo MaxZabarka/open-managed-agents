@@ -219,7 +219,7 @@ patch_var() {
 }
 
 # apps/main: AUTH_DB + INTEGRATIONS_DB + CONFIG_KV + INTEGRATIONS_ORIGIN
-patch_d1 apps/main/wrangler.jsonc AUTH_DB         "$AUTH_DB_ID"
+patch_d1 apps/main/wrangler.jsonc MAIN_DB         "$AUTH_DB_ID"
 patch_d1 apps/main/wrangler.jsonc INTEGRATIONS_DB "$INTEGRATIONS_DB_ID"
 patch_kv apps/main/wrangler.jsonc CONFIG_KV       "$CONFIG_KV_ID"
 # Default INTEGRATIONS_ORIGIN to the integrations workers.dev URL — user
@@ -228,7 +228,7 @@ patch_var apps/main/wrangler.jsonc INTEGRATIONS_ORIGIN \
   "https://managed-agents-integrations.${ACCOUNT_ID:0:8}.workers.dev"
 
 # apps/agent: AUTH_DB + CONFIG_KV + CLOUDFLARE_ACCOUNT_ID
-patch_d1 apps/agent/wrangler.jsonc AUTH_DB   "$AUTH_DB_ID"
+patch_d1 apps/agent/wrangler.jsonc MAIN_DB   "$AUTH_DB_ID"
 patch_kv apps/agent/wrangler.jsonc CONFIG_KV "$CONFIG_KV_ID"
 patch_var apps/agent/wrangler.jsonc CLOUDFLARE_ACCOUNT_ID "$ACCOUNT_ID"
 
