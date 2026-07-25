@@ -1,0 +1,3041 @@
+{
+    "wallTime": 161,
+    "cpuTime": 6,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "2026-07-25T08:29:54.376Z WARN [Better Auth]: [better-auth] Base URL could not be determined. Please set a valid base URL using the baseURL config option or the BETTER_AUTH_URL environment variable. Without this, callbacks and redirects may not work correctly."
+            ],
+            "level": "warn",
+            "timestamp": 1784968194376
+        },
+        {
+            "message": [
+                "{\"ts\":\"2026-07-25T08:29:54.522Z\",\"level\":\"error\",\"msg\":\"session cookie auth threw; returning 401\",\"op\":\"auth.session_check\",\"err\":{\"message\":\"Failed query: insert into \\\"tenant_shard\\\" (\\\"tenant_id\\\", \\\"binding_name\\\", \\\"created_at\\\") values (?, ?, ?) on conflict do nothing\\nparams: tn_4661ee0721094062,MAIN_DB,1784968194486\",\"name\":\"Error\",\"stack\":\"Error: Failed query: insert into \\\"tenant_shard\\\" (\\\"tenant_id\\\", \\\"binding_name\\\", \\\"created_at\\\") values (?, ?, ?) on conflict do nothing\\nparams: tn_4661ee0721094062,MAIN_DB,1784968194486\\n    at D1PreparedQuery.queryWithCache (index.js:9589:19)\\n    at async D1PreparedQuery.run (index.js:16800:16)\\n    at async runOnce (index.js:16592:5)\\n    at async SqlTenantShardDirectoryRepo.insert (index.js:17067:9)\",\"cause\":\"Error: D1_ERROR: no such table: tenant_shard: SQLITE_ERROR\"}}"
+            ],
+            "level": "error",
+            "timestamp": 1784968194522
+        }
+    ],
+    "eventTimestamp": 1784968194375,
+    "event": {
+        "request": {
+            "url": "https://managed-agents.3552d90c.workers.dev/v1/me/tenants",
+            "method": "GET",
+            "headers": {
+                "accept": "*/*",
+                "accept-encoding": "gzip, br",
+                "accept-language": "en-US,en;q=0.9,ar;q=0.8",
+                "cf-connecting-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a",
+                "cf-ipcountry": "CA",
+                "cf-ray": "a209ccaec8385e5d",
+                "cf-visitor": "{\"scheme\":\"https\"}",
+                "connection": "Keep-Alive",
+                "cookie": "REDACTED",
+                "host": "managed-agents.3552d90c.workers.dev",
+                "priority": "u=1, i",
+                "referer": "https://managed-agents.3552d90c.workers.dev/memory",
+                "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Google Chrome\";v=\"150\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-ch-ua-platform": "\"Linux\"",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-origin",
+                "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+                "x-forwarded-proto": "https",
+                "x-real-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a"
+            },
+            "cf": {
+                "httpProtocol": "HTTP/3",
+                "clientAcceptEncoding": "gzip, deflate, br",
+                "requestPriority": "",
+                "edgeRequestKeepAliveStatus": 1,
+                "requestHeaderNames": {},
+                "clientTcpRtt": 0,
+                "clientQuicRtt": 23,
+                "colo": "YVR",
+                "asn": 852,
+                "asOrganization": "TELUS-FIBRE-CLGRAB49",
+                "country": "CA",
+                "isEUCountry": false,
+                "city": "Calgary",
+                "continent": "NA",
+                "region": "Alberta",
+                "regionCode": "AB",
+                "timezone": "America/Edmonton",
+                "longitude": "-114.08529",
+                "latitude": "51.05011",
+                "postalCode": "T3S",
+                "tlsVersion": "TLSv1.3",
+                "tlsCipher": "AEAD-AES128-GCM-SHA256",
+                "tlsClientRandom": "mp22GQ5C4LBm8QpTD8C+vrD+ub/LITlJGuuLUQAxsqA=",
+                "tlsClientCiphersSha1": "3HTt3+R/6BL3zeALJDSq0pR1yOQ=",
+                "tlsClientExtensionsSha1": "y+qUfmLiMTOqkC2/qSPziKyMXZ4=",
+                "tlsClientExtensionsSha1Le": "v6A3CPLXn2Ibd4MHXzUaydtEKws=",
+                "tlsClientHelloLength": "1751",
+                "tlsClientAuth": {
+                    "certPresented": "0",
+                    "certVerified": "NONE",
+                    "certRevoked": "0",
+                    "certIssuerDN": "",
+                    "certSubjectDN": "",
+                    "certIssuerDNRFC2253": "",
+                    "certSubjectDNRFC2253": "",
+                    "certIssuerDNLegacy": "",
+                    "certSubjectDNLegacy": "",
+                    "certSerial": "",
+                    "certIssuerSerial": "",
+                    "certSKI": "",
+                    "certIssuerSKI": "",
+                    "certFingerprintSHA1": "",
+                    "certFingerprintSHA256": "",
+                    "certNotBefore": "",
+                    "certNotAfter": "",
+                    "certRFC9440": "",
+                    "certRFC9440TooLarge": false,
+                    "certChainRFC9440": "",
+                    "certChainRFC9440TooLarge": false
+                },
+                "verifiedBotCategory": "",
+                "edgeL4": {
+                    "deliveryRate": 62352
+                }
+            }
+        },
+        "response": {
+            "status": 401
+        }
+    }
+}
+{
+    "wallTime": 42,
+    "cpuTime": 5,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "2026-07-25T08:29:54.381Z WARN [Better Auth]: [better-auth] Base URL could not be determined. Please set a valid base URL using the baseURL config option or the BETTER_AUTH_URL environment variable. Without this, callbacks and redirects may not work correctly."
+            ],
+            "level": "warn",
+            "timestamp": 1784968194381
+        }
+    ],
+    "eventTimestamp": 1784968194375,
+    "event": {
+        "request": {
+            "url": "https://managed-agents.3552d90c.workers.dev/auth/get-session",
+            "method": "GET",
+            "headers": {
+                "accept": "*/*",
+                "accept-encoding": "gzip, br",
+                "accept-language": "en-US,en;q=0.9,ar;q=0.8",
+                "cf-connecting-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a",
+                "cf-ipcountry": "CA",
+                "cf-ray": "a209ccaed83a5e5d",
+                "cf-visitor": "{\"scheme\":\"https\"}",
+                "connection": "Keep-Alive",
+                "cookie": "REDACTED",
+                "host": "managed-agents.3552d90c.workers.dev",
+                "priority": "u=1, i",
+                "referer": "https://managed-agents.3552d90c.workers.dev/memory",
+                "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Google Chrome\";v=\"150\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-ch-ua-platform": "\"Linux\"",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-origin",
+                "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+                "x-forwarded-proto": "https",
+                "x-real-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a"
+            },
+            "cf": {
+                "httpProtocol": "HTTP/3",
+                "clientAcceptEncoding": "gzip, deflate, br",
+                "requestPriority": "",
+                "edgeRequestKeepAliveStatus": 1,
+                "requestHeaderNames": {},
+                "clientTcpRtt": 0,
+                "clientQuicRtt": 23,
+                "colo": "YVR",
+                "asn": 852,
+                "asOrganization": "TELUS-FIBRE-CLGRAB49",
+                "country": "CA",
+                "isEUCountry": false,
+                "city": "Calgary",
+                "continent": "NA",
+                "region": "Alberta",
+                "regionCode": "AB",
+                "timezone": "America/Edmonton",
+                "longitude": "-114.08529",
+                "latitude": "51.05011",
+                "postalCode": "T3S",
+                "tlsVersion": "TLSv1.3",
+                "tlsCipher": "AEAD-AES128-GCM-SHA256",
+                "tlsClientRandom": "mp22GQ5C4LBm8QpTD8C+vrD+ub/LITlJGuuLUQAxsqA=",
+                "tlsClientCiphersSha1": "3HTt3+R/6BL3zeALJDSq0pR1yOQ=",
+                "tlsClientExtensionsSha1": "y+qUfmLiMTOqkC2/qSPziKyMXZ4=",
+                "tlsClientExtensionsSha1Le": "v6A3CPLXn2Ibd4MHXzUaydtEKws=",
+                "tlsClientHelloLength": "1751",
+                "tlsClientAuth": {
+                    "certPresented": "0",
+                    "certVerified": "NONE",
+                    "certRevoked": "0",
+                    "certIssuerDN": "",
+                    "certSubjectDN": "",
+                    "certIssuerDNRFC2253": "",
+                    "certSubjectDNRFC2253": "",
+                    "certIssuerDNLegacy": "",
+                    "certSubjectDNLegacy": "",
+                    "certSerial": "",
+                    "certIssuerSerial": "",
+                    "certSKI": "",
+                    "certIssuerSKI": "",
+                    "certFingerprintSHA1": "",
+                    "certFingerprintSHA256": "",
+                    "certNotBefore": "",
+                    "certNotAfter": "",
+                    "certRFC9440": "",
+                    "certRFC9440TooLarge": false,
+                    "certChainRFC9440": "",
+                    "certChainRFC9440TooLarge": false
+                },
+                "verifiedBotCategory": "",
+                "edgeL4": {
+                    "deliveryRate": 62352
+                }
+            }
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 179,
+    "cpuTime": 5,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "2026-07-25T08:29:54.379Z WARN [Better Auth]: [better-auth] Base URL could not be determined. Please set a valid base URL using the baseURL config option or the BETTER_AUTH_URL environment variable. Without this, callbacks and redirects may not work correctly."
+            ],
+            "level": "warn",
+            "timestamp": 1784968194379
+        },
+        {
+            "message": [
+                "{\"ts\":\"2026-07-25T08:29:54.542Z\",\"level\":\"error\",\"msg\":\"session cookie auth threw; returning 401\",\"op\":\"auth.session_check\",\"err\":{\"message\":\"Failed query: insert into \\\"tenant_shard\\\" (\\\"tenant_id\\\", \\\"binding_name\\\", \\\"created_at\\\") values (?, ?, ?) on conflict do nothing\\nparams: tn_3be83694e7a7427f,MAIN_DB,1784968194524\",\"name\":\"Error\",\"stack\":\"Error: Failed query: insert into \\\"tenant_shard\\\" (\\\"tenant_id\\\", \\\"binding_name\\\", \\\"created_at\\\") values (?, ?, ?) on conflict do nothing\\nparams: tn_3be83694e7a7427f,MAIN_DB,1784968194524\\n    at D1PreparedQuery.queryWithCache (index.js:9589:19)\\n    at async D1PreparedQuery.run (index.js:16800:16)\\n    at async runOnce (index.js:16592:5)\\n    at async SqlTenantShardDirectoryRepo.insert (index.js:17067:9)\",\"cause\":\"Error: D1_ERROR: no such table: tenant_shard: SQLITE_ERROR\"}}"
+            ],
+            "level": "error",
+            "timestamp": 1784968194542
+        }
+    ],
+    "eventTimestamp": 1784968194375,
+    "event": {
+        "request": {
+            "url": "https://managed-agents.3552d90c.workers.dev/v1/memory_stores?status=active",
+            "method": "GET",
+            "headers": {
+                "accept": "*/*",
+                "accept-encoding": "gzip, br",
+                "accept-language": "en-US,en;q=0.9,ar;q=0.8",
+                "cf-connecting-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a",
+                "cf-ipcountry": "CA",
+                "cf-ray": "a209ccaed8395e5d",
+                "cf-visitor": "{\"scheme\":\"https\"}",
+                "connection": "Keep-Alive",
+                "cookie": "REDACTED",
+                "host": "managed-agents.3552d90c.workers.dev",
+                "priority": "u=1, i",
+                "referer": "https://managed-agents.3552d90c.workers.dev/memory",
+                "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Google Chrome\";v=\"150\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-ch-ua-platform": "\"Linux\"",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-origin",
+                "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+                "x-forwarded-proto": "https",
+                "x-real-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a"
+            },
+            "cf": {
+                "httpProtocol": "HTTP/3",
+                "clientAcceptEncoding": "gzip, deflate, br",
+                "requestPriority": "",
+                "edgeRequestKeepAliveStatus": 1,
+                "requestHeaderNames": {},
+                "clientTcpRtt": 0,
+                "clientQuicRtt": 23,
+                "colo": "YVR",
+                "asn": 852,
+                "asOrganization": "TELUS-FIBRE-CLGRAB49",
+                "country": "CA",
+                "isEUCountry": false,
+                "city": "Calgary",
+                "continent": "NA",
+                "region": "Alberta",
+                "regionCode": "AB",
+                "timezone": "America/Edmonton",
+                "longitude": "-114.08529",
+                "latitude": "51.05011",
+                "postalCode": "T3S",
+                "tlsVersion": "TLSv1.3",
+                "tlsCipher": "AEAD-AES128-GCM-SHA256",
+                "tlsClientRandom": "mp22GQ5C4LBm8QpTD8C+vrD+ub/LITlJGuuLUQAxsqA=",
+                "tlsClientCiphersSha1": "3HTt3+R/6BL3zeALJDSq0pR1yOQ=",
+                "tlsClientExtensionsSha1": "y+qUfmLiMTOqkC2/qSPziKyMXZ4=",
+                "tlsClientExtensionsSha1Le": "v6A3CPLXn2Ibd4MHXzUaydtEKws=",
+                "tlsClientHelloLength": "1751",
+                "tlsClientAuth": {
+                    "certPresented": "0",
+                    "certVerified": "NONE",
+                    "certRevoked": "0",
+                    "certIssuerDN": "",
+                    "certSubjectDN": "",
+                    "certIssuerDNRFC2253": "",
+                    "certSubjectDNRFC2253": "",
+                    "certIssuerDNLegacy": "",
+                    "certSubjectDNLegacy": "",
+                    "certSerial": "",
+                    "certIssuerSerial": "",
+                    "certSKI": "",
+                    "certIssuerSKI": "",
+                    "certFingerprintSHA1": "",
+                    "certFingerprintSHA256": "",
+                    "certNotBefore": "",
+                    "certNotAfter": "",
+                    "certRFC9440": "",
+                    "certRFC9440TooLarge": false,
+                    "certChainRFC9440": "",
+                    "certChainRFC9440TooLarge": false
+                },
+                "verifiedBotCategory": "",
+                "edgeL4": {
+                    "deliveryRate": 62352
+                }
+            }
+        },
+        "response": {
+            "status": 401
+        }
+    }
+}
+{
+    "wallTime": 95,
+    "cpuTime": 5,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "2026-07-25T08:29:54.459Z WARN [Better Auth]: [better-auth] Base URL could not be determined. Please set a valid base URL using the baseURL config option or the BETTER_AUTH_URL environment variable. Without this, callbacks and redirects may not work correctly."
+            ],
+            "level": "warn",
+            "timestamp": 1784968194459
+        }
+    ],
+    "eventTimestamp": 1784968194459,
+    "event": {
+        "request": {
+            "url": "https://managed-agents.3552d90c.workers.dev/auth/get-session",
+            "method": "GET",
+            "headers": {
+                "accept": "*/*",
+                "accept-encoding": "gzip, br",
+                "accept-language": "en-US,en;q=0.9,ar;q=0.8",
+                "cf-connecting-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a",
+                "cf-ipcountry": "CA",
+                "cf-ray": "a209ccaf58475e5d",
+                "cf-visitor": "{\"scheme\":\"https\"}",
+                "connection": "Keep-Alive",
+                "cookie": "REDACTED",
+                "host": "managed-agents.3552d90c.workers.dev",
+                "priority": "u=1, i",
+                "referer": "https://managed-agents.3552d90c.workers.dev/memory",
+                "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Google Chrome\";v=\"150\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-ch-ua-platform": "\"Linux\"",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-origin",
+                "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+                "x-forwarded-proto": "https",
+                "x-real-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a"
+            },
+            "cf": {
+                "httpProtocol": "HTTP/3",
+                "clientAcceptEncoding": "gzip, deflate, br",
+                "requestPriority": "",
+                "edgeRequestKeepAliveStatus": 1,
+                "requestHeaderNames": {},
+                "clientTcpRtt": 0,
+                "clientQuicRtt": 23,
+                "colo": "YVR",
+                "asn": 852,
+                "asOrganization": "TELUS-FIBRE-CLGRAB49",
+                "country": "CA",
+                "isEUCountry": false,
+                "city": "Calgary",
+                "continent": "NA",
+                "region": "Alberta",
+                "regionCode": "AB",
+                "timezone": "America/Edmonton",
+                "longitude": "-114.08529",
+                "latitude": "51.05011",
+                "postalCode": "T3S",
+                "tlsVersion": "TLSv1.3",
+                "tlsCipher": "AEAD-AES128-GCM-SHA256",
+                "tlsClientRandom": "mp22GQ5C4LBm8QpTD8C+vrD+ub/LITlJGuuLUQAxsqA=",
+                "tlsClientCiphersSha1": "3HTt3+R/6BL3zeALJDSq0pR1yOQ=",
+                "tlsClientExtensionsSha1": "y+qUfmLiMTOqkC2/qSPziKyMXZ4=",
+                "tlsClientExtensionsSha1Le": "v6A3CPLXn2Ibd4MHXzUaydtEKws=",
+                "tlsClientHelloLength": "1751",
+                "tlsClientAuth": {
+                    "certPresented": "0",
+                    "certVerified": "NONE",
+                    "certRevoked": "0",
+                    "certIssuerDN": "",
+                    "certSubjectDN": "",
+                    "certIssuerDNRFC2253": "",
+                    "certSubjectDNRFC2253": "",
+                    "certIssuerDNLegacy": "",
+                    "certSubjectDNLegacy": "",
+                    "certSerial": "",
+                    "certIssuerSerial": "",
+                    "certSKI": "",
+                    "certIssuerSKI": "",
+                    "certFingerprintSHA1": "",
+                    "certFingerprintSHA256": "",
+                    "certNotBefore": "",
+                    "certNotAfter": "",
+                    "certRFC9440": "",
+                    "certRFC9440TooLarge": false,
+                    "certChainRFC9440": "",
+                    "certChainRFC9440TooLarge": false
+                },
+                "verifiedBotCategory": "",
+                "edgeL4": {
+                    "deliveryRate": 62352
+                }
+            }
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 114,
+    "cpuTime": 4,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "2026-07-25T08:29:55.378Z WARN [Better Auth]: [better-auth] Base URL could not be determined. Please set a valid base URL using the baseURL config option or the BETTER_AUTH_URL environment variable. Without this, callbacks and redirects may not work correctly."
+            ],
+            "level": "warn",
+            "timestamp": 1784968195378
+        },
+        {
+            "message": [
+                "{\"ts\":\"2026-07-25T08:29:55.479Z\",\"level\":\"error\",\"msg\":\"session cookie auth threw; returning 401\",\"op\":\"auth.session_check\",\"err\":{\"message\":\"Failed query: insert into \\\"tenant_shard\\\" (\\\"tenant_id\\\", \\\"binding_name\\\", \\\"created_at\\\") values (?, ?, ?) on conflict do nothing\\nparams: tn_8fa6e05a4dc2465f,MAIN_DB,1784968195469\",\"name\":\"Error\",\"stack\":\"Error: Failed query: insert into \\\"tenant_shard\\\" (\\\"tenant_id\\\", \\\"binding_name\\\", \\\"created_at\\\") values (?, ?, ?) on conflict do nothing\\nparams: tn_8fa6e05a4dc2465f,MAIN_DB,1784968195469\\n    at D1PreparedQuery.queryWithCache (index.js:9589:19)\\n    at async D1PreparedQuery.run (index.js:16800:16)\\n    at async runOnce (index.js:16592:5)\\n    at async SqlTenantShardDirectoryRepo.insert (index.js:17067:9)\",\"cause\":\"Error: D1_ERROR: no such table: tenant_shard: SQLITE_ERROR\"}}"
+            ],
+            "level": "error",
+            "timestamp": 1784968195479
+        }
+    ],
+    "eventTimestamp": 1784968195378,
+    "event": {
+        "request": {
+            "url": "https://managed-agents.3552d90c.workers.dev/v1/me/tenants",
+            "method": "GET",
+            "headers": {
+                "accept": "*/*",
+                "accept-encoding": "gzip, br",
+                "accept-language": "en-US,en;q=0.9,ar;q=0.8",
+                "cf-connecting-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a",
+                "cf-ipcountry": "CA",
+                "cf-ray": "a209ccb518ba5e5d",
+                "cf-visitor": "{\"scheme\":\"https\"}",
+                "connection": "Keep-Alive",
+                "cookie": "REDACTED",
+                "host": "managed-agents.3552d90c.workers.dev",
+                "priority": "u=1, i",
+                "referer": "https://managed-agents.3552d90c.workers.dev/memory",
+                "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Google Chrome\";v=\"150\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-ch-ua-platform": "\"Linux\"",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-origin",
+                "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+                "x-forwarded-proto": "https",
+                "x-real-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a"
+            },
+            "cf": {
+                "httpProtocol": "HTTP/3",
+                "clientAcceptEncoding": "gzip, deflate, br",
+                "requestPriority": "",
+                "edgeRequestKeepAliveStatus": 1,
+                "requestHeaderNames": {},
+                "clientTcpRtt": 0,
+                "clientQuicRtt": 25,
+                "colo": "YVR",
+                "asn": 852,
+                "asOrganization": "TELUS-FIBRE-CLGRAB49",
+                "country": "CA",
+                "isEUCountry": false,
+                "city": "Calgary",
+                "continent": "NA",
+                "region": "Alberta",
+                "regionCode": "AB",
+                "timezone": "America/Edmonton",
+                "longitude": "-114.08529",
+                "latitude": "51.05011",
+                "postalCode": "T3S",
+                "tlsVersion": "TLSv1.3",
+                "tlsCipher": "AEAD-AES128-GCM-SHA256",
+                "tlsClientRandom": "mp22GQ5C4LBm8QpTD8C+vrD+ub/LITlJGuuLUQAxsqA=",
+                "tlsClientCiphersSha1": "3HTt3+R/6BL3zeALJDSq0pR1yOQ=",
+                "tlsClientExtensionsSha1": "y+qUfmLiMTOqkC2/qSPziKyMXZ4=",
+                "tlsClientExtensionsSha1Le": "v6A3CPLXn2Ibd4MHXzUaydtEKws=",
+                "tlsClientHelloLength": "1751",
+                "tlsClientAuth": {
+                    "certPresented": "0",
+                    "certVerified": "NONE",
+                    "certRevoked": "0",
+                    "certIssuerDN": "",
+                    "certSubjectDN": "",
+                    "certIssuerDNRFC2253": "",
+                    "certSubjectDNRFC2253": "",
+                    "certIssuerDNLegacy": "",
+                    "certSubjectDNLegacy": "",
+                    "certSerial": "",
+                    "certIssuerSerial": "",
+                    "certSKI": "",
+                    "certIssuerSKI": "",
+                    "certFingerprintSHA1": "",
+                    "certFingerprintSHA256": "",
+                    "certNotBefore": "",
+                    "certNotAfter": "",
+                    "certRFC9440": "",
+                    "certRFC9440TooLarge": false,
+                    "certChainRFC9440": "",
+                    "certChainRFC9440TooLarge": false
+                },
+                "verifiedBotCategory": "",
+                "edgeL4": {
+                    "deliveryRate": 62352
+                }
+            }
+        },
+        "response": {
+            "status": 401
+        }
+    }
+}
+{
+    "wallTime": 154,
+    "cpuTime": 5,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "2026-07-25T08:29:55.394Z WARN [Better Auth]: [better-auth] Base URL could not be determined. Please set a valid base URL using the baseURL config option or the BETTER_AUTH_URL environment variable. Without this, callbacks and redirects may not work correctly."
+            ],
+            "level": "warn",
+            "timestamp": 1784968195394
+        },
+        {
+            "message": [
+                "{\"ts\":\"2026-07-25T08:29:55.533Z\",\"level\":\"error\",\"msg\":\"session cookie auth threw; returning 401\",\"op\":\"auth.session_check\",\"err\":{\"message\":\"Failed query: insert into \\\"tenant_shard\\\" (\\\"tenant_id\\\", \\\"binding_name\\\", \\\"created_at\\\") values (?, ?, ?) on conflict do nothing\\nparams: tn_3b600381cfc8494a,MAIN_DB,1784968195521\",\"name\":\"Error\",\"stack\":\"Error: Failed query: insert into \\\"tenant_shard\\\" (\\\"tenant_id\\\", \\\"binding_name\\\", \\\"created_at\\\") values (?, ?, ?) on conflict do nothing\\nparams: tn_3b600381cfc8494a,MAIN_DB,1784968195521\\n    at D1PreparedQuery.queryWithCache (index.js:9589:19)\\n    at async D1PreparedQuery.run (index.js:16800:16)\\n    at async runOnce (index.js:16592:5)\\n    at async SqlTenantShardDirectoryRepo.insert (index.js:17067:9)\",\"cause\":\"Error: D1_ERROR: no such table: tenant_shard: SQLITE_ERROR\"}}"
+            ],
+            "level": "error",
+            "timestamp": 1784968195533
+        }
+    ],
+    "eventTimestamp": 1784968195394,
+    "event": {
+        "request": {
+            "url": "https://managed-agents.3552d90c.workers.dev/v1/memory_stores?status=active",
+            "method": "GET",
+            "headers": {
+                "accept": "*/*",
+                "accept-encoding": "gzip, br",
+                "accept-language": "en-US,en;q=0.9,ar;q=0.8",
+                "cf-connecting-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a",
+                "cf-ipcountry": "CA",
+                "cf-ray": "a209ccb538bc5e5d",
+                "cf-visitor": "{\"scheme\":\"https\"}",
+                "connection": "Keep-Alive",
+                "cookie": "REDACTED",
+                "host": "managed-agents.3552d90c.workers.dev",
+                "priority": "u=1, i",
+                "referer": "https://managed-agents.3552d90c.workers.dev/memory",
+                "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Google Chrome\";v=\"150\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-ch-ua-platform": "\"Linux\"",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-origin",
+                "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+                "x-forwarded-proto": "https",
+                "x-real-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a"
+            },
+            "cf": {
+                "httpProtocol": "HTTP/3",
+                "clientAcceptEncoding": "gzip, deflate, br",
+                "requestPriority": "",
+                "edgeRequestKeepAliveStatus": 1,
+                "requestHeaderNames": {},
+                "clientTcpRtt": 0,
+                "clientQuicRtt": 25,
+                "colo": "YVR",
+                "asn": 852,
+                "asOrganization": "TELUS-FIBRE-CLGRAB49",
+                "country": "CA",
+                "isEUCountry": false,
+                "city": "Calgary",
+                "continent": "NA",
+                "region": "Alberta",
+                "regionCode": "AB",
+                "timezone": "America/Edmonton",
+                "longitude": "-114.08529",
+                "latitude": "51.05011",
+                "postalCode": "T3S",
+                "tlsVersion": "TLSv1.3",
+                "tlsCipher": "AEAD-AES128-GCM-SHA256",
+                "tlsClientRandom": "mp22GQ5C4LBm8QpTD8C+vrD+ub/LITlJGuuLUQAxsqA=",
+                "tlsClientCiphersSha1": "3HTt3+R/6BL3zeALJDSq0pR1yOQ=",
+                "tlsClientExtensionsSha1": "y+qUfmLiMTOqkC2/qSPziKyMXZ4=",
+                "tlsClientExtensionsSha1Le": "v6A3CPLXn2Ibd4MHXzUaydtEKws=",
+                "tlsClientHelloLength": "1751",
+                "tlsClientAuth": {
+                    "certPresented": "0",
+                    "certVerified": "NONE",
+                    "certRevoked": "0",
+                    "certIssuerDN": "",
+                    "certSubjectDN": "",
+                    "certIssuerDNRFC2253": "",
+                    "certSubjectDNRFC2253": "",
+                    "certIssuerDNLegacy": "",
+                    "certSubjectDNLegacy": "",
+                    "certSerial": "",
+                    "certIssuerSerial": "",
+                    "certSKI": "",
+                    "certIssuerSKI": "",
+                    "certFingerprintSHA1": "",
+                    "certFingerprintSHA256": "",
+                    "certNotBefore": "",
+                    "certNotAfter": "",
+                    "certRFC9440": "",
+                    "certRFC9440TooLarge": false,
+                    "certChainRFC9440": "",
+                    "certChainRFC9440TooLarge": false
+                },
+                "verifiedBotCategory": "",
+                "edgeL4": {
+                    "deliveryRate": 62352
+                }
+            }
+        },
+        "response": {
+            "status": 401
+        }
+    }
+}
+{
+    "wallTime": 130,
+    "cpuTime": 6,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "2026-07-25T08:29:56.129Z WARN [Better Auth]: [better-auth] Base URL could not be determined. Please set a valid base URL using the baseURL config option or the BETTER_AUTH_URL environment variable. Without this, callbacks and redirects may not work correctly."
+            ],
+            "level": "warn",
+            "timestamp": 1784968196129
+        },
+        {
+            "message": [
+                "{\"ts\":\"2026-07-25T08:29:56.244Z\",\"level\":\"error\",\"msg\":\"session cookie auth threw; returning 401\",\"op\":\"auth.session_check\",\"err\":{\"message\":\"Failed query: insert into \\\"tenant_shard\\\" (\\\"tenant_id\\\", \\\"binding_name\\\", \\\"created_at\\\") values (?, ?, ?) on conflict do nothing\\nparams: tn_ab3213bd510e4a34,MAIN_DB,1784968196230\",\"name\":\"Error\",\"stack\":\"Error: Failed query: insert into \\\"tenant_shard\\\" (\\\"tenant_id\\\", \\\"binding_name\\\", \\\"created_at\\\") values (?, ?, ?) on conflict do nothing\\nparams: tn_ab3213bd510e4a34,MAIN_DB,1784968196230\\n    at D1PreparedQuery.queryWithCache (index.js:9589:19)\\n    at async D1PreparedQuery.run (index.js:16800:16)\\n    at async runOnce (index.js:16592:5)\\n    at async SqlTenantShardDirectoryRepo.insert (index.js:17067:9)\",\"cause\":\"Error: D1_ERROR: no such table: tenant_shard: SQLITE_ERROR\"}}"
+            ],
+            "level": "error",
+            "timestamp": 1784968196244
+        }
+    ],
+    "eventTimestamp": 1784968196129,
+    "event": {
+        "request": {
+            "url": "https://managed-agents.3552d90c.workers.dev/v1/stats",
+            "method": "GET",
+            "headers": {
+                "accept": "*/*",
+                "accept-encoding": "gzip, br",
+                "accept-language": "en-US,en;q=0.9,ar;q=0.8",
+                "cf-connecting-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a",
+                "cf-ipcountry": "CA",
+                "cf-ray": "a209ccb9c8ef5e5d",
+                "cf-visitor": "{\"scheme\":\"https\"}",
+                "connection": "Keep-Alive",
+                "cookie": "REDACTED",
+                "host": "managed-agents.3552d90c.workers.dev",
+                "priority": "u=1, i",
+                "referer": "https://managed-agents.3552d90c.workers.dev/",
+                "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Google Chrome\";v=\"150\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-ch-ua-platform": "\"Linux\"",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-origin",
+                "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+                "x-forwarded-proto": "https",
+                "x-real-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a"
+            },
+            "cf": {
+                "httpProtocol": "HTTP/3",
+                "clientAcceptEncoding": "gzip, deflate, br",
+                "requestPriority": "",
+                "edgeRequestKeepAliveStatus": 1,
+                "requestHeaderNames": {},
+                "clientTcpRtt": 0,
+                "clientQuicRtt": 26,
+                "colo": "YVR",
+                "asn": 852,
+                "asOrganization": "TELUS-FIBRE-CLGRAB49",
+                "country": "CA",
+                "isEUCountry": false,
+                "city": "Calgary",
+                "continent": "NA",
+                "region": "Alberta",
+                "regionCode": "AB",
+                "timezone": "America/Edmonton",
+                "longitude": "-114.08529",
+                "latitude": "51.05011",
+                "postalCode": "T3S",
+                "tlsVersion": "TLSv1.3",
+                "tlsCipher": "AEAD-AES128-GCM-SHA256",
+                "tlsClientRandom": "mp22GQ5C4LBm8QpTD8C+vrD+ub/LITlJGuuLUQAxsqA=",
+                "tlsClientCiphersSha1": "3HTt3+R/6BL3zeALJDSq0pR1yOQ=",
+                "tlsClientExtensionsSha1": "y+qUfmLiMTOqkC2/qSPziKyMXZ4=",
+                "tlsClientExtensionsSha1Le": "v6A3CPLXn2Ibd4MHXzUaydtEKws=",
+                "tlsClientHelloLength": "1751",
+                "tlsClientAuth": {
+                    "certPresented": "0",
+                    "certVerified": "NONE",
+                    "certRevoked": "0",
+                    "certIssuerDN": "",
+                    "certSubjectDN": "",
+                    "certIssuerDNRFC2253": "",
+                    "certSubjectDNRFC2253": "",
+                    "certIssuerDNLegacy": "",
+                    "certSubjectDNLegacy": "",
+                    "certSerial": "",
+                    "certIssuerSerial": "",
+                    "certSKI": "",
+                    "certIssuerSKI": "",
+                    "certFingerprintSHA1": "",
+                    "certFingerprintSHA256": "",
+                    "certNotBefore": "",
+                    "certNotAfter": "",
+                    "certRFC9440": "",
+                    "certRFC9440TooLarge": false,
+                    "certChainRFC9440": "",
+                    "certChainRFC9440TooLarge": false
+                },
+                "verifiedBotCategory": "",
+                "edgeL4": {
+                    "deliveryRate": 62352
+                }
+            }
+        },
+        "response": {
+            "status": 401
+        }
+    }
+}
+{
+    "wallTime": 157,
+    "cpuTime": 37,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "2026-07-25T08:29:56.278Z WARN [Better Auth]: [better-auth] Base URL could not be determined. Please set a valid base URL using the baseURL config option or the BETTER_AUTH_URL environment variable. Without this, callbacks and redirects may not work correctly."
+            ],
+            "level": "warn",
+            "timestamp": 1784968196278
+        },
+        {
+            "message": [
+                "{\"ts\":\"2026-07-25T08:29:56.393Z\",\"level\":\"error\",\"msg\":\"session cookie auth threw; returning 401\",\"op\":\"auth.session_check\",\"err\":{\"message\":\"Failed query: insert into \\\"tenant_shard\\\" (\\\"tenant_id\\\", \\\"binding_name\\\", \\\"created_at\\\") values (?, ?, ?) on conflict do nothing\\nparams: tn_f98c3cfa4dfb48ea,MAIN_DB,1784968196382\",\"name\":\"Error\",\"stack\":\"Error: Failed query: insert into \\\"tenant_shard\\\" (\\\"tenant_id\\\", \\\"binding_name\\\", \\\"created_at\\\") values (?, ?, ?) on conflict do nothing\\nparams: tn_f98c3cfa4dfb48ea,MAIN_DB,1784968196382\\n    at D1PreparedQuery.queryWithCache (index.js:9589:19)\\n    at async D1PreparedQuery.run (index.js:16800:16)\\n    at async runOnce (index.js:16592:5)\\n    at async SqlTenantShardDirectoryRepo.insert (index.js:17067:9)\",\"cause\":\"Error: D1_ERROR: no such table: tenant_shard: SQLITE_ERROR\"}}"
+            ],
+            "level": "error",
+            "timestamp": 1784968196393
+        }
+    ],
+    "eventTimestamp": 1784968196129,
+    "event": {
+        "request": {
+            "url": "https://managed-agents.3552d90c.workers.dev/v1/sessions?limit=5",
+            "method": "GET",
+            "headers": {
+                "accept": "*/*",
+                "accept-encoding": "gzip, br",
+                "accept-language": "en-US,en;q=0.9,ar;q=0.8",
+                "cf-connecting-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a",
+                "cf-ipcountry": "CA",
+                "cf-ray": "a209ccb9c8f05e5d",
+                "cf-visitor": "{\"scheme\":\"https\"}",
+                "connection": "Keep-Alive",
+                "cookie": "REDACTED",
+                "host": "managed-agents.3552d90c.workers.dev",
+                "priority": "u=1, i",
+                "referer": "https://managed-agents.3552d90c.workers.dev/",
+                "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Google Chrome\";v=\"150\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-ch-ua-platform": "\"Linux\"",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-origin",
+                "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+                "x-forwarded-proto": "https",
+                "x-real-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a"
+            },
+            "cf": {
+                "httpProtocol": "HTTP/3",
+                "clientAcceptEncoding": "gzip, deflate, br",
+                "requestPriority": "",
+                "edgeRequestKeepAliveStatus": 1,
+                "requestHeaderNames": {},
+                "clientTcpRtt": 0,
+                "clientQuicRtt": 26,
+                "colo": "YVR",
+                "asn": 852,
+                "asOrganization": "TELUS-FIBRE-CLGRAB49",
+                "country": "CA",
+                "isEUCountry": false,
+                "city": "Calgary",
+                "continent": "NA",
+                "region": "Alberta",
+                "regionCode": "AB",
+                "timezone": "America/Edmonton",
+                "longitude": "-114.08529",
+                "latitude": "51.05011",
+                "postalCode": "T3S",
+                "tlsVersion": "TLSv1.3",
+                "tlsCipher": "AEAD-AES128-GCM-SHA256",
+                "tlsClientRandom": "mp22GQ5C4LBm8QpTD8C+vrD+ub/LITlJGuuLUQAxsqA=",
+                "tlsClientCiphersSha1": "3HTt3+R/6BL3zeALJDSq0pR1yOQ=",
+                "tlsClientExtensionsSha1": "y+qUfmLiMTOqkC2/qSPziKyMXZ4=",
+                "tlsClientExtensionsSha1Le": "v6A3CPLXn2Ibd4MHXzUaydtEKws=",
+                "tlsClientHelloLength": "1751",
+                "tlsClientAuth": {
+                    "certPresented": "0",
+                    "certVerified": "NONE",
+                    "certRevoked": "0",
+                    "certIssuerDN": "",
+                    "certSubjectDN": "",
+                    "certIssuerDNRFC2253": "",
+                    "certSubjectDNRFC2253": "",
+                    "certIssuerDNLegacy": "",
+                    "certSubjectDNLegacy": "",
+                    "certSerial": "",
+                    "certIssuerSerial": "",
+                    "certSKI": "",
+                    "certIssuerSKI": "",
+                    "certFingerprintSHA1": "",
+                    "certFingerprintSHA256": "",
+                    "certNotBefore": "",
+                    "certNotAfter": "",
+                    "certRFC9440": "",
+                    "certRFC9440TooLarge": false,
+                    "certChainRFC9440": "",
+                    "certChainRFC9440TooLarge": false
+                },
+                "verifiedBotCategory": "",
+                "edgeL4": {
+                    "deliveryRate": 62352
+                }
+            }
+        },
+        "response": {
+            "status": 401
+        }
+    }
+}
+{
+    "wallTime": 215,
+    "cpuTime": 5,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "2026-07-25T08:29:57.099Z WARN [Better Auth]: [better-auth] Base URL could not be determined. Please set a valid base URL using the baseURL config option or the BETTER_AUTH_URL environment variable. Without this, callbacks and redirects may not work correctly."
+            ],
+            "level": "warn",
+            "timestamp": 1784968197099
+        },
+        {
+            "message": [
+                "{\"ts\":\"2026-07-25T08:29:57.302Z\",\"level\":\"error\",\"msg\":\"session cookie auth threw; returning 401\",\"op\":\"auth.session_check\",\"err\":{\"message\":\"Failed query: insert into \\\"tenant_shard\\\" (\\\"tenant_id\\\", \\\"binding_name\\\", \\\"created_at\\\") values (?, ?, ?) on conflict do nothing\\nparams: tn_b292e22711b242fd,MAIN_DB,1784968197289\",\"name\":\"Error\",\"stack\":\"Error: Failed query: insert into \\\"tenant_shard\\\" (\\\"tenant_id\\\", \\\"binding_name\\\", \\\"created_at\\\") values (?, ?, ?) on conflict do nothing\\nparams: tn_b292e22711b242fd,MAIN_DB,1784968197289\\n    at D1PreparedQuery.queryWithCache (index.js:9589:19)\\n    at async D1PreparedQuery.run (index.js:16800:16)\\n    at async runOnce (index.js:16592:5)\\n    at async SqlTenantShardDirectoryRepo.insert (index.js:17067:9)\",\"cause\":\"Error: D1_ERROR: no such table: tenant_shard: SQLITE_ERROR\"}}"
+            ],
+            "level": "error",
+            "timestamp": 1784968197302
+        }
+    ],
+    "eventTimestamp": 1784968197099,
+    "event": {
+        "request": {
+            "url": "https://managed-agents.3552d90c.workers.dev/v1/stats",
+            "method": "GET",
+            "headers": {
+                "accept": "*/*",
+                "accept-encoding": "gzip, br",
+                "accept-language": "en-US,en;q=0.9,ar;q=0.8",
+                "cf-connecting-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a",
+                "cf-ipcountry": "CA",
+                "cf-ray": "a209ccbfd9405e5d",
+                "cf-visitor": "{\"scheme\":\"https\"}",
+                "connection": "Keep-Alive",
+                "cookie": "REDACTED",
+                "host": "managed-agents.3552d90c.workers.dev",
+                "priority": "u=1, i",
+                "referer": "https://managed-agents.3552d90c.workers.dev/",
+                "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Google Chrome\";v=\"150\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-ch-ua-platform": "\"Linux\"",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-origin",
+                "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+                "x-forwarded-proto": "https",
+                "x-real-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a"
+            },
+            "cf": {
+                "httpProtocol": "HTTP/3",
+                "clientAcceptEncoding": "gzip, deflate, br",
+                "requestPriority": "",
+                "edgeRequestKeepAliveStatus": 1,
+                "requestHeaderNames": {},
+                "clientTcpRtt": 0,
+                "clientQuicRtt": 25,
+                "colo": "YVR",
+                "asn": 852,
+                "asOrganization": "TELUS-FIBRE-CLGRAB49",
+                "country": "CA",
+                "isEUCountry": false,
+                "city": "Calgary",
+                "continent": "NA",
+                "region": "Alberta",
+                "regionCode": "AB",
+                "timezone": "America/Edmonton",
+                "longitude": "-114.08529",
+                "latitude": "51.05011",
+                "postalCode": "T3S",
+                "tlsVersion": "TLSv1.3",
+                "tlsCipher": "AEAD-AES128-GCM-SHA256",
+                "tlsClientRandom": "mp22GQ5C4LBm8QpTD8C+vrD+ub/LITlJGuuLUQAxsqA=",
+                "tlsClientCiphersSha1": "3HTt3+R/6BL3zeALJDSq0pR1yOQ=",
+                "tlsClientExtensionsSha1": "y+qUfmLiMTOqkC2/qSPziKyMXZ4=",
+                "tlsClientExtensionsSha1Le": "v6A3CPLXn2Ibd4MHXzUaydtEKws=",
+                "tlsClientHelloLength": "1751",
+                "tlsClientAuth": {
+                    "certPresented": "0",
+                    "certVerified": "NONE",
+                    "certRevoked": "0",
+                    "certIssuerDN": "",
+                    "certSubjectDN": "",
+                    "certIssuerDNRFC2253": "",
+                    "certSubjectDNRFC2253": "",
+                    "certIssuerDNLegacy": "",
+                    "certSubjectDNLegacy": "",
+                    "certSerial": "",
+                    "certIssuerSerial": "",
+                    "certSKI": "",
+                    "certIssuerSKI": "",
+                    "certFingerprintSHA1": "",
+                    "certFingerprintSHA256": "",
+                    "certNotBefore": "",
+                    "certNotAfter": "",
+                    "certRFC9440": "",
+                    "certRFC9440TooLarge": false,
+                    "certChainRFC9440": "",
+                    "certChainRFC9440TooLarge": false
+                },
+                "verifiedBotCategory": "",
+                "edgeL4": {
+                    "deliveryRate": 62352
+                }
+            }
+        },
+        "response": {
+            "status": 401
+        }
+    }
+}
+{
+    "wallTime": 106,
+    "cpuTime": 5,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "2026-07-25T08:29:57.319Z WARN [Better Auth]: [better-auth] Base URL could not be determined. Please set a valid base URL using the baseURL config option or the BETTER_AUTH_URL environment variable. Without this, callbacks and redirects may not work correctly."
+            ],
+            "level": "warn",
+            "timestamp": 1784968197319
+        },
+        {
+            "message": [
+                "{\"ts\":\"2026-07-25T08:29:57.413Z\",\"level\":\"error\",\"msg\":\"session cookie auth threw; returning 401\",\"op\":\"auth.session_check\",\"err\":{\"message\":\"Failed query: insert into \\\"tenant_shard\\\" (\\\"tenant_id\\\", \\\"binding_name\\\", \\\"created_at\\\") values (?, ?, ?) on conflict do nothing\\nparams: tn_8681cf909bc24799,MAIN_DB,1784968197405\",\"name\":\"Error\",\"stack\":\"Error: Failed query: insert into \\\"tenant_shard\\\" (\\\"tenant_id\\\", \\\"binding_name\\\", \\\"created_at\\\") values (?, ?, ?) on conflict do nothing\\nparams: tn_8681cf909bc24799,MAIN_DB,1784968197405\\n    at D1PreparedQuery.queryWithCache (index.js:9589:19)\\n    at async D1PreparedQuery.run (index.js:16800:16)\\n    at async runOnce (index.js:16592:5)\\n    at async SqlTenantShardDirectoryRepo.insert (index.js:17067:9)\",\"cause\":\"Error: D1_ERROR: no such table: tenant_shard: SQLITE_ERROR\"}}"
+            ],
+            "level": "error",
+            "timestamp": 1784968197413
+        }
+    ],
+    "eventTimestamp": 1784968197319,
+    "event": {
+        "request": {
+            "url": "https://managed-agents.3552d90c.workers.dev/v1/sessions?limit=5",
+            "method": "GET",
+            "headers": {
+                "accept": "*/*",
+                "accept-encoding": "gzip, br",
+                "accept-language": "en-US,en;q=0.9,ar;q=0.8",
+                "cf-connecting-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a",
+                "cf-ipcountry": "CA",
+                "cf-ray": "a209ccc1395a5e5d",
+                "cf-visitor": "{\"scheme\":\"https\"}",
+                "connection": "Keep-Alive",
+                "cookie": "REDACTED",
+                "host": "managed-agents.3552d90c.workers.dev",
+                "priority": "u=1, i",
+                "referer": "https://managed-agents.3552d90c.workers.dev/",
+                "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Google Chrome\";v=\"150\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-ch-ua-platform": "\"Linux\"",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-origin",
+                "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+                "x-forwarded-proto": "https",
+                "x-real-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a"
+            },
+            "cf": {
+                "httpProtocol": "HTTP/3",
+                "clientAcceptEncoding": "gzip, deflate, br",
+                "requestPriority": "",
+                "edgeRequestKeepAliveStatus": 1,
+                "requestHeaderNames": {},
+                "clientTcpRtt": 0,
+                "clientQuicRtt": 25,
+                "colo": "YVR",
+                "asn": 852,
+                "asOrganization": "TELUS-FIBRE-CLGRAB49",
+                "country": "CA",
+                "isEUCountry": false,
+                "city": "Calgary",
+                "continent": "NA",
+                "region": "Alberta",
+                "regionCode": "AB",
+                "timezone": "America/Edmonton",
+                "longitude": "-114.08529",
+                "latitude": "51.05011",
+                "postalCode": "T3S",
+                "tlsVersion": "TLSv1.3",
+                "tlsCipher": "AEAD-AES128-GCM-SHA256",
+                "tlsClientRandom": "mp22GQ5C4LBm8QpTD8C+vrD+ub/LITlJGuuLUQAxsqA=",
+                "tlsClientCiphersSha1": "3HTt3+R/6BL3zeALJDSq0pR1yOQ=",
+                "tlsClientExtensionsSha1": "y+qUfmLiMTOqkC2/qSPziKyMXZ4=",
+                "tlsClientExtensionsSha1Le": "v6A3CPLXn2Ibd4MHXzUaydtEKws=",
+                "tlsClientHelloLength": "1751",
+                "tlsClientAuth": {
+                    "certPresented": "0",
+                    "certVerified": "NONE",
+                    "certRevoked": "0",
+                    "certIssuerDN": "",
+                    "certSubjectDN": "",
+                    "certIssuerDNRFC2253": "",
+                    "certSubjectDNRFC2253": "",
+                    "certIssuerDNLegacy": "",
+                    "certSubjectDNLegacy": "",
+                    "certSerial": "",
+                    "certIssuerSerial": "",
+                    "certSKI": "",
+                    "certIssuerSKI": "",
+                    "certFingerprintSHA1": "",
+                    "certFingerprintSHA256": "",
+                    "certNotBefore": "",
+                    "certNotAfter": "",
+                    "certRFC9440": "",
+                    "certRFC9440TooLarge": false,
+                    "certChainRFC9440": "",
+                    "certChainRFC9440TooLarge": false
+                },
+                "verifiedBotCategory": "",
+                "edgeL4": {
+                    "deliveryRate": 62352
+                }
+            }
+        },
+        "response": {
+            "status": 401
+        }
+    }
+}
+{
+    "wallTime": 33,
+    "cpuTime": 6,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "2026-07-25T08:29:57.446Z WARN [Better Auth]: [better-auth] Base URL could not be determined. Please set a valid base URL using the baseURL config option or the BETTER_AUTH_URL environment variable. Without this, callbacks and redirects may not work correctly."
+            ],
+            "level": "warn",
+            "timestamp": 1784968197446
+        },
+        {
+            "message": [
+                "2026-07-25T08:29:57.446Z WARN [Better Auth]: Rate limiting skipped: could not determine client IP address. Ensure your runtime forwards a trusted client IP header and configure `advanced.ipAddress.ipAddressHeaders` if needed."
+            ],
+            "level": "warn",
+            "timestamp": 1784968197446
+        }
+    ],
+    "eventTimestamp": 1784968197446,
+    "event": {
+        "request": {
+            "url": "https://managed-agents.3552d90c.workers.dev/auth/get-session",
+            "method": "GET",
+            "headers": {
+                "accept": "*/*",
+                "accept-encoding": "gzip, br",
+                "accept-language": "en-US,en;q=0.9,ar;q=0.8",
+                "cf-connecting-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a",
+                "cf-ipcountry": "CA",
+                "cf-ray": "a209ccc2096a5e5d",
+                "cf-visitor": "{\"scheme\":\"https\"}",
+                "connection": "Keep-Alive",
+                "cookie": "REDACTED",
+                "host": "managed-agents.3552d90c.workers.dev",
+                "priority": "u=1, i",
+                "referer": "https://managed-agents.3552d90c.workers.dev/",
+                "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Google Chrome\";v=\"150\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-ch-ua-platform": "\"Linux\"",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-origin",
+                "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+                "x-forwarded-proto": "https",
+                "x-real-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a"
+            },
+            "cf": {
+                "httpProtocol": "HTTP/3",
+                "clientAcceptEncoding": "gzip, deflate, br",
+                "requestPriority": "",
+                "edgeRequestKeepAliveStatus": 1,
+                "requestHeaderNames": {},
+                "clientTcpRtt": 0,
+                "clientQuicRtt": 23,
+                "colo": "YVR",
+                "asn": 852,
+                "asOrganization": "TELUS-FIBRE-CLGRAB49",
+                "country": "CA",
+                "isEUCountry": false,
+                "city": "Calgary",
+                "continent": "NA",
+                "region": "Alberta",
+                "regionCode": "AB",
+                "timezone": "America/Edmonton",
+                "longitude": "-114.08529",
+                "latitude": "51.05011",
+                "postalCode": "T3S",
+                "tlsVersion": "TLSv1.3",
+                "tlsCipher": "AEAD-AES128-GCM-SHA256",
+                "tlsClientRandom": "mp22GQ5C4LBm8QpTD8C+vrD+ub/LITlJGuuLUQAxsqA=",
+                "tlsClientCiphersSha1": "3HTt3+R/6BL3zeALJDSq0pR1yOQ=",
+                "tlsClientExtensionsSha1": "y+qUfmLiMTOqkC2/qSPziKyMXZ4=",
+                "tlsClientExtensionsSha1Le": "v6A3CPLXn2Ibd4MHXzUaydtEKws=",
+                "tlsClientHelloLength": "1751",
+                "tlsClientAuth": {
+                    "certPresented": "0",
+                    "certVerified": "NONE",
+                    "certRevoked": "0",
+                    "certIssuerDN": "",
+                    "certSubjectDN": "",
+                    "certIssuerDNRFC2253": "",
+                    "certSubjectDNRFC2253": "",
+                    "certIssuerDNLegacy": "",
+                    "certSubjectDNLegacy": "",
+                    "certSerial": "",
+                    "certIssuerSerial": "",
+                    "certSKI": "",
+                    "certIssuerSKI": "",
+                    "certFingerprintSHA1": "",
+                    "certFingerprintSHA256": "",
+                    "certNotBefore": "",
+                    "certNotAfter": "",
+                    "certRFC9440": "",
+                    "certRFC9440TooLarge": false,
+                    "certChainRFC9440": "",
+                    "certChainRFC9440TooLarge": false
+                },
+                "verifiedBotCategory": "",
+                "edgeL4": {
+                    "deliveryRate": 94292
+                }
+            }
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 151,
+    "cpuTime": 4,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "2026-07-25T08:29:57.533Z WARN [Better Auth]: [better-auth] Base URL could not be determined. Please set a valid base URL using the baseURL config option or the BETTER_AUTH_URL environment variable. Without this, callbacks and redirects may not work correctly."
+            ],
+            "level": "warn",
+            "timestamp": 1784968197533
+        },
+        {
+            "message": [
+                "{\"ts\":\"2026-07-25T08:29:57.673Z\",\"level\":\"error\",\"msg\":\"session cookie auth threw; returning 401\",\"op\":\"auth.session_check\",\"err\":{\"message\":\"Failed query: insert into \\\"tenant_shard\\\" (\\\"tenant_id\\\", \\\"binding_name\\\", \\\"created_at\\\") values (?, ?, ?) on conflict do nothing\\nparams: tn_bfa6f6abf2ed485a,MAIN_DB,1784968197632\",\"name\":\"Error\",\"stack\":\"Error: Failed query: insert into \\\"tenant_shard\\\" (\\\"tenant_id\\\", \\\"binding_name\\\", \\\"created_at\\\") values (?, ?, ?) on conflict do nothing\\nparams: tn_bfa6f6abf2ed485a,MAIN_DB,1784968197632\\n    at D1PreparedQuery.queryWithCache (index.js:9589:19)\\n    at async D1PreparedQuery.run (index.js:16800:16)\\n    at async runOnce (index.js:16592:5)\\n    at async SqlTenantShardDirectoryRepo.insert (index.js:17067:9)\",\"cause\":\"Error: D1_ERROR: no such table: tenant_shard: SQLITE_ERROR\"}}"
+            ],
+            "level": "error",
+            "timestamp": 1784968197673
+        }
+    ],
+    "eventTimestamp": 1784968197533,
+    "event": {
+        "request": {
+            "url": "https://managed-agents.3552d90c.workers.dev/v1/me/tenants",
+            "method": "GET",
+            "headers": {
+                "accept": "*/*",
+                "accept-encoding": "gzip, br",
+                "accept-language": "en-US,en;q=0.9,ar;q=0.8",
+                "cf-connecting-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a",
+                "cf-ipcountry": "CA",
+                "cf-ray": "a209ccc299775e5d",
+                "cf-visitor": "{\"scheme\":\"https\"}",
+                "connection": "Keep-Alive",
+                "cookie": "REDACTED",
+                "host": "managed-agents.3552d90c.workers.dev",
+                "priority": "u=1, i",
+                "referer": "https://managed-agents.3552d90c.workers.dev/",
+                "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Google Chrome\";v=\"150\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-ch-ua-platform": "\"Linux\"",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-origin",
+                "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+                "x-forwarded-proto": "https",
+                "x-real-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a"
+            },
+            "cf": {
+                "httpProtocol": "HTTP/3",
+                "clientAcceptEncoding": "gzip, deflate, br",
+                "requestPriority": "",
+                "edgeRequestKeepAliveStatus": 1,
+                "requestHeaderNames": {},
+                "clientTcpRtt": 0,
+                "clientQuicRtt": 23,
+                "colo": "YVR",
+                "asn": 852,
+                "asOrganization": "TELUS-FIBRE-CLGRAB49",
+                "country": "CA",
+                "isEUCountry": false,
+                "city": "Calgary",
+                "continent": "NA",
+                "region": "Alberta",
+                "regionCode": "AB",
+                "timezone": "America/Edmonton",
+                "longitude": "-114.08529",
+                "latitude": "51.05011",
+                "postalCode": "T3S",
+                "tlsVersion": "TLSv1.3",
+                "tlsCipher": "AEAD-AES128-GCM-SHA256",
+                "tlsClientRandom": "mp22GQ5C4LBm8QpTD8C+vrD+ub/LITlJGuuLUQAxsqA=",
+                "tlsClientCiphersSha1": "3HTt3+R/6BL3zeALJDSq0pR1yOQ=",
+                "tlsClientExtensionsSha1": "y+qUfmLiMTOqkC2/qSPziKyMXZ4=",
+                "tlsClientExtensionsSha1Le": "v6A3CPLXn2Ibd4MHXzUaydtEKws=",
+                "tlsClientHelloLength": "1751",
+                "tlsClientAuth": {
+                    "certPresented": "0",
+                    "certVerified": "NONE",
+                    "certRevoked": "0",
+                    "certIssuerDN": "",
+                    "certSubjectDN": "",
+                    "certIssuerDNRFC2253": "",
+                    "certSubjectDNRFC2253": "",
+                    "certIssuerDNLegacy": "",
+                    "certSubjectDNLegacy": "",
+                    "certSerial": "",
+                    "certIssuerSerial": "",
+                    "certSKI": "",
+                    "certIssuerSKI": "",
+                    "certFingerprintSHA1": "",
+                    "certFingerprintSHA256": "",
+                    "certNotBefore": "",
+                    "certNotAfter": "",
+                    "certRFC9440": "",
+                    "certRFC9440TooLarge": false,
+                    "certChainRFC9440": "",
+                    "certChainRFC9440TooLarge": false
+                },
+                "verifiedBotCategory": "",
+                "edgeL4": {
+                    "deliveryRate": 94292
+                }
+            }
+        },
+        "response": {
+            "status": 401
+        }
+    }
+}
+{
+    "wallTime": 157,
+    "cpuTime": 4,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "2026-07-25T08:29:57.536Z WARN [Better Auth]: [better-auth] Base URL could not be determined. Please set a valid base URL using the baseURL config option or the BETTER_AUTH_URL environment variable. Without this, callbacks and redirects may not work correctly."
+            ],
+            "level": "warn",
+            "timestamp": 1784968197536
+        },
+        {
+            "message": [
+                "{\"ts\":\"2026-07-25T08:29:57.678Z\",\"level\":\"error\",\"msg\":\"session cookie auth threw; returning 401\",\"op\":\"auth.session_check\",\"err\":{\"message\":\"Failed query: insert into \\\"tenant_shard\\\" (\\\"tenant_id\\\", \\\"binding_name\\\", \\\"created_at\\\") values (?, ?, ?) on conflict do nothing\\nparams: tn_f3776f250fa54246,MAIN_DB,1784968197669\",\"name\":\"Error\",\"stack\":\"Error: Failed query: insert into \\\"tenant_shard\\\" (\\\"tenant_id\\\", \\\"binding_name\\\", \\\"created_at\\\") values (?, ?, ?) on conflict do nothing\\nparams: tn_f3776f250fa54246,MAIN_DB,1784968197669\\n    at D1PreparedQuery.queryWithCache (index.js:9589:19)\\n    at async D1PreparedQuery.run (index.js:16800:16)\\n    at async runOnce (index.js:16592:5)\\n    at async SqlTenantShardDirectoryRepo.insert (index.js:17067:9)\",\"cause\":\"Error: D1_ERROR: no such table: tenant_shard: SQLITE_ERROR\"}}"
+            ],
+            "level": "error",
+            "timestamp": 1784968197678
+        }
+    ],
+    "eventTimestamp": 1784968197533,
+    "event": {
+        "request": {
+            "url": "https://managed-agents.3552d90c.workers.dev/v1/sessions?limit=5",
+            "method": "GET",
+            "headers": {
+                "accept": "*/*",
+                "accept-encoding": "gzip, br",
+                "accept-language": "en-US,en;q=0.9,ar;q=0.8",
+                "cf-connecting-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a",
+                "cf-ipcountry": "CA",
+                "cf-ray": "a209ccc299795e5d",
+                "cf-visitor": "{\"scheme\":\"https\"}",
+                "connection": "Keep-Alive",
+                "cookie": "REDACTED",
+                "host": "managed-agents.3552d90c.workers.dev",
+                "priority": "u=1, i",
+                "referer": "https://managed-agents.3552d90c.workers.dev/",
+                "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Google Chrome\";v=\"150\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-ch-ua-platform": "\"Linux\"",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-origin",
+                "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+                "x-forwarded-proto": "https",
+                "x-real-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a"
+            },
+            "cf": {
+                "httpProtocol": "HTTP/3",
+                "clientAcceptEncoding": "gzip, deflate, br",
+                "requestPriority": "",
+                "edgeRequestKeepAliveStatus": 1,
+                "requestHeaderNames": {},
+                "clientTcpRtt": 0,
+                "clientQuicRtt": 23,
+                "colo": "YVR",
+                "asn": 852,
+                "asOrganization": "TELUS-FIBRE-CLGRAB49",
+                "country": "CA",
+                "isEUCountry": false,
+                "city": "Calgary",
+                "continent": "NA",
+                "region": "Alberta",
+                "regionCode": "AB",
+                "timezone": "America/Edmonton",
+                "longitude": "-114.08529",
+                "latitude": "51.05011",
+                "postalCode": "T3S",
+                "tlsVersion": "TLSv1.3",
+                "tlsCipher": "AEAD-AES128-GCM-SHA256",
+                "tlsClientRandom": "mp22GQ5C4LBm8QpTD8C+vrD+ub/LITlJGuuLUQAxsqA=",
+                "tlsClientCiphersSha1": "3HTt3+R/6BL3zeALJDSq0pR1yOQ=",
+                "tlsClientExtensionsSha1": "y+qUfmLiMTOqkC2/qSPziKyMXZ4=",
+                "tlsClientExtensionsSha1Le": "v6A3CPLXn2Ibd4MHXzUaydtEKws=",
+                "tlsClientHelloLength": "1751",
+                "tlsClientAuth": {
+                    "certPresented": "0",
+                    "certVerified": "NONE",
+                    "certRevoked": "0",
+                    "certIssuerDN": "",
+                    "certSubjectDN": "",
+                    "certIssuerDNRFC2253": "",
+                    "certSubjectDNRFC2253": "",
+                    "certIssuerDNLegacy": "",
+                    "certSubjectDNLegacy": "",
+                    "certSerial": "",
+                    "certIssuerSerial": "",
+                    "certSKI": "",
+                    "certIssuerSKI": "",
+                    "certFingerprintSHA1": "",
+                    "certFingerprintSHA256": "",
+                    "certNotBefore": "",
+                    "certNotAfter": "",
+                    "certRFC9440": "",
+                    "certRFC9440TooLarge": false,
+                    "certChainRFC9440": "",
+                    "certChainRFC9440TooLarge": false
+                },
+                "verifiedBotCategory": "",
+                "edgeL4": {
+                    "deliveryRate": 94292
+                }
+            }
+        },
+        "response": {
+            "status": 401
+        }
+    }
+}
+{
+    "wallTime": 162,
+    "cpuTime": 4,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "2026-07-25T08:29:57.537Z WARN [Better Auth]: [better-auth] Base URL could not be determined. Please set a valid base URL using the baseURL config option or the BETTER_AUTH_URL environment variable. Without this, callbacks and redirects may not work correctly."
+            ],
+            "level": "warn",
+            "timestamp": 1784968197537
+        },
+        {
+            "message": [
+                "{\"ts\":\"2026-07-25T08:29:57.682Z\",\"level\":\"error\",\"msg\":\"session cookie auth threw; returning 401\",\"op\":\"auth.session_check\",\"err\":{\"message\":\"Failed query: insert into \\\"tenant_shard\\\" (\\\"tenant_id\\\", \\\"binding_name\\\", \\\"created_at\\\") values (?, ?, ?) on conflict do nothing\\nparams: tn_7ef5400e988045c3,MAIN_DB,1784968197670\",\"name\":\"Error\",\"stack\":\"Error: Failed query: insert into \\\"tenant_shard\\\" (\\\"tenant_id\\\", \\\"binding_name\\\", \\\"created_at\\\") values (?, ?, ?) on conflict do nothing\\nparams: tn_7ef5400e988045c3,MAIN_DB,1784968197670\\n    at D1PreparedQuery.queryWithCache (index.js:9589:19)\\n    at async D1PreparedQuery.run (index.js:16800:16)\\n    at async runOnce (index.js:16592:5)\\n    at async SqlTenantShardDirectoryRepo.insert (index.js:17067:9)\",\"cause\":\"Error: D1_ERROR: no such table: tenant_shard: SQLITE_ERROR\"}}"
+            ],
+            "level": "error",
+            "timestamp": 1784968197682
+        }
+    ],
+    "eventTimestamp": 1784968197534,
+    "event": {
+        "request": {
+            "url": "https://managed-agents.3552d90c.workers.dev/v1/stats",
+            "method": "GET",
+            "headers": {
+                "accept": "*/*",
+                "accept-encoding": "gzip, br",
+                "accept-language": "en-US,en;q=0.9,ar;q=0.8",
+                "cf-connecting-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a",
+                "cf-ipcountry": "CA",
+                "cf-ray": "a209ccc2997a5e5d",
+                "cf-visitor": "{\"scheme\":\"https\"}",
+                "connection": "Keep-Alive",
+                "cookie": "REDACTED",
+                "host": "managed-agents.3552d90c.workers.dev",
+                "priority": "u=1, i",
+                "referer": "https://managed-agents.3552d90c.workers.dev/",
+                "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Google Chrome\";v=\"150\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-ch-ua-platform": "\"Linux\"",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-origin",
+                "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+                "x-forwarded-proto": "https",
+                "x-real-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a"
+            },
+            "cf": {
+                "httpProtocol": "HTTP/3",
+                "clientAcceptEncoding": "gzip, deflate, br",
+                "requestPriority": "",
+                "edgeRequestKeepAliveStatus": 1,
+                "requestHeaderNames": {},
+                "clientTcpRtt": 0,
+                "clientQuicRtt": 23,
+                "colo": "YVR",
+                "asn": 852,
+                "asOrganization": "TELUS-FIBRE-CLGRAB49",
+                "country": "CA",
+                "isEUCountry": false,
+                "city": "Calgary",
+                "continent": "NA",
+                "region": "Alberta",
+                "regionCode": "AB",
+                "timezone": "America/Edmonton",
+                "longitude": "-114.08529",
+                "latitude": "51.05011",
+                "postalCode": "T3S",
+                "tlsVersion": "TLSv1.3",
+                "tlsCipher": "AEAD-AES128-GCM-SHA256",
+                "tlsClientRandom": "mp22GQ5C4LBm8QpTD8C+vrD+ub/LITlJGuuLUQAxsqA=",
+                "tlsClientCiphersSha1": "3HTt3+R/6BL3zeALJDSq0pR1yOQ=",
+                "tlsClientExtensionsSha1": "y+qUfmLiMTOqkC2/qSPziKyMXZ4=",
+                "tlsClientExtensionsSha1Le": "v6A3CPLXn2Ibd4MHXzUaydtEKws=",
+                "tlsClientHelloLength": "1751",
+                "tlsClientAuth": {
+                    "certPresented": "0",
+                    "certVerified": "NONE",
+                    "certRevoked": "0",
+                    "certIssuerDN": "",
+                    "certSubjectDN": "",
+                    "certIssuerDNRFC2253": "",
+                    "certSubjectDNRFC2253": "",
+                    "certIssuerDNLegacy": "",
+                    "certSubjectDNLegacy": "",
+                    "certSerial": "",
+                    "certIssuerSerial": "",
+                    "certSKI": "",
+                    "certIssuerSKI": "",
+                    "certFingerprintSHA1": "",
+                    "certFingerprintSHA256": "",
+                    "certNotBefore": "",
+                    "certNotAfter": "",
+                    "certRFC9440": "",
+                    "certRFC9440TooLarge": false,
+                    "certChainRFC9440": "",
+                    "certChainRFC9440TooLarge": false
+                },
+                "verifiedBotCategory": "",
+                "edgeL4": {
+                    "deliveryRate": 94292
+                }
+            }
+        },
+        "response": {
+            "status": 401
+        }
+    }
+}
+{
+    "wallTime": 145,
+    "cpuTime": 4,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "2026-07-25T08:29:58.526Z WARN [Better Auth]: [better-auth] Base URL could not be determined. Please set a valid base URL using the baseURL config option or the BETTER_AUTH_URL environment variable. Without this, callbacks and redirects may not work correctly."
+            ],
+            "level": "warn",
+            "timestamp": 1784968198526
+        },
+        {
+            "message": [
+                "{\"ts\":\"2026-07-25T08:29:58.657Z\",\"level\":\"error\",\"msg\":\"session cookie auth threw; returning 401\",\"op\":\"auth.session_check\",\"err\":{\"message\":\"Failed query: insert into \\\"tenant_shard\\\" (\\\"tenant_id\\\", \\\"binding_name\\\", \\\"created_at\\\") values (?, ?, ?) on conflict do nothing\\nparams: tn_d65a71c77e6c4104,MAIN_DB,1784968198616\",\"name\":\"Error\",\"stack\":\"Error: Failed query: insert into \\\"tenant_shard\\\" (\\\"tenant_id\\\", \\\"binding_name\\\", \\\"created_at\\\") values (?, ?, ?) on conflict do nothing\\nparams: tn_d65a71c77e6c4104,MAIN_DB,1784968198616\\n    at D1PreparedQuery.queryWithCache (index.js:9589:19)\\n    at async D1PreparedQuery.run (index.js:16800:16)\\n    at async runOnce (index.js:16592:5)\\n    at async SqlTenantShardDirectoryRepo.insert (index.js:17067:9)\",\"cause\":\"Error: D1_ERROR: no such table: tenant_shard: SQLITE_ERROR\"}}"
+            ],
+            "level": "error",
+            "timestamp": 1784968198657
+        }
+    ],
+    "eventTimestamp": 1784968198524,
+    "event": {
+        "request": {
+            "url": "https://managed-agents.3552d90c.workers.dev/v1/me/tenants",
+            "method": "GET",
+            "headers": {
+                "accept": "*/*",
+                "accept-encoding": "gzip, br",
+                "accept-language": "en-US,en;q=0.9,ar;q=0.8",
+                "cf-connecting-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a",
+                "cf-ipcountry": "CA",
+                "cf-ray": "a209ccc8c9b25e5d",
+                "cf-visitor": "{\"scheme\":\"https\"}",
+                "connection": "Keep-Alive",
+                "cookie": "REDACTED",
+                "host": "managed-agents.3552d90c.workers.dev",
+                "priority": "u=1, i",
+                "referer": "https://managed-agents.3552d90c.workers.dev/",
+                "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Google Chrome\";v=\"150\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-ch-ua-platform": "\"Linux\"",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-origin",
+                "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+                "x-forwarded-proto": "https",
+                "x-real-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a"
+            },
+            "cf": {
+                "httpProtocol": "HTTP/3",
+                "clientAcceptEncoding": "gzip, deflate, br",
+                "requestPriority": "",
+                "edgeRequestKeepAliveStatus": 1,
+                "requestHeaderNames": {},
+                "clientTcpRtt": 0,
+                "clientQuicRtt": 23,
+                "colo": "YVR",
+                "asn": 852,
+                "asOrganization": "TELUS-FIBRE-CLGRAB49",
+                "country": "CA",
+                "isEUCountry": false,
+                "city": "Calgary",
+                "continent": "NA",
+                "region": "Alberta",
+                "regionCode": "AB",
+                "timezone": "America/Edmonton",
+                "longitude": "-114.08529",
+                "latitude": "51.05011",
+                "postalCode": "T3S",
+                "tlsVersion": "TLSv1.3",
+                "tlsCipher": "AEAD-AES128-GCM-SHA256",
+                "tlsClientRandom": "mp22GQ5C4LBm8QpTD8C+vrD+ub/LITlJGuuLUQAxsqA=",
+                "tlsClientCiphersSha1": "3HTt3+R/6BL3zeALJDSq0pR1yOQ=",
+                "tlsClientExtensionsSha1": "y+qUfmLiMTOqkC2/qSPziKyMXZ4=",
+                "tlsClientExtensionsSha1Le": "v6A3CPLXn2Ibd4MHXzUaydtEKws=",
+                "tlsClientHelloLength": "1751",
+                "tlsClientAuth": {
+                    "certPresented": "0",
+                    "certVerified": "NONE",
+                    "certRevoked": "0",
+                    "certIssuerDN": "",
+                    "certSubjectDN": "",
+                    "certIssuerDNRFC2253": "",
+                    "certSubjectDNRFC2253": "",
+                    "certIssuerDNLegacy": "",
+                    "certSubjectDNLegacy": "",
+                    "certSerial": "",
+                    "certIssuerSerial": "",
+                    "certSKI": "",
+                    "certIssuerSKI": "",
+                    "certFingerprintSHA1": "",
+                    "certFingerprintSHA256": "",
+                    "certNotBefore": "",
+                    "certNotAfter": "",
+                    "certRFC9440": "",
+                    "certRFC9440TooLarge": false,
+                    "certChainRFC9440": "",
+                    "certChainRFC9440TooLarge": false
+                },
+                "verifiedBotCategory": "",
+                "edgeL4": {
+                    "deliveryRate": 94292
+                }
+            }
+        },
+        "response": {
+            "status": 401
+        }
+    }
+}
+{
+    "wallTime": 156,
+    "cpuTime": 3,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "2026-07-25T08:29:58.529Z WARN [Better Auth]: [better-auth] Base URL could not be determined. Please set a valid base URL using the baseURL config option or the BETTER_AUTH_URL environment variable. Without this, callbacks and redirects may not work correctly."
+            ],
+            "level": "warn",
+            "timestamp": 1784968198529
+        },
+        {
+            "message": [
+                "{\"ts\":\"2026-07-25T08:29:58.673Z\",\"level\":\"error\",\"msg\":\"session cookie auth threw; returning 401\",\"op\":\"auth.session_check\",\"err\":{\"message\":\"Failed query: insert into \\\"tenant_shard\\\" (\\\"tenant_id\\\", \\\"binding_name\\\", \\\"created_at\\\") values (?, ?, ?) on conflict do nothing\\nparams: tn_29a930dc0b8a483c,MAIN_DB,1784968198658\",\"name\":\"Error\",\"stack\":\"Error: Failed query: insert into \\\"tenant_shard\\\" (\\\"tenant_id\\\", \\\"binding_name\\\", \\\"created_at\\\") values (?, ?, ?) on conflict do nothing\\nparams: tn_29a930dc0b8a483c,MAIN_DB,1784968198658\\n    at D1PreparedQuery.queryWithCache (index.js:9589:19)\\n    at async D1PreparedQuery.run (index.js:16800:16)\\n    at async runOnce (index.js:16592:5)\\n    at async SqlTenantShardDirectoryRepo.insert (index.js:17067:9)\",\"cause\":\"Error: D1_ERROR: no such table: tenant_shard: SQLITE_ERROR\"}}"
+            ],
+            "level": "error",
+            "timestamp": 1784968198673
+        }
+    ],
+    "eventTimestamp": 1784968198529,
+    "event": {
+        "request": {
+            "url": "https://managed-agents.3552d90c.workers.dev/v1/stats",
+            "method": "GET",
+            "headers": {
+                "accept": "*/*",
+                "accept-encoding": "gzip, br",
+                "accept-language": "en-US,en;q=0.9,ar;q=0.8",
+                "cf-connecting-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a",
+                "cf-ipcountry": "CA",
+                "cf-ray": "a209ccc8c9b65e5d",
+                "cf-visitor": "{\"scheme\":\"https\"}",
+                "connection": "Keep-Alive",
+                "cookie": "REDACTED",
+                "host": "managed-agents.3552d90c.workers.dev",
+                "priority": "u=1, i",
+                "referer": "https://managed-agents.3552d90c.workers.dev/",
+                "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Google Chrome\";v=\"150\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-ch-ua-platform": "\"Linux\"",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-origin",
+                "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+                "x-forwarded-proto": "https",
+                "x-real-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a"
+            },
+            "cf": {
+                "httpProtocol": "HTTP/3",
+                "clientAcceptEncoding": "gzip, deflate, br",
+                "requestPriority": "",
+                "edgeRequestKeepAliveStatus": 1,
+                "requestHeaderNames": {},
+                "clientTcpRtt": 0,
+                "clientQuicRtt": 23,
+                "colo": "YVR",
+                "asn": 852,
+                "asOrganization": "TELUS-FIBRE-CLGRAB49",
+                "country": "CA",
+                "isEUCountry": false,
+                "city": "Calgary",
+                "continent": "NA",
+                "region": "Alberta",
+                "regionCode": "AB",
+                "timezone": "America/Edmonton",
+                "longitude": "-114.08529",
+                "latitude": "51.05011",
+                "postalCode": "T3S",
+                "tlsVersion": "TLSv1.3",
+                "tlsCipher": "AEAD-AES128-GCM-SHA256",
+                "tlsClientRandom": "mp22GQ5C4LBm8QpTD8C+vrD+ub/LITlJGuuLUQAxsqA=",
+                "tlsClientCiphersSha1": "3HTt3+R/6BL3zeALJDSq0pR1yOQ=",
+                "tlsClientExtensionsSha1": "y+qUfmLiMTOqkC2/qSPziKyMXZ4=",
+                "tlsClientExtensionsSha1Le": "v6A3CPLXn2Ibd4MHXzUaydtEKws=",
+                "tlsClientHelloLength": "1751",
+                "tlsClientAuth": {
+                    "certPresented": "0",
+                    "certVerified": "NONE",
+                    "certRevoked": "0",
+                    "certIssuerDN": "",
+                    "certSubjectDN": "",
+                    "certIssuerDNRFC2253": "",
+                    "certSubjectDNRFC2253": "",
+                    "certIssuerDNLegacy": "",
+                    "certSubjectDNLegacy": "",
+                    "certSerial": "",
+                    "certIssuerSerial": "",
+                    "certSKI": "",
+                    "certIssuerSKI": "",
+                    "certFingerprintSHA1": "",
+                    "certFingerprintSHA256": "",
+                    "certNotBefore": "",
+                    "certNotAfter": "",
+                    "certRFC9440": "",
+                    "certRFC9440TooLarge": false,
+                    "certChainRFC9440": "",
+                    "certChainRFC9440TooLarge": false
+                },
+                "verifiedBotCategory": "",
+                "edgeL4": {
+                    "deliveryRate": 94292
+                }
+            }
+        },
+        "response": {
+            "status": 401
+        }
+    }
+}
+{
+    "wallTime": 147,
+    "cpuTime": 3,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "2026-07-25T08:29:58.524Z WARN [Better Auth]: [better-auth] Base URL could not be determined. Please set a valid base URL using the baseURL config option or the BETTER_AUTH_URL environment variable. Without this, callbacks and redirects may not work correctly."
+            ],
+            "level": "warn",
+            "timestamp": 1784968198524
+        },
+        {
+            "message": [
+                "{\"ts\":\"2026-07-25T08:29:58.661Z\",\"level\":\"error\",\"msg\":\"session cookie auth threw; returning 401\",\"op\":\"auth.session_check\",\"err\":{\"message\":\"Failed query: insert into \\\"tenant_shard\\\" (\\\"tenant_id\\\", \\\"binding_name\\\", \\\"created_at\\\") values (?, ?, ?) on conflict do nothing\\nparams: tn_01460fc95e4a48bb,MAIN_DB,1784968198653\",\"name\":\"Error\",\"stack\":\"Error: Failed query: insert into \\\"tenant_shard\\\" (\\\"tenant_id\\\", \\\"binding_name\\\", \\\"created_at\\\") values (?, ?, ?) on conflict do nothing\\nparams: tn_01460fc95e4a48bb,MAIN_DB,1784968198653\\n    at D1PreparedQuery.queryWithCache (index.js:9589:19)\\n    at async D1PreparedQuery.run (index.js:16800:16)\\n    at async runOnce (index.js:16592:5)\\n    at async SqlTenantShardDirectoryRepo.insert (index.js:17067:9)\",\"cause\":\"Error: D1_ERROR: no such table: tenant_shard: SQLITE_ERROR\"}}"
+            ],
+            "level": "error",
+            "timestamp": 1784968198661
+        }
+    ],
+    "eventTimestamp": 1784968198524,
+    "event": {
+        "request": {
+            "url": "https://managed-agents.3552d90c.workers.dev/v1/sessions?limit=5",
+            "method": "GET",
+            "headers": {
+                "accept": "*/*",
+                "accept-encoding": "gzip, br",
+                "accept-language": "en-US,en;q=0.9,ar;q=0.8",
+                "cf-connecting-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a",
+                "cf-ipcountry": "CA",
+                "cf-ray": "a209ccc8c9b35e5d",
+                "cf-visitor": "{\"scheme\":\"https\"}",
+                "connection": "Keep-Alive",
+                "cookie": "REDACTED",
+                "host": "managed-agents.3552d90c.workers.dev",
+                "priority": "u=1, i",
+                "referer": "https://managed-agents.3552d90c.workers.dev/",
+                "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Google Chrome\";v=\"150\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-ch-ua-platform": "\"Linux\"",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-origin",
+                "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+                "x-forwarded-proto": "https",
+                "x-real-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a"
+            },
+            "cf": {
+                "httpProtocol": "HTTP/3",
+                "clientAcceptEncoding": "gzip, deflate, br",
+                "requestPriority": "",
+                "edgeRequestKeepAliveStatus": 1,
+                "requestHeaderNames": {},
+                "clientTcpRtt": 0,
+                "clientQuicRtt": 23,
+                "colo": "YVR",
+                "asn": 852,
+                "asOrganization": "TELUS-FIBRE-CLGRAB49",
+                "country": "CA",
+                "isEUCountry": false,
+                "city": "Calgary",
+                "continent": "NA",
+                "region": "Alberta",
+                "regionCode": "AB",
+                "timezone": "America/Edmonton",
+                "longitude": "-114.08529",
+                "latitude": "51.05011",
+                "postalCode": "T3S",
+                "tlsVersion": "TLSv1.3",
+                "tlsCipher": "AEAD-AES128-GCM-SHA256",
+                "tlsClientRandom": "mp22GQ5C4LBm8QpTD8C+vrD+ub/LITlJGuuLUQAxsqA=",
+                "tlsClientCiphersSha1": "3HTt3+R/6BL3zeALJDSq0pR1yOQ=",
+                "tlsClientExtensionsSha1": "y+qUfmLiMTOqkC2/qSPziKyMXZ4=",
+                "tlsClientExtensionsSha1Le": "v6A3CPLXn2Ibd4MHXzUaydtEKws=",
+                "tlsClientHelloLength": "1751",
+                "tlsClientAuth": {
+                    "certPresented": "0",
+                    "certVerified": "NONE",
+                    "certRevoked": "0",
+                    "certIssuerDN": "",
+                    "certSubjectDN": "",
+                    "certIssuerDNRFC2253": "",
+                    "certSubjectDNRFC2253": "",
+                    "certIssuerDNLegacy": "",
+                    "certSubjectDNLegacy": "",
+                    "certSerial": "",
+                    "certIssuerSerial": "",
+                    "certSKI": "",
+                    "certIssuerSKI": "",
+                    "certFingerprintSHA1": "",
+                    "certFingerprintSHA256": "",
+                    "certNotBefore": "",
+                    "certNotAfter": "",
+                    "certRFC9440": "",
+                    "certRFC9440TooLarge": false,
+                    "certChainRFC9440": "",
+                    "certChainRFC9440TooLarge": false
+                },
+                "verifiedBotCategory": "",
+                "edgeL4": {
+                    "deliveryRate": 94292
+                }
+            }
+        },
+        "response": {
+            "status": 401
+        }
+    }
+}
+{
+    "wallTime": 191,
+    "cpuTime": 3,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "2026-07-25T08:29:58.607Z WARN [Better Auth]: [better-auth] Base URL could not be determined. Please set a valid base URL using the baseURL config option or the BETTER_AUTH_URL environment variable. Without this, callbacks and redirects may not work correctly."
+            ],
+            "level": "warn",
+            "timestamp": 1784968198607
+        },
+        {
+            "message": [
+                "{\"ts\":\"2026-07-25T08:29:58.789Z\",\"level\":\"error\",\"msg\":\"session cookie auth threw; returning 401\",\"op\":\"auth.session_check\",\"err\":{\"message\":\"Failed query: insert into \\\"tenant_shard\\\" (\\\"tenant_id\\\", \\\"binding_name\\\", \\\"created_at\\\") values (?, ?, ?) on conflict do nothing\\nparams: tn_00e01a9d12034b79,MAIN_DB,1784968198752\",\"name\":\"Error\",\"stack\":\"Error: Failed query: insert into \\\"tenant_shard\\\" (\\\"tenant_id\\\", \\\"binding_name\\\", \\\"created_at\\\") values (?, ?, ?) on conflict do nothing\\nparams: tn_00e01a9d12034b79,MAIN_DB,1784968198752\\n    at D1PreparedQuery.queryWithCache (index.js:9589:19)\\n    at async D1PreparedQuery.run (index.js:16800:16)\\n    at async runOnce (index.js:16592:5)\\n    at async SqlTenantShardDirectoryRepo.insert (index.js:17067:9)\",\"cause\":\"Error: D1_ERROR: no such table: tenant_shard: SQLITE_ERROR\"}}"
+            ],
+            "level": "error",
+            "timestamp": 1784968198789
+        }
+    ],
+    "eventTimestamp": 1784968198607,
+    "event": {
+        "request": {
+            "url": "https://managed-agents.3552d90c.workers.dev/v1/agents?status=active&limit=20",
+            "method": "GET",
+            "headers": {
+                "accept": "*/*",
+                "accept-encoding": "gzip, br",
+                "accept-language": "en-US,en;q=0.9,ar;q=0.8",
+                "cf-connecting-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a",
+                "cf-ipcountry": "CA",
+                "cf-ray": "a209ccc949be5e5d",
+                "cf-visitor": "{\"scheme\":\"https\"}",
+                "connection": "Keep-Alive",
+                "cookie": "REDACTED",
+                "host": "managed-agents.3552d90c.workers.dev",
+                "priority": "u=1, i",
+                "referer": "https://managed-agents.3552d90c.workers.dev/agents",
+                "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Google Chrome\";v=\"150\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-ch-ua-platform": "\"Linux\"",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-origin",
+                "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+                "x-forwarded-proto": "https",
+                "x-real-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a"
+            },
+            "cf": {
+                "httpProtocol": "HTTP/3",
+                "clientAcceptEncoding": "gzip, deflate, br",
+                "requestPriority": "",
+                "edgeRequestKeepAliveStatus": 1,
+                "requestHeaderNames": {},
+                "clientTcpRtt": 0,
+                "clientQuicRtt": 23,
+                "colo": "YVR",
+                "asn": 852,
+                "asOrganization": "TELUS-FIBRE-CLGRAB49",
+                "country": "CA",
+                "isEUCountry": false,
+                "city": "Calgary",
+                "continent": "NA",
+                "region": "Alberta",
+                "regionCode": "AB",
+                "timezone": "America/Edmonton",
+                "longitude": "-114.08529",
+                "latitude": "51.05011",
+                "postalCode": "T3S",
+                "tlsVersion": "TLSv1.3",
+                "tlsCipher": "AEAD-AES128-GCM-SHA256",
+                "tlsClientRandom": "mp22GQ5C4LBm8QpTD8C+vrD+ub/LITlJGuuLUQAxsqA=",
+                "tlsClientCiphersSha1": "3HTt3+R/6BL3zeALJDSq0pR1yOQ=",
+                "tlsClientExtensionsSha1": "y+qUfmLiMTOqkC2/qSPziKyMXZ4=",
+                "tlsClientExtensionsSha1Le": "v6A3CPLXn2Ibd4MHXzUaydtEKws=",
+                "tlsClientHelloLength": "1751",
+                "tlsClientAuth": {
+                    "certPresented": "0",
+                    "certVerified": "NONE",
+                    "certRevoked": "0",
+                    "certIssuerDN": "",
+                    "certSubjectDN": "",
+                    "certIssuerDNRFC2253": "",
+                    "certSubjectDNRFC2253": "",
+                    "certIssuerDNLegacy": "",
+                    "certSubjectDNLegacy": "",
+                    "certSerial": "",
+                    "certIssuerSerial": "",
+                    "certSKI": "",
+                    "certIssuerSKI": "",
+                    "certFingerprintSHA1": "",
+                    "certFingerprintSHA256": "",
+                    "certNotBefore": "",
+                    "certNotAfter": "",
+                    "certRFC9440": "",
+                    "certRFC9440TooLarge": false,
+                    "certChainRFC9440": "",
+                    "certChainRFC9440TooLarge": false
+                },
+                "verifiedBotCategory": "",
+                "edgeL4": {
+                    "deliveryRate": 94292
+                }
+            }
+        },
+        "response": {
+            "status": 401
+        }
+    }
+}
+{
+    "wallTime": 206,
+    "cpuTime": 4,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "2026-07-25T08:29:58.609Z WARN [Better Auth]: [better-auth] Base URL could not be determined. Please set a valid base URL using the baseURL config option or the BETTER_AUTH_URL environment variable. Without this, callbacks and redirects may not work correctly."
+            ],
+            "level": "warn",
+            "timestamp": 1784968198609
+        },
+        {
+            "message": [
+                "{\"ts\":\"2026-07-25T08:29:58.801Z\",\"level\":\"error\",\"msg\":\"session cookie auth threw; returning 401\",\"op\":\"auth.session_check\",\"err\":{\"message\":\"Failed query: insert into \\\"tenant_shard\\\" (\\\"tenant_id\\\", \\\"binding_name\\\", \\\"created_at\\\") values (?, ?, ?) on conflict do nothing\\nparams: tn_bddfdbe482b54aa0,MAIN_DB,1784968198790\",\"name\":\"Error\",\"stack\":\"Error: Failed query: insert into \\\"tenant_shard\\\" (\\\"tenant_id\\\", \\\"binding_name\\\", \\\"created_at\\\") values (?, ?, ?) on conflict do nothing\\nparams: tn_bddfdbe482b54aa0,MAIN_DB,1784968198790\\n    at D1PreparedQuery.queryWithCache (index.js:9589:19)\\n    at async D1PreparedQuery.run (index.js:16800:16)\\n    at async runOnce (index.js:16592:5)\\n    at async SqlTenantShardDirectoryRepo.insert (index.js:17067:9)\",\"cause\":\"Error: D1_ERROR: no such table: tenant_shard: SQLITE_ERROR\"}}"
+            ],
+            "level": "error",
+            "timestamp": 1784968198801
+        }
+    ],
+    "eventTimestamp": 1784968198607,
+    "event": {
+        "request": {
+            "url": "https://managed-agents.3552d90c.workers.dev/v1/agents?limit=200&status=any",
+            "method": "GET",
+            "headers": {
+                "accept": "*/*",
+                "accept-encoding": "gzip, br",
+                "accept-language": "en-US,en;q=0.9,ar;q=0.8",
+                "cf-connecting-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a",
+                "cf-ipcountry": "CA",
+                "cf-ray": "a209ccc949bf5e5d",
+                "cf-visitor": "{\"scheme\":\"https\"}",
+                "connection": "Keep-Alive",
+                "cookie": "REDACTED",
+                "host": "managed-agents.3552d90c.workers.dev",
+                "priority": "u=1, i",
+                "referer": "https://managed-agents.3552d90c.workers.dev/agents",
+                "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Google Chrome\";v=\"150\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-ch-ua-platform": "\"Linux\"",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-origin",
+                "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+                "x-forwarded-proto": "https",
+                "x-real-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a"
+            },
+            "cf": {
+                "httpProtocol": "HTTP/3",
+                "clientAcceptEncoding": "gzip, deflate, br",
+                "requestPriority": "",
+                "edgeRequestKeepAliveStatus": 1,
+                "requestHeaderNames": {},
+                "clientTcpRtt": 0,
+                "clientQuicRtt": 23,
+                "colo": "YVR",
+                "asn": 852,
+                "asOrganization": "TELUS-FIBRE-CLGRAB49",
+                "country": "CA",
+                "isEUCountry": false,
+                "city": "Calgary",
+                "continent": "NA",
+                "region": "Alberta",
+                "regionCode": "AB",
+                "timezone": "America/Edmonton",
+                "longitude": "-114.08529",
+                "latitude": "51.05011",
+                "postalCode": "T3S",
+                "tlsVersion": "TLSv1.3",
+                "tlsCipher": "AEAD-AES128-GCM-SHA256",
+                "tlsClientRandom": "mp22GQ5C4LBm8QpTD8C+vrD+ub/LITlJGuuLUQAxsqA=",
+                "tlsClientCiphersSha1": "3HTt3+R/6BL3zeALJDSq0pR1yOQ=",
+                "tlsClientExtensionsSha1": "y+qUfmLiMTOqkC2/qSPziKyMXZ4=",
+                "tlsClientExtensionsSha1Le": "v6A3CPLXn2Ibd4MHXzUaydtEKws=",
+                "tlsClientHelloLength": "1751",
+                "tlsClientAuth": {
+                    "certPresented": "0",
+                    "certVerified": "NONE",
+                    "certRevoked": "0",
+                    "certIssuerDN": "",
+                    "certSubjectDN": "",
+                    "certIssuerDNRFC2253": "",
+                    "certSubjectDNRFC2253": "",
+                    "certIssuerDNLegacy": "",
+                    "certSubjectDNLegacy": "",
+                    "certSerial": "",
+                    "certIssuerSerial": "",
+                    "certSKI": "",
+                    "certIssuerSKI": "",
+                    "certFingerprintSHA1": "",
+                    "certFingerprintSHA256": "",
+                    "certNotBefore": "",
+                    "certNotAfter": "",
+                    "certRFC9440": "",
+                    "certRFC9440TooLarge": false,
+                    "certChainRFC9440": "",
+                    "certChainRFC9440TooLarge": false
+                },
+                "verifiedBotCategory": "",
+                "edgeL4": {
+                    "deliveryRate": 94292
+                }
+            }
+        },
+        "response": {
+            "status": 401
+        }
+    }
+}
+{
+    "wallTime": 27,
+    "cpuTime": 4,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "2026-07-25T08:29:59.083Z WARN [Better Auth]: [better-auth] Base URL could not be determined. Please set a valid base URL using the baseURL config option or the BETTER_AUTH_URL environment variable. Without this, callbacks and redirects may not work correctly."
+            ],
+            "level": "warn",
+            "timestamp": 1784968199083
+        }
+    ],
+    "eventTimestamp": 1784968199083,
+    "event": {
+        "request": {
+            "url": "https://managed-agents.3552d90c.workers.dev/auth/get-session",
+            "method": "GET",
+            "headers": {
+                "accept": "*/*",
+                "accept-encoding": "gzip, br",
+                "accept-language": "en-US,en;q=0.9,ar;q=0.8",
+                "cf-connecting-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a",
+                "cf-ipcountry": "CA",
+                "cf-ray": "a209cccc49d85e5d",
+                "cf-visitor": "{\"scheme\":\"https\"}",
+                "connection": "Keep-Alive",
+                "cookie": "REDACTED",
+                "host": "managed-agents.3552d90c.workers.dev",
+                "priority": "u=1, i",
+                "referer": "https://managed-agents.3552d90c.workers.dev/agents",
+                "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Google Chrome\";v=\"150\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-ch-ua-platform": "\"Linux\"",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-origin",
+                "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+                "x-forwarded-proto": "https",
+                "x-real-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a"
+            },
+            "cf": {
+                "httpProtocol": "HTTP/3",
+                "clientAcceptEncoding": "gzip, deflate, br",
+                "requestPriority": "",
+                "edgeRequestKeepAliveStatus": 1,
+                "requestHeaderNames": {},
+                "clientTcpRtt": 0,
+                "clientQuicRtt": 23,
+                "colo": "YVR",
+                "asn": 852,
+                "asOrganization": "TELUS-FIBRE-CLGRAB49",
+                "country": "CA",
+                "isEUCountry": false,
+                "city": "Calgary",
+                "continent": "NA",
+                "region": "Alberta",
+                "regionCode": "AB",
+                "timezone": "America/Edmonton",
+                "longitude": "-114.08529",
+                "latitude": "51.05011",
+                "postalCode": "T3S",
+                "tlsVersion": "TLSv1.3",
+                "tlsCipher": "AEAD-AES128-GCM-SHA256",
+                "tlsClientRandom": "mp22GQ5C4LBm8QpTD8C+vrD+ub/LITlJGuuLUQAxsqA=",
+                "tlsClientCiphersSha1": "3HTt3+R/6BL3zeALJDSq0pR1yOQ=",
+                "tlsClientExtensionsSha1": "y+qUfmLiMTOqkC2/qSPziKyMXZ4=",
+                "tlsClientExtensionsSha1Le": "v6A3CPLXn2Ibd4MHXzUaydtEKws=",
+                "tlsClientHelloLength": "1751",
+                "tlsClientAuth": {
+                    "certPresented": "0",
+                    "certVerified": "NONE",
+                    "certRevoked": "0",
+                    "certIssuerDN": "",
+                    "certSubjectDN": "",
+                    "certIssuerDNRFC2253": "",
+                    "certSubjectDNRFC2253": "",
+                    "certIssuerDNLegacy": "",
+                    "certSubjectDNLegacy": "",
+                    "certSerial": "",
+                    "certIssuerSerial": "",
+                    "certSKI": "",
+                    "certIssuerSKI": "",
+                    "certFingerprintSHA1": "",
+                    "certFingerprintSHA256": "",
+                    "certNotBefore": "",
+                    "certNotAfter": "",
+                    "certRFC9440": "",
+                    "certRFC9440TooLarge": false,
+                    "certChainRFC9440": "",
+                    "certChainRFC9440TooLarge": false
+                },
+                "verifiedBotCategory": "",
+                "edgeL4": {
+                    "deliveryRate": 102616
+                }
+            }
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 169,
+    "cpuTime": 3,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "2026-07-25T08:29:59.163Z WARN [Better Auth]: [better-auth] Base URL could not be determined. Please set a valid base URL using the baseURL config option or the BETTER_AUTH_URL environment variable. Without this, callbacks and redirects may not work correctly."
+            ],
+            "level": "warn",
+            "timestamp": 1784968199163
+        },
+        {
+            "message": [
+                "{\"ts\":\"2026-07-25T08:29:59.321Z\",\"level\":\"error\",\"msg\":\"session cookie auth threw; returning 401\",\"op\":\"auth.session_check\",\"err\":{\"message\":\"Failed query: insert into \\\"tenant_shard\\\" (\\\"tenant_id\\\", \\\"binding_name\\\", \\\"created_at\\\") values (?, ?, ?) on conflict do nothing\\nparams: tn_c057971918d44224,MAIN_DB,1784968199305\",\"name\":\"Error\",\"stack\":\"Error: Failed query: insert into \\\"tenant_shard\\\" (\\\"tenant_id\\\", \\\"binding_name\\\", \\\"created_at\\\") values (?, ?, ?) on conflict do nothing\\nparams: tn_c057971918d44224,MAIN_DB,1784968199305\\n    at D1PreparedQuery.queryWithCache (index.js:9589:19)\\n    at async D1PreparedQuery.run (index.js:16800:16)\\n    at async runOnce (index.js:16592:5)\\n    at async SqlTenantShardDirectoryRepo.insert (index.js:17067:9)\",\"cause\":\"Error: D1_ERROR: no such table: tenant_shard: SQLITE_ERROR\"}}"
+            ],
+            "level": "error",
+            "timestamp": 1784968199321
+        }
+    ],
+    "eventTimestamp": 1784968199163,
+    "event": {
+        "request": {
+            "url": "https://managed-agents.3552d90c.workers.dev/v1/me/tenants",
+            "method": "GET",
+            "headers": {
+                "accept": "*/*",
+                "accept-encoding": "gzip, br",
+                "accept-language": "en-US,en;q=0.9,ar;q=0.8",
+                "cf-connecting-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a",
+                "cf-ipcountry": "CA",
+                "cf-ray": "a209ccccc9dc5e5d",
+                "cf-visitor": "{\"scheme\":\"https\"}",
+                "connection": "Keep-Alive",
+                "cookie": "REDACTED",
+                "host": "managed-agents.3552d90c.workers.dev",
+                "priority": "u=1, i",
+                "referer": "https://managed-agents.3552d90c.workers.dev/agents",
+                "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Google Chrome\";v=\"150\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-ch-ua-platform": "\"Linux\"",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-origin",
+                "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+                "x-forwarded-proto": "https",
+                "x-real-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a"
+            },
+            "cf": {
+                "httpProtocol": "HTTP/3",
+                "clientAcceptEncoding": "gzip, deflate, br",
+                "requestPriority": "",
+                "edgeRequestKeepAliveStatus": 1,
+                "requestHeaderNames": {},
+                "clientTcpRtt": 0,
+                "clientQuicRtt": 22,
+                "colo": "YVR",
+                "asn": 852,
+                "asOrganization": "TELUS-FIBRE-CLGRAB49",
+                "country": "CA",
+                "isEUCountry": false,
+                "city": "Calgary",
+                "continent": "NA",
+                "region": "Alberta",
+                "regionCode": "AB",
+                "timezone": "America/Edmonton",
+                "longitude": "-114.08529",
+                "latitude": "51.05011",
+                "postalCode": "T3S",
+                "tlsVersion": "TLSv1.3",
+                "tlsCipher": "AEAD-AES128-GCM-SHA256",
+                "tlsClientRandom": "mp22GQ5C4LBm8QpTD8C+vrD+ub/LITlJGuuLUQAxsqA=",
+                "tlsClientCiphersSha1": "3HTt3+R/6BL3zeALJDSq0pR1yOQ=",
+                "tlsClientExtensionsSha1": "y+qUfmLiMTOqkC2/qSPziKyMXZ4=",
+                "tlsClientExtensionsSha1Le": "v6A3CPLXn2Ibd4MHXzUaydtEKws=",
+                "tlsClientHelloLength": "1751",
+                "tlsClientAuth": {
+                    "certPresented": "0",
+                    "certVerified": "NONE",
+                    "certRevoked": "0",
+                    "certIssuerDN": "",
+                    "certSubjectDN": "",
+                    "certIssuerDNRFC2253": "",
+                    "certSubjectDNRFC2253": "",
+                    "certIssuerDNLegacy": "",
+                    "certSubjectDNLegacy": "",
+                    "certSerial": "",
+                    "certIssuerSerial": "",
+                    "certSKI": "",
+                    "certIssuerSKI": "",
+                    "certFingerprintSHA1": "",
+                    "certFingerprintSHA256": "",
+                    "certNotBefore": "",
+                    "certNotAfter": "",
+                    "certRFC9440": "",
+                    "certRFC9440TooLarge": false,
+                    "certChainRFC9440": "",
+                    "certChainRFC9440TooLarge": false
+                },
+                "verifiedBotCategory": "",
+                "edgeL4": {
+                    "deliveryRate": 102616
+                }
+            }
+        },
+        "response": {
+            "status": 401
+        }
+    }
+}
+{
+    "wallTime": 167,
+    "cpuTime": 4,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "2026-07-25T08:29:59.165Z WARN [Better Auth]: [better-auth] Base URL could not be determined. Please set a valid base URL using the baseURL config option or the BETTER_AUTH_URL environment variable. Without this, callbacks and redirects may not work correctly."
+            ],
+            "level": "warn",
+            "timestamp": 1784968199165
+        },
+        {
+            "message": [
+                "{\"ts\":\"2026-07-25T08:29:59.318Z\",\"level\":\"error\",\"msg\":\"session cookie auth threw; returning 401\",\"op\":\"auth.session_check\",\"err\":{\"message\":\"Failed query: insert into \\\"tenant_shard\\\" (\\\"tenant_id\\\", \\\"binding_name\\\", \\\"created_at\\\") values (?, ?, ?) on conflict do nothing\\nparams: tn_68de691cb0fe4bf6,MAIN_DB,1784968199306\",\"name\":\"Error\",\"stack\":\"Error: Failed query: insert into \\\"tenant_shard\\\" (\\\"tenant_id\\\", \\\"binding_name\\\", \\\"created_at\\\") values (?, ?, ?) on conflict do nothing\\nparams: tn_68de691cb0fe4bf6,MAIN_DB,1784968199306\\n    at D1PreparedQuery.queryWithCache (index.js:9589:19)\\n    at async D1PreparedQuery.run (index.js:16800:16)\\n    at async runOnce (index.js:16592:5)\\n    at async SqlTenantShardDirectoryRepo.insert (index.js:17067:9)\",\"cause\":\"Error: D1_ERROR: no such table: tenant_shard: SQLITE_ERROR\"}}"
+            ],
+            "level": "error",
+            "timestamp": 1784968199318
+        }
+    ],
+    "eventTimestamp": 1784968199164,
+    "event": {
+        "request": {
+            "url": "https://managed-agents.3552d90c.workers.dev/v1/agents?status=active&limit=20",
+            "method": "GET",
+            "headers": {
+                "accept": "*/*",
+                "accept-encoding": "gzip, br",
+                "accept-language": "en-US,en;q=0.9,ar;q=0.8",
+                "cf-connecting-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a",
+                "cf-ipcountry": "CA",
+                "cf-ray": "a209ccccc9de5e5d",
+                "cf-visitor": "{\"scheme\":\"https\"}",
+                "connection": "Keep-Alive",
+                "cookie": "REDACTED",
+                "host": "managed-agents.3552d90c.workers.dev",
+                "priority": "u=1, i",
+                "referer": "https://managed-agents.3552d90c.workers.dev/agents",
+                "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Google Chrome\";v=\"150\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-ch-ua-platform": "\"Linux\"",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-origin",
+                "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+                "x-forwarded-proto": "https",
+                "x-real-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a"
+            },
+            "cf": {
+                "httpProtocol": "HTTP/3",
+                "clientAcceptEncoding": "gzip, deflate, br",
+                "requestPriority": "",
+                "edgeRequestKeepAliveStatus": 1,
+                "requestHeaderNames": {},
+                "clientTcpRtt": 0,
+                "clientQuicRtt": 22,
+                "colo": "YVR",
+                "asn": 852,
+                "asOrganization": "TELUS-FIBRE-CLGRAB49",
+                "country": "CA",
+                "isEUCountry": false,
+                "city": "Calgary",
+                "continent": "NA",
+                "region": "Alberta",
+                "regionCode": "AB",
+                "timezone": "America/Edmonton",
+                "longitude": "-114.08529",
+                "latitude": "51.05011",
+                "postalCode": "T3S",
+                "tlsVersion": "TLSv1.3",
+                "tlsCipher": "AEAD-AES128-GCM-SHA256",
+                "tlsClientRandom": "mp22GQ5C4LBm8QpTD8C+vrD+ub/LITlJGuuLUQAxsqA=",
+                "tlsClientCiphersSha1": "3HTt3+R/6BL3zeALJDSq0pR1yOQ=",
+                "tlsClientExtensionsSha1": "y+qUfmLiMTOqkC2/qSPziKyMXZ4=",
+                "tlsClientExtensionsSha1Le": "v6A3CPLXn2Ibd4MHXzUaydtEKws=",
+                "tlsClientHelloLength": "1751",
+                "tlsClientAuth": {
+                    "certPresented": "0",
+                    "certVerified": "NONE",
+                    "certRevoked": "0",
+                    "certIssuerDN": "",
+                    "certSubjectDN": "",
+                    "certIssuerDNRFC2253": "",
+                    "certSubjectDNRFC2253": "",
+                    "certIssuerDNLegacy": "",
+                    "certSubjectDNLegacy": "",
+                    "certSerial": "",
+                    "certIssuerSerial": "",
+                    "certSKI": "",
+                    "certIssuerSKI": "",
+                    "certFingerprintSHA1": "",
+                    "certFingerprintSHA256": "",
+                    "certNotBefore": "",
+                    "certNotAfter": "",
+                    "certRFC9440": "",
+                    "certRFC9440TooLarge": false,
+                    "certChainRFC9440": "",
+                    "certChainRFC9440TooLarge": false
+                },
+                "verifiedBotCategory": "",
+                "edgeL4": {
+                    "deliveryRate": 102616
+                }
+            }
+        },
+        "response": {
+            "status": 401
+        }
+    }
+}
+{
+    "wallTime": 151,
+    "cpuTime": 6,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "2026-07-25T08:29:59.167Z WARN [Better Auth]: [better-auth] Base URL could not be determined. Please set a valid base URL using the baseURL config option or the BETTER_AUTH_URL environment variable. Without this, callbacks and redirects may not work correctly."
+            ],
+            "level": "warn",
+            "timestamp": 1784968199167
+        },
+        {
+            "message": [
+                "{\"ts\":\"2026-07-25T08:29:59.300Z\",\"level\":\"error\",\"msg\":\"session cookie auth threw; returning 401\",\"op\":\"auth.session_check\",\"err\":{\"message\":\"Failed query: insert into \\\"tenant_shard\\\" (\\\"tenant_id\\\", \\\"binding_name\\\", \\\"created_at\\\") values (?, ?, ?) on conflict do nothing\\nparams: tn_90f2d7f58898460f,MAIN_DB,1784968199264\",\"name\":\"Error\",\"stack\":\"Error: Failed query: insert into \\\"tenant_shard\\\" (\\\"tenant_id\\\", \\\"binding_name\\\", \\\"created_at\\\") values (?, ?, ?) on conflict do nothing\\nparams: tn_90f2d7f58898460f,MAIN_DB,1784968199264\\n    at D1PreparedQuery.queryWithCache (index.js:9589:19)\\n    at async D1PreparedQuery.run (index.js:16800:16)\\n    at async runOnce (index.js:16592:5)\\n    at async SqlTenantShardDirectoryRepo.insert (index.js:17067:9)\",\"cause\":\"Error: D1_ERROR: no such table: tenant_shard: SQLITE_ERROR\"}}"
+            ],
+            "level": "error",
+            "timestamp": 1784968199300
+        }
+    ],
+    "eventTimestamp": 1784968199164,
+    "event": {
+        "request": {
+            "url": "https://managed-agents.3552d90c.workers.dev/v1/agents?limit=200&status=any",
+            "method": "GET",
+            "headers": {
+                "accept": "*/*",
+                "accept-encoding": "gzip, br",
+                "accept-language": "en-US,en;q=0.9,ar;q=0.8",
+                "cf-connecting-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a",
+                "cf-ipcountry": "CA",
+                "cf-ray": "a209ccccc9dd5e5d",
+                "cf-visitor": "{\"scheme\":\"https\"}",
+                "connection": "Keep-Alive",
+                "cookie": "REDACTED",
+                "host": "managed-agents.3552d90c.workers.dev",
+                "priority": "u=1, i",
+                "referer": "https://managed-agents.3552d90c.workers.dev/agents",
+                "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Google Chrome\";v=\"150\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-ch-ua-platform": "\"Linux\"",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-origin",
+                "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+                "x-forwarded-proto": "https",
+                "x-real-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a"
+            },
+            "cf": {
+                "httpProtocol": "HTTP/3",
+                "clientAcceptEncoding": "gzip, deflate, br",
+                "requestPriority": "",
+                "edgeRequestKeepAliveStatus": 1,
+                "requestHeaderNames": {},
+                "clientTcpRtt": 0,
+                "clientQuicRtt": 22,
+                "colo": "YVR",
+                "asn": 852,
+                "asOrganization": "TELUS-FIBRE-CLGRAB49",
+                "country": "CA",
+                "isEUCountry": false,
+                "city": "Calgary",
+                "continent": "NA",
+                "region": "Alberta",
+                "regionCode": "AB",
+                "timezone": "America/Edmonton",
+                "longitude": "-114.08529",
+                "latitude": "51.05011",
+                "postalCode": "T3S",
+                "tlsVersion": "TLSv1.3",
+                "tlsCipher": "AEAD-AES128-GCM-SHA256",
+                "tlsClientRandom": "mp22GQ5C4LBm8QpTD8C+vrD+ub/LITlJGuuLUQAxsqA=",
+                "tlsClientCiphersSha1": "3HTt3+R/6BL3zeALJDSq0pR1yOQ=",
+                "tlsClientExtensionsSha1": "y+qUfmLiMTOqkC2/qSPziKyMXZ4=",
+                "tlsClientExtensionsSha1Le": "v6A3CPLXn2Ibd4MHXzUaydtEKws=",
+                "tlsClientHelloLength": "1751",
+                "tlsClientAuth": {
+                    "certPresented": "0",
+                    "certVerified": "NONE",
+                    "certRevoked": "0",
+                    "certIssuerDN": "",
+                    "certSubjectDN": "",
+                    "certIssuerDNRFC2253": "",
+                    "certSubjectDNRFC2253": "",
+                    "certIssuerDNLegacy": "",
+                    "certSubjectDNLegacy": "",
+                    "certSerial": "",
+                    "certIssuerSerial": "",
+                    "certSKI": "",
+                    "certIssuerSKI": "",
+                    "certFingerprintSHA1": "",
+                    "certFingerprintSHA256": "",
+                    "certNotBefore": "",
+                    "certNotAfter": "",
+                    "certRFC9440": "",
+                    "certRFC9440TooLarge": false,
+                    "certChainRFC9440": "",
+                    "certChainRFC9440TooLarge": false
+                },
+                "verifiedBotCategory": "",
+                "edgeL4": {
+                    "deliveryRate": 102616
+                }
+            }
+        },
+        "response": {
+            "status": 401
+        }
+    }
+}
+{
+    "wallTime": 146,
+    "cpuTime": 3,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "2026-07-25T08:30:00.167Z WARN [Better Auth]: [better-auth] Base URL could not be determined. Please set a valid base URL using the baseURL config option or the BETTER_AUTH_URL environment variable. Without this, callbacks and redirects may not work correctly."
+            ],
+            "level": "warn",
+            "timestamp": 1784968200167
+        },
+        {
+            "message": [
+                "{\"ts\":\"2026-07-25T08:30:00.302Z\",\"level\":\"error\",\"msg\":\"session cookie auth threw; returning 401\",\"op\":\"auth.session_check\",\"err\":{\"message\":\"Failed query: insert into \\\"tenant_shard\\\" (\\\"tenant_id\\\", \\\"binding_name\\\", \\\"created_at\\\") values (?, ?, ?) on conflict do nothing\\nparams: tn_51329eeeb83a4448,MAIN_DB,1784968200263\",\"name\":\"Error\",\"stack\":\"Error: Failed query: insert into \\\"tenant_shard\\\" (\\\"tenant_id\\\", \\\"binding_name\\\", \\\"created_at\\\") values (?, ?, ?) on conflict do nothing\\nparams: tn_51329eeeb83a4448,MAIN_DB,1784968200263\\n    at D1PreparedQuery.queryWithCache (index.js:9589:19)\\n    at async D1PreparedQuery.run (index.js:16800:16)\\n    at async runOnce (index.js:16592:5)\\n    at async SqlTenantShardDirectoryRepo.insert (index.js:17067:9)\",\"cause\":\"Error: D1_ERROR: no such table: tenant_shard: SQLITE_ERROR\"}}"
+            ],
+            "level": "error",
+            "timestamp": 1784968200302
+        }
+    ],
+    "eventTimestamp": 1784968200167,
+    "event": {
+        "request": {
+            "url": "https://managed-agents.3552d90c.workers.dev/v1/agents?status=active&limit=20",
+            "method": "GET",
+            "headers": {
+                "accept": "*/*",
+                "accept-encoding": "gzip, br",
+                "accept-language": "en-US,en;q=0.9,ar;q=0.8",
+                "cf-connecting-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a",
+                "cf-ipcountry": "CA",
+                "cf-ray": "a209ccd30a2a5e5d",
+                "cf-visitor": "{\"scheme\":\"https\"}",
+                "connection": "Keep-Alive",
+                "cookie": "REDACTED",
+                "host": "managed-agents.3552d90c.workers.dev",
+                "priority": "u=1, i",
+                "referer": "https://managed-agents.3552d90c.workers.dev/agents",
+                "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Google Chrome\";v=\"150\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-ch-ua-platform": "\"Linux\"",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-origin",
+                "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+                "x-forwarded-proto": "https",
+                "x-real-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a"
+            },
+            "cf": {
+                "httpProtocol": "HTTP/3",
+                "clientAcceptEncoding": "gzip, deflate, br",
+                "requestPriority": "",
+                "edgeRequestKeepAliveStatus": 1,
+                "requestHeaderNames": {},
+                "clientTcpRtt": 0,
+                "clientQuicRtt": 22,
+                "colo": "YVR",
+                "asn": 852,
+                "asOrganization": "TELUS-FIBRE-CLGRAB49",
+                "country": "CA",
+                "isEUCountry": false,
+                "city": "Calgary",
+                "continent": "NA",
+                "region": "Alberta",
+                "regionCode": "AB",
+                "timezone": "America/Edmonton",
+                "longitude": "-114.08529",
+                "latitude": "51.05011",
+                "postalCode": "T3S",
+                "tlsVersion": "TLSv1.3",
+                "tlsCipher": "AEAD-AES128-GCM-SHA256",
+                "tlsClientRandom": "mp22GQ5C4LBm8QpTD8C+vrD+ub/LITlJGuuLUQAxsqA=",
+                "tlsClientCiphersSha1": "3HTt3+R/6BL3zeALJDSq0pR1yOQ=",
+                "tlsClientExtensionsSha1": "y+qUfmLiMTOqkC2/qSPziKyMXZ4=",
+                "tlsClientExtensionsSha1Le": "v6A3CPLXn2Ibd4MHXzUaydtEKws=",
+                "tlsClientHelloLength": "1751",
+                "tlsClientAuth": {
+                    "certPresented": "0",
+                    "certVerified": "NONE",
+                    "certRevoked": "0",
+                    "certIssuerDN": "",
+                    "certSubjectDN": "",
+                    "certIssuerDNRFC2253": "",
+                    "certSubjectDNRFC2253": "",
+                    "certIssuerDNLegacy": "",
+                    "certSubjectDNLegacy": "",
+                    "certSerial": "",
+                    "certIssuerSerial": "",
+                    "certSKI": "",
+                    "certIssuerSKI": "",
+                    "certFingerprintSHA1": "",
+                    "certFingerprintSHA256": "",
+                    "certNotBefore": "",
+                    "certNotAfter": "",
+                    "certRFC9440": "",
+                    "certRFC9440TooLarge": false,
+                    "certChainRFC9440": "",
+                    "certChainRFC9440TooLarge": false
+                },
+                "verifiedBotCategory": "",
+                "edgeL4": {
+                    "deliveryRate": 102616
+                }
+            }
+        },
+        "response": {
+            "status": 401
+        }
+    }
+}
+{
+    "wallTime": 160,
+    "cpuTime": 3,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "2026-07-25T08:30:00.168Z WARN [Better Auth]: [better-auth] Base URL could not be determined. Please set a valid base URL using the baseURL config option or the BETTER_AUTH_URL environment variable. Without this, callbacks and redirects may not work correctly."
+            ],
+            "level": "warn",
+            "timestamp": 1784968200168
+        },
+        {
+            "message": [
+                "{\"ts\":\"2026-07-25T08:30:00.314Z\",\"level\":\"error\",\"msg\":\"session cookie auth threw; returning 401\",\"op\":\"auth.session_check\",\"err\":{\"message\":\"Failed query: insert into \\\"tenant_shard\\\" (\\\"tenant_id\\\", \\\"binding_name\\\", \\\"created_at\\\") values (?, ?, ?) on conflict do nothing\\nparams: tn_14a0bac74d554071,MAIN_DB,1784968200302\",\"name\":\"Error\",\"stack\":\"Error: Failed query: insert into \\\"tenant_shard\\\" (\\\"tenant_id\\\", \\\"binding_name\\\", \\\"created_at\\\") values (?, ?, ?) on conflict do nothing\\nparams: tn_14a0bac74d554071,MAIN_DB,1784968200302\\n    at D1PreparedQuery.queryWithCache (index.js:9589:19)\\n    at async D1PreparedQuery.run (index.js:16800:16)\\n    at async runOnce (index.js:16592:5)\\n    at async SqlTenantShardDirectoryRepo.insert (index.js:17067:9)\",\"cause\":\"Error: D1_ERROR: no such table: tenant_shard: SQLITE_ERROR\"}}"
+            ],
+            "level": "error",
+            "timestamp": 1784968200314
+        }
+    ],
+    "eventTimestamp": 1784968200168,
+    "event": {
+        "request": {
+            "url": "https://managed-agents.3552d90c.workers.dev/v1/me/tenants",
+            "method": "GET",
+            "headers": {
+                "accept": "*/*",
+                "accept-encoding": "gzip, br",
+                "accept-language": "en-US,en;q=0.9,ar;q=0.8",
+                "cf-connecting-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a",
+                "cf-ipcountry": "CA",
+                "cf-ray": "a209ccd30a2b5e5d",
+                "cf-visitor": "{\"scheme\":\"https\"}",
+                "connection": "Keep-Alive",
+                "cookie": "REDACTED",
+                "host": "managed-agents.3552d90c.workers.dev",
+                "priority": "u=1, i",
+                "referer": "https://managed-agents.3552d90c.workers.dev/agents",
+                "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Google Chrome\";v=\"150\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-ch-ua-platform": "\"Linux\"",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-origin",
+                "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+                "x-forwarded-proto": "https",
+                "x-real-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a"
+            },
+            "cf": {
+                "httpProtocol": "HTTP/3",
+                "clientAcceptEncoding": "gzip, deflate, br",
+                "requestPriority": "",
+                "edgeRequestKeepAliveStatus": 1,
+                "requestHeaderNames": {},
+                "clientTcpRtt": 0,
+                "clientQuicRtt": 22,
+                "colo": "YVR",
+                "asn": 852,
+                "asOrganization": "TELUS-FIBRE-CLGRAB49",
+                "country": "CA",
+                "isEUCountry": false,
+                "city": "Calgary",
+                "continent": "NA",
+                "region": "Alberta",
+                "regionCode": "AB",
+                "timezone": "America/Edmonton",
+                "longitude": "-114.08529",
+                "latitude": "51.05011",
+                "postalCode": "T3S",
+                "tlsVersion": "TLSv1.3",
+                "tlsCipher": "AEAD-AES128-GCM-SHA256",
+                "tlsClientRandom": "mp22GQ5C4LBm8QpTD8C+vrD+ub/LITlJGuuLUQAxsqA=",
+                "tlsClientCiphersSha1": "3HTt3+R/6BL3zeALJDSq0pR1yOQ=",
+                "tlsClientExtensionsSha1": "y+qUfmLiMTOqkC2/qSPziKyMXZ4=",
+                "tlsClientExtensionsSha1Le": "v6A3CPLXn2Ibd4MHXzUaydtEKws=",
+                "tlsClientHelloLength": "1751",
+                "tlsClientAuth": {
+                    "certPresented": "0",
+                    "certVerified": "NONE",
+                    "certRevoked": "0",
+                    "certIssuerDN": "",
+                    "certSubjectDN": "",
+                    "certIssuerDNRFC2253": "",
+                    "certSubjectDNRFC2253": "",
+                    "certIssuerDNLegacy": "",
+                    "certSubjectDNLegacy": "",
+                    "certSerial": "",
+                    "certIssuerSerial": "",
+                    "certSKI": "",
+                    "certIssuerSKI": "",
+                    "certFingerprintSHA1": "",
+                    "certFingerprintSHA256": "",
+                    "certNotBefore": "",
+                    "certNotAfter": "",
+                    "certRFC9440": "",
+                    "certRFC9440TooLarge": false,
+                    "certChainRFC9440": "",
+                    "certChainRFC9440TooLarge": false
+                },
+                "verifiedBotCategory": "",
+                "edgeL4": {
+                    "deliveryRate": 102616
+                }
+            }
+        },
+        "response": {
+            "status": 401
+        }
+    }
+}
+{
+    "wallTime": 15,
+    "cpuTime": 2,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "{\"ts\":\"2026-07-25T08:30:03.776Z\",\"level\":\"error\",\"msg\":\"tickEvalRuns failed\",\"op\":\"cron.tick_eval_runs\",\"err\":{\"message\":\"Failed query: select \\\"binding_name\\\", \\\"status\\\", \\\"tenant_count\\\", \\\"size_bytes\\\", \\\"observed_at\\\", \\\"notes\\\" from \\\"shard_pool\\\" order by \\\"shard_pool\\\".\\\"binding_name\\\"\\nparams: \",\"name\":\"Error\",\"stack\":\"Error: Failed query: select \\\"binding_name\\\", \\\"status\\\", \\\"tenant_count\\\", \\\"size_bytes\\\", \\\"observed_at\\\", \\\"notes\\\" from \\\"shard_pool\\\" order by \\\"shard_pool\\\".\\\"binding_name\\\"\\nparams: \\n    at D1PreparedQuery.queryWithCache (index.js:9589:19)\\n    at async D1PreparedQuery.values (index.js:16861:16)\\n    at async D1PreparedQuery.all (index.js:16813:22)\\n    at async getAll (index.js:16586:12)\",\"cause\":\"Error: D1_ERROR: no such table: shard_pool: SQLITE_ERROR\"}}"
+            ],
+            "level": "error",
+            "timestamp": 1784968203776
+        },
+        {
+            "message": [
+                "{\"ts\":\"2026-07-25T08:30:03.777Z\",\"level\":\"error\",\"msg\":\"dream recovery fan-out failed\",\"op\":\"cron.dream_recovery\",\"err\":{\"message\":\"Failed query: select \\\"binding_name\\\", \\\"status\\\", \\\"tenant_count\\\", \\\"size_bytes\\\", \\\"observed_at\\\", \\\"notes\\\" from \\\"shard_pool\\\" order by \\\"shard_pool\\\".\\\"binding_name\\\"\\nparams: \",\"name\":\"Error\",\"stack\":\"Error: Failed query: select \\\"binding_name\\\", \\\"status\\\", \\\"tenant_count\\\", \\\"size_bytes\\\", \\\"observed_at\\\", \\\"notes\\\" from \\\"shard_pool\\\" order by \\\"shard_pool\\\".\\\"binding_name\\\"\\nparams: \\n    at D1PreparedQuery.queryWithCache (index.js:9589:19)\\n    at async D1PreparedQuery.values (index.js:16861:16)\\n    at async D1PreparedQuery.all (index.js:16813:22)\\n    at async getAll (index.js:16586:12)\",\"cause\":\"Error: D1_ERROR: no such table: shard_pool: SQLITE_ERROR\"}}"
+            ],
+            "level": "error",
+            "timestamp": 1784968203777
+        }
+    ],
+    "eventTimestamp": 1784968203767,
+    "event": {
+        "cron": "* * * * *",
+        "scheduledTime": 1784968203000
+    }
+}

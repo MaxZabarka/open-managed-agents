@@ -258,6 +258,24 @@ apply_migrations() {
 
 apply_migrations "openma-auth"
 apply_migrations "openma-integrations"
+
+# Router tables (shard_pool / tenant_shard / memory_store_tenant) are REQUIRED
+# in single-D1 mode too: the runtime falls back ROUTER_DB ?? MAIN_DB and the
+# session check inserts into tenant_shard on tenant provisioning — without
+# them EVERY authenticated request 401s ("no such table: tenant_shard").
+# They live in a separate migrations dir that wrangler can't track against
+# the same DB, so apply the consolidated file guarded by an existence check.
+if npx wrangler d1 execute openma-auth --remote --json \
+     --command "SELECT name FROM sqlite_master WHERE name='tenant_shard'" \
+     --config apps/main/wrangler.jsonc 2>/dev/null | grep -q tenant_shard; then
+  ok "router tables already present in openma-auth"
+else
+  npx wrangler d1 execute openma-auth --remote -y \
+    --file apps/main/migrations-router/0001_consolidated.sql \
+    --config apps/main/wrangler.jsonc 2>&1 | tail -2 \
+    || die "router-table bootstrap failed for openma-auth"
+  ok "router tables applied to openma-auth (single-D1 mode)"
+fi
 # ROUTER_DB is the same physical DB as AUTH_DB in single-D1 mode (the
 # code falls back via env.ROUTER_DB ?? env.AUTH_DB). The router tables
 # (tenant_shard, shard_pool, memory_store_tenant) are also in the AUTH_DB
