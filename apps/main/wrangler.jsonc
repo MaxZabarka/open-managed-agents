@@ -39,14 +39,14 @@
   ],
 
   "kv_namespaces": [
-    { "binding": "CONFIG_KV", "id": "<set-by-setup-cf-sh>" }
+    { "binding": "CONFIG_KV", "id": "4f7d58b8485c41e0ac62bcebaec3927b" }
   ],
 
   // Public origin of the integrations gateway. For self-host this is
   // typically https://integrations.<your-domain> or the integrations
   // worker's *.workers.dev URL. setup-cf.sh fills it in.
   "vars": {
-    "INTEGRATIONS_ORIGIN": "<set-by-setup-cf-sh>",
+    "INTEGRATIONS_ORIGIN": "https://managed-agents-integrations.3552d90c.workers.dev",
     "TURNSTILE_SITE_KEY": ""
   },
 
@@ -66,8 +66,8 @@
   // to CfSharedAuthDbProvider when AUTH_DB_01 isn't bound, so signup
   // and routing work without any shard tables.
   "d1_databases": [
-    { "binding": "MAIN_DB",         "database_name": "openma-auth",         "database_id": "<set-by-setup-cf-sh>" },
-    { "binding": "INTEGRATIONS_DB", "database_name": "openma-integrations", "database_id": "<set-by-setup-cf-sh>" }
+    { "binding": "MAIN_DB",         "database_name": "openma-auth",         "database_id": "c3494ee7-5095-4654-b744-e71c78880957", "migrations_dir": "migrations" },
+    { "binding": "INTEGRATIONS_DB", "database_name": "openma-integrations", "database_id": "aaaae233-d360-4bb9-a646-5eb1d8ffe14b", "migrations_dir": "migrations-integrations" }
   ],
 
   "durable_objects": {

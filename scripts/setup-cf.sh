@@ -242,14 +242,22 @@ patch_var apps/integrations/wrangler.jsonc GATEWAY_ORIGIN \
 say "3. Apply D1 migrations"
 
 apply_migrations() {
-  local db_name="$1" dir="$2"
-  echo "  → $db_name (from $dir)"
-  npx wrangler d1 migrations apply "$db_name" --remote --config apps/main/wrangler.jsonc \
-    --migrations-dir "$dir" 2>&1 | grep -E '(Applied|No migrations)' || true
+  # --migrations-dir is not a wrangler flag (it silently fails with "Unknown
+  # arguments"); the per-database "migrations_dir" field in wrangler.jsonc is
+  # the supported mechanism. Failures must be fatal — an unmigrated auth DB
+  # makes signup return an opaque "Authentication failed".
+  local db_name="$1"
+  echo "  → $db_name"
+  local out
+  out=$(npx wrangler d1 migrations apply "$db_name" --remote --config apps/main/wrangler.jsonc 2>&1) || {
+    echo "$out" | tail -5
+    die "d1 migrations apply failed for $db_name"
+  }
+  echo "$out" | grep -E '(Applied|No migrations|up to date)' || true
 }
 
-apply_migrations "openma-auth"         "apps/main/migrations"
-apply_migrations "openma-integrations" "apps/main/migrations-integrations"
+apply_migrations "openma-auth"
+apply_migrations "openma-integrations"
 # ROUTER_DB is the same physical DB as AUTH_DB in single-D1 mode (the
 # code falls back via env.ROUTER_DB ?? env.AUTH_DB). The router tables
 # (tenant_shard, shard_pool, memory_store_tenant) are also in the AUTH_DB

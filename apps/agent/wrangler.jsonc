@@ -36,14 +36,14 @@
   },
 
   "kv_namespaces": [
-    { "binding": "CONFIG_KV", "id": "<set-by-setup-cf-sh>" }
+    { "binding": "CONFIG_KV", "id": "4f7d58b8485c41e0ac62bcebaec3927b" }
   ],
 
   // D1 layout — single-D1 self-host baseline. Same auto-detection as
   // apps/main/wrangler.jsonc: when AUTH_DB_01 isn't bound, the shared
   // MemoryStoreService resolves every tenant to MAIN_DB.
   "d1_databases": [
-    { "binding": "MAIN_DB", "database_name": "openma-auth", "database_id": "<set-by-setup-cf-sh>" }
+    { "binding": "MAIN_DB", "database_name": "openma-auth", "database_id": "c3494ee7-5095-4654-b744-e71c78880957" }
   ],
 
   // Service bindings:
@@ -80,7 +80,7 @@
     "MEMORY_BUCKET_NAME": "managed-agents-memory",
     "WORKSPACE_BUCKET_NAME": "managed-agents-workspace",
     "BACKUP_BUCKET_NAME": "managed-agents-backups",
-    "CLOUDFLARE_ACCOUNT_ID": "<set-by-setup-cf-sh>"
+    "CLOUDFLARE_ACCOUNT_ID": "3552d90c86602bdb59d8b9b254f5fcfd"
   },
 
   "r2_buckets": [
