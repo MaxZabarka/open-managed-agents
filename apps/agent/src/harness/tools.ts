@@ -1116,13 +1116,26 @@ export async function buildTools(
   // at the tool-registration layer below — only declared servers get
   // registered, and the model has no other tool that takes an arbitrary URL.
   if (agentConfig.mcp_servers?.length) {
+    // An agent that DECLARES MCP servers but silently runs without them is
+    // the worst failure mode: the model can't call the tool, so it
+    // confabulates ("I don't have a Linear tool") and the turn looks
+    // successful while doing nothing. Collect every attach failure and, at
+    // the end, throw an explicit error naming the failed servers — refusing
+    // to run tool-blind. The harness surfaces the throw as session.error and
+    // OMA reschedules, so a transient attach failure retries with a clear
+    // cause instead of degrading silently.
+    const mcpFailures: Array<{ name: string; reason: string }> = [];
     if (!env?.mcpBinding || !env?.tenantId || !env?.sessionId) {
       // Wiring missing — buildTools called from a context that didn't
-      // thread the binding through (legacy path or test harness). Skip MCP
-      // setup silently rather than crash; the model just won't see the
-      // tools and will report "I don't have that available". Caller logs
-      // are responsible for surfacing this misconfiguration in real
-      // deployments — see SessionDO callsites which always thread it.
+      // thread the binding through. In a real session (SessionDO callsites
+      // always thread it) this is a hard misconfiguration, not a reason to
+      // run tool-blind.
+      for (const server of agentConfig.mcp_servers) {
+        mcpFailures.push({
+          name: server.name,
+          reason: "MCP binding/tenant/session not threaded into buildTools",
+        });
+      }
     } else {
       const mcpBinding = env.mcpBinding;
       const tenantId = env.tenantId;
@@ -1130,8 +1143,11 @@ export async function buildTools(
       for (const server of agentConfig.mcp_servers) {
         if (!server.url) {
           // stdio MCP whose sandbox-side spawn hasn't recorded a URL yet
-          // (warmup hasn't run, or spawn failed). Skip silently — re-attempt
-          // when the next buildTools fires after warmup.
+          // (warmup hasn't run). Genuinely transient — skip this pass and
+          // re-attempt when the next buildTools fires after warmup. NOT a
+          // failure to throw on (would break the warmup handshake), but the
+          // reschedule loop still re-runs, so it can't hang tool-blind
+          // forever without eventually surfacing a real attach error.
           continue;
         }
         const serverName = server.name;
@@ -1175,16 +1191,26 @@ export async function buildTools(
         } catch (err) {
           // Connection / handshake / tools/list failure for one server
           // (e.g. main worker unreachable, vault credential missing,
-          // upstream MCP server down, our timeout fired). Log + skip so
-          // a single misconfiguration doesn't take the whole turn down.
+          // upstream MCP server down, our timeout fired). Record it — a
+          // declared tool that won't attach is a turn-fatal error, not
+          // something to swallow.
           const msg = err instanceof Error ? err.message : String(err);
           console.error(
             `[mcp] cloud MCP setup failed for "${server.name}" (${server.url}): ${msg}`,
           );
+          mcpFailures.push({ name: server.name, reason: msg });
         } finally {
           clearTimeout(timeoutHandle);
         }
       }
+    }
+    if (mcpFailures.length > 0) {
+      throw new Error(
+        `MCP tools failed to attach for ${String(mcpFailures.length)} declared server(s): ` +
+          mcpFailures.map((f) => `"${f.name}" — ${f.reason}`).join("; ") +
+          ". Refusing to run tool-blind: a session that declares these tools cannot " +
+          "silently proceed without them.",
+      );
     }
   }
 
