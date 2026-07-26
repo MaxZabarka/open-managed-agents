@@ -288,6 +288,41 @@ export function buildIntegrationsGatewayRoutes(deps: IntegrationsGatewayDeps) {
     }
   });
 
+  // POST /linear/internal/refresh-by-vault — Linear OAuth refresh + vault
+  // rotate. Analogue of the GitHub route above (session-create lifecycle
+  // hook + mcp-proxy on-401 retry both call it). Internal-secret gated.
+  app.post("/linear/internal/refresh-by-vault", async (c) => {
+    const expected = deps.internalSecret;
+    if (!expected) return c.json({ error: "internal endpoints not configured" }, 503);
+    const provided = c.req.header("x-internal-secret");
+    if (!provided || provided !== expected) return c.json({ error: "unauthorized" }, 401);
+    let body: { userId?: string; vaultId?: string };
+    try {
+      body = (await c.req.json()) as typeof body;
+    } catch {
+      return c.json({ error: "invalid json" }, 400);
+    }
+    if (!body.userId || !body.vaultId) {
+      return c.json({ error: "userId, vaultId required" }, 400);
+    }
+    try {
+      const refreshed = await deps.installBridge.refreshLinearVault({
+        userId: body.userId,
+        vaultId: body.vaultId,
+      });
+      return c.json({ ok: true, token: refreshed.token });
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : String(err);
+      // 404 = nothing to refresh / must reinstall (no installation, dead
+      // refresh_token, no live publication); 502 = Linear refused the
+      // refresh. Mirrors the GitHub route's 404/502 split.
+      if (/no linear installation|not found|no stored refresh_token|no live publication|revoked/i.test(msg)) {
+        return c.json({ error: msg }, 404);
+      }
+      return c.json({ error: "linear_token_refresh_failed", details: msg }, 502);
+    }
+  });
+
   // ─── Slack ───────────────────────────────────────────────────────────
   // GET /slack/oauth/pub/:pubId/callback?code=&state=
   //

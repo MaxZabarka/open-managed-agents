@@ -58,11 +58,28 @@ const capRegistry = createSpecRegistry(builtinSpecs);
 
 const app = new Hono<{ Bindings: Env; Variables: { services: Services } }>();
 
+/** Linear's hosted MCP. A static_bearer credential pointing here holds a
+ *  Linear OAuth access token that expires; on 401 we re-mint it via the
+ *  installation's refresh_token (see `linearRefresh` below). Kept in sync
+ *  with LINEAR_MCP_URL in packages/linear/src/provider.ts. */
+const LINEAR_MCP_URL = "https://mcp.linear.app/mcp";
+
 export interface ProxyTarget {
   /** Real upstream MCP server URL (e.g. https://integrations.openma.dev/.../mcp). */
   upstreamUrl: string;
   /** Bearer token to inject on the upstream request. */
   upstreamToken: string;
+  /** Set when the matched credential is a Linear MCP static_bearer whose
+   *  token can be re-minted from the installation's refresh_token. On 401
+   *  `forwardWithRefresh` POSTs the integrations `/linear/internal/
+   *  refresh-by-vault` endpoint (which rotates the vault) and retries.
+   *  Distinct from `refresh` (generic OAuth token_endpoint flow) because
+   *  Linear refresh needs the installation + publication client creds that
+   *  only the integrations worker holds. */
+  linearRefresh?: {
+    userId: string;
+    vaultId: string;
+  };
   /** Set when the matched credential has the bits needed to refresh on
    *  401 (refresh_token + token_endpoint). Used by `forwardWithRefresh`
    *  to retry once with a fresh token if the upstream rejects the
@@ -125,6 +142,7 @@ export async function resolveProxyTargetByTenant(
     archived_at?: string | null;
     vault_ids?: string[] | null;
     agent_snapshot?: AgentConfig;
+    user_id?: string | null;
   };
   if (sessionAny.archived_at) return null;
 
@@ -176,6 +194,15 @@ export async function resolveProxyTargetByTenant(
           credentialId: (c as { id: string }).id,
           vaultId: g.vault_id,
         };
+      } else if (server.url === LINEAR_MCP_URL && sessionAny.user_id) {
+        // Linear's hosted MCP holds an OAuth access token that expires. The
+        // vault copy is static_bearer (no token_endpoint/refresh_token in the
+        // credential), so the generic branch above can't refresh it — the
+        // refresh lives in the integrations worker (installation refresh_token
+        // + publication client creds). Mark it so forwardWithRefresh re-mints
+        // via /linear/internal/refresh-by-vault on 401. Matches by URL so it
+        // covers pre-existing untagged creds, not just provider-tagged ones.
+        target.linearRefresh = { userId: sessionAny.user_id, vaultId: g.vault_id };
       }
       return target;
     }
@@ -439,6 +466,10 @@ export async function forwardWithRefresh(
     serverName?: string;
     callerKind: "http" | "rpc-mcp" | "rpc-outbound";
   },
+  /** Needed only for the Linear-vault refresh path (target.linearRefresh),
+   *  which POSTs the integrations worker to re-mint the token. Omit for
+   *  callers that only ever see mcp_oauth targets. */
+  env?: Env,
 ): Promise<Response> {
   const started = Date.now();
   let upstreamHost: string | undefined;
@@ -464,7 +495,8 @@ export async function forwardWithRefresh(
   // sess-pvdx9d16zitzhw39 saw all three of airtable/asana/sentry
   // permanently 403 across multiple sessions until manual SQL cleanup).
   const refreshableStatus = first.status === 401 || first.status === 403;
-  if (!refreshableStatus || !target.refresh) {
+  const canRefresh = !!target.refresh || (!!target.linearRefresh && !!env);
+  if (!refreshableStatus || !canRefresh) {
     log(
       {
         op: "mcp_proxy.forward",
@@ -492,7 +524,11 @@ export async function forwardWithRefresh(
     /* already consumed / closed */
   }
 
-  const fresh = await tryRefreshOauth(services, tenantId, target.refresh, target.upstreamToken);
+  const fresh = target.refresh
+    ? await tryRefreshOauth(services, tenantId, target.refresh, target.upstreamToken)
+    : target.linearRefresh && env
+      ? await tryRefreshLinearVault(env, target.linearRefresh)
+      : null;
   if (!fresh) {
     // Refresh failed: re-issue the original request unchanged so the
     // caller gets the upstream's actual 401 (matches old behavior).
@@ -535,6 +571,49 @@ export async function forwardWithRefresh(
     "mcp_proxy forward (after refresh)",
   );
   return retried;
+}
+
+/**
+ * Re-mint a Linear MCP access token via the integrations worker and return
+ * the fresh bearer. The integrations endpoint uses the installation's
+ * refresh_token + publication client creds (which only that worker holds) and
+ * rotates the fresh token into the vault, so the next session picks it up too.
+ * Returns null on any failure (misconfig, dead refresh_token → "reinstall",
+ * Linear refusal) — the caller then surfaces the upstream 401 unchanged.
+ */
+async function tryRefreshLinearVault(
+  env: Env,
+  linearRefresh: NonNullable<ProxyTarget["linearRefresh"]>,
+): Promise<string | null> {
+  if (!env.INTEGRATIONS || !env.INTEGRATIONS_INTERNAL_SECRET) return null;
+  try {
+    const res = await env.INTEGRATIONS.fetch(
+      "http://gateway/linear/internal/refresh-by-vault",
+      {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+          "x-internal-secret": env.INTEGRATIONS_INTERNAL_SECRET,
+        },
+        body: JSON.stringify({ userId: linearRefresh.userId, vaultId: linearRefresh.vaultId }),
+      },
+    );
+    if (!res.ok) {
+      logWarn(
+        { op: "mcp_proxy.linear_refresh_failed", vault_id: linearRefresh.vaultId, status: res.status },
+        "linear vault refresh returned non-2xx",
+      );
+      return null;
+    }
+    const data = (await res.json()) as { token?: string };
+    return data.token ?? null;
+  } catch (err) {
+    logWarn(
+      { op: "mcp_proxy.linear_refresh_threw", vault_id: linearRefresh.vaultId, err: String(err) },
+      "linear vault refresh threw",
+    );
+    return null;
+  }
 }
 
 async function tryRefreshOauth(
@@ -732,6 +811,7 @@ app.all("/:sid/:server", async (c) => {
     c.req.raw.headers,
     body,
     { sessionId: sid, serverName: serverName, callerKind: "http" },
+    c.env,
   );
 });
 

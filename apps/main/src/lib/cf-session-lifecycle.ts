@@ -392,6 +392,13 @@ async function tryGitHubBindingFastPath(
   repoUrl: string,
 ): Promise<{ token: string; vaultId: string } | null> {
   if (!env.INTEGRATIONS || !env.INTEGRATIONS_INTERNAL_SECRET || !env.MAIN_DB) return null;
+  // Installation rows live in the integrations DB, not MAIN_DB (auth). The
+  // original query hit MAIN_DB → "no such table: linear_installations" →
+  // every session create with a github_repository resource 500'd. The `user`
+  // lookup below stays on MAIN_DB (that table IS in auth). Post-0009 the
+  // canonical GitHub-App install table is github_installations (the legacy
+  // multi-provider linear_installations no longer receives github rows).
+  if (!env.INTEGRATIONS_DB) return null;
   const org = parseGitHubOrg(repoUrl);
   if (!org) return null;
   const userRow = await env.MAIN_DB
@@ -400,10 +407,10 @@ async function tryGitHubBindingFastPath(
     .first<{ id: string }>();
   const userId = userRow?.id;
   if (!userId) return null;
-  const row = await env.MAIN_DB
+  const row = await env.INTEGRATIONS_DB
     .prepare(
-      `SELECT id, vault_id FROM linear_installations
-         WHERE user_id = ? AND provider_id = 'github'
+      `SELECT id, vault_id FROM github_installations
+         WHERE user_id = ?
            AND lower(workspace_name) = lower(?)
            AND revoked_at IS NULL AND vault_id IS NOT NULL
          ORDER BY created_at DESC LIMIT 1`,

@@ -17,6 +17,8 @@ import type {
   LinearMcpCredentialLookupResult,
   RefreshGithubVaultArgs,
   RefreshGithubVaultResult,
+  RefreshLinearVaultArgs,
+  RefreshLinearVaultResult,
 } from "@open-managed-agents/integrations-core";
 import {
   mintAppJwt,
@@ -173,6 +175,29 @@ export class CfInstallBridge implements InstallBridge {
       newToken: fresh.token,
     });
     return { token: fresh.token, expiresAt: fresh.expiresAt };
+  }
+
+  async refreshLinearVault(
+    args: RefreshLinearVaultArgs,
+  ): Promise<RefreshLinearVaultResult> {
+    const env = this.opts.env;
+    const container = buildContainer(env);
+    const providers = buildProviders(env, container);
+    // Find the Linear installation bound to this vault (mirrors
+    // refreshGithubVault's listByUser + vaultId filter — no by-vault query
+    // exists on the shared InstallationRepo port).
+    const installations = await container.installations.listByUser(args.userId, "linear");
+    const installation = installations.find((i) => i.vaultId === args.vaultId);
+    if (!installation) {
+      throw new Error("no linear installation for vault");
+    }
+    // refreshAccessToken uses the installation's stored refresh_token +
+    // publication client creds, persists the rotated token onto the
+    // installation, AND rotates the fresh bearer into the vault's
+    // static_bearer credential. It throws a clear "user must reinstall"
+    // error when the refresh_token itself is dead.
+    const token = await providers.linear.refreshAccessToken(installation.id);
+    return { token };
   }
 
   async lookupLinearCredentialForSession(

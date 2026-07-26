@@ -560,6 +560,12 @@ export class LinearProvider implements IntegrationProvider {
       displayName: `Linear MCP token (${pub.persona.name})`,
       mcpServerUrl: LINEAR_MCP_URL,
       bearerToken: token.access_token,
+      // Tag the credential so the session-create lifecycle hook proactively
+      // refreshes it (this is the OAuth "dedicated" install, which carries a
+      // refresh_token; the PAT install path stays untagged since a PAT has
+      // nothing to refresh). The mcp-proxy on-401 retry is the backstop for
+      // existing untagged creds.
+      provider: "linear",
     });
     await this.container.installations.setVaultId(installation.id, vaultId);
 

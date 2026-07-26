@@ -15,6 +15,8 @@ import type {
   LinearMcpCredentialLookupResult,
   RefreshGithubVaultArgs,
   RefreshGithubVaultResult,
+  RefreshLinearVaultArgs,
+  RefreshLinearVaultResult,
   StartInstallationArgs,
   StartInstallationResult,
   Container,
@@ -241,6 +243,23 @@ export class NodeInstallBridge implements InstallBridge {
       newToken: fresh.token,
     });
     return { token: fresh.token, expiresAt: fresh.expiresAt };
+  }
+
+  async refreshLinearVault(
+    args: RefreshLinearVaultArgs,
+  ): Promise<RefreshLinearVaultResult> {
+    const containers = this.buildContainers();
+    const linear = containers.linear;
+    const installations = await linear.installations.listByUser(args.userId, "linear");
+    const installation = installations.find((i) => i.vaultId === args.vaultId);
+    if (!installation) throw new Error("no linear installation for vault");
+    const provider = new LinearProvider(linear, {
+      gatewayOrigin: this.opts.gatewayOrigin,
+      scopes: DEFAULT_LINEAR_SCOPES,
+      defaultCapabilities: ALL_LINEAR_CAPS,
+    });
+    const token = await provider.refreshAccessToken(installation.id);
+    return { token };
   }
 
   async lookupLinearCredentialForSession(

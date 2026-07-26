@@ -69,6 +69,20 @@ export interface RefreshGithubVaultResult {
   expiresAt: string;
 }
 
+/** Refresh the Linear OAuth access token behind a vault (via the installation's
+ *  stored refresh_token) and rotate the fresh bearer into the vault's
+ *  static_bearer credential in place — the Linear analogue of
+ *  RefreshGithubVaultArgs. Same path both the session-create lifecycle hook
+ *  and the mcp-proxy on-401 retry call. */
+export interface RefreshLinearVaultArgs {
+  userId: string;
+  vaultId: string;
+}
+
+export interface RefreshLinearVaultResult {
+  token: string;
+}
+
 /** Linear MCP looks up the cred bound to the session by reading session
  *  metadata.linear.publicationId, then resolving the publication's
  *  installation accessToken (refreshing when expired). */
@@ -143,6 +157,14 @@ export interface InstallBridge {
   refreshGithubVault(
     args: RefreshGithubVaultArgs,
   ): Promise<RefreshGithubVaultResult>;
+
+  /** Refresh the Linear access token behind a vault (using the installation's
+   *  refresh_token) and rotate the fresh bearer into the vault's static_bearer
+   *  credential. Throws with a clear "reinstall" message when the refresh
+   *  token itself is dead. Mirrors refreshGithubVault. */
+  refreshLinearVault(
+    args: RefreshLinearVaultArgs,
+  ): Promise<RefreshLinearVaultResult>;
 
   /** Look up the Linear credential bound to a session. Used by /linear/mcp/
    *  :sessionId to find the access token for the GraphQL escape hatch. */

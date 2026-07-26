@@ -1,0 +1,3865 @@
+{
+    "wallTime": 1538371,
+    "cpuTime": 8,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "2026-07-25T09:15:39.572Z WARN [Better Auth]: [better-auth] Base URL could not be determined. Please set a valid base URL using the baseURL config option or the BETTER_AUTH_URL environment variable. Without this, callbacks and redirects may not work correctly."
+            ],
+            "level": "warn",
+            "timestamp": 1784970939572
+        }
+    ],
+    "eventTimestamp": 1784970939567,
+    "event": {
+        "request": {
+            "url": "https://managed-agents.3552d90c.workers.dev/v1/sessions/sess-g1kgywj8u7coiy3m/events/stream?include=chunks&replay=1",
+            "method": "GET",
+            "headers": {
+                "accept": "text/event-stream",
+                "accept-encoding": "gzip, br",
+                "accept-language": "en-US,en;q=0.9,ar;q=0.8",
+                "cache-control": "no-cache",
+                "cf-connecting-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a",
+                "cf-ipcountry": "CA",
+                "cf-ray": "a20a0fb44b5abe80",
+                "cf-visitor": "{\"scheme\":\"https\"}",
+                "connection": "Keep-Alive",
+                "cookie": "REDACTED",
+                "host": "managed-agents.3552d90c.workers.dev",
+                "pragma": "no-cache",
+                "priority": "u=1, i",
+                "referer": "https://managed-agents.3552d90c.workers.dev/sessions/sess-g1kgywj8u7coiy3m",
+                "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Google Chrome\";v=\"150\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-ch-ua-platform": "\"Linux\"",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-origin",
+                "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+                "x-active-tenant": "tn_076fe31510d04f65",
+                "x-forwarded-proto": "https",
+                "x-real-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a"
+            },
+            "cf": {
+                "httpProtocol": "HTTP/3",
+                "clientAcceptEncoding": "gzip, deflate, br",
+                "requestPriority": "",
+                "edgeRequestKeepAliveStatus": 1,
+                "requestHeaderNames": {},
+                "clientTcpRtt": 0,
+                "clientQuicRtt": 25,
+                "colo": "YVR",
+                "asn": 852,
+                "asOrganization": "TELUS-FIBRE-CLGRAB49",
+                "country": "CA",
+                "isEUCountry": false,
+                "city": "Calgary",
+                "continent": "NA",
+                "region": "Alberta",
+                "regionCode": "AB",
+                "timezone": "America/Edmonton",
+                "longitude": "-114.08529",
+                "latitude": "51.05011",
+                "postalCode": "T3S",
+                "tlsVersion": "TLSv1.3",
+                "tlsCipher": "AEAD-AES128-GCM-SHA256",
+                "tlsClientRandom": "KLipMBmblUOHIiYwKxQECFsJ+wKjOMyZPXog9VO9qdU=",
+                "tlsClientCiphersSha1": "3HTt3+R/6BL3zeALJDSq0pR1yOQ=",
+                "tlsClientExtensionsSha1": "Tu8SNwj8P6NnrlYVdSxI25EnWgw=",
+                "tlsClientExtensionsSha1Le": "cVD9M1OUYne9cdu1h6TI8XimZUY=",
+                "tlsClientHelloLength": "1763",
+                "tlsClientAuth": {
+                    "certPresented": "0",
+                    "certVerified": "NONE",
+                    "certRevoked": "0",
+                    "certIssuerDN": "",
+                    "certSubjectDN": "",
+                    "certIssuerDNRFC2253": "",
+                    "certSubjectDNRFC2253": "",
+                    "certIssuerDNLegacy": "",
+                    "certSubjectDNLegacy": "",
+                    "certSerial": "",
+                    "certIssuerSerial": "",
+                    "certSKI": "",
+                    "certIssuerSKI": "",
+                    "certFingerprintSHA1": "",
+                    "certFingerprintSHA256": "",
+                    "certNotBefore": "",
+                    "certNotAfter": "",
+                    "certRFC9440": "",
+                    "certRFC9440TooLarge": false,
+                    "certChainRFC9440": "",
+                    "certChainRFC9440TooLarge": false
+                },
+                "verifiedBotCategory": "",
+                "edgeL4": {
+                    "deliveryRate": 143033
+                }
+            }
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 89,
+    "cpuTime": 1,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "responseStreamDisconnected",
+    "durableObjectId": "bfe5a38410d09b51efa55cfda3f348af99af022c3d27fe4012c1f63318c5133c",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "entrypoint": "RuntimeRoom",
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "{\"ts\":\"2026-07-25T09:25:55.335Z\",\"level\":\"info\",\"msg\":\"daemon attached\",\"op\":\"runtime_room.daemon_attach\",\"runtime_id\":\"bb84c888-2092-41d7-b18d-618eb1b1758a\"}"
+            ],
+            "level": "log",
+            "timestamp": 1784971555335
+        }
+    ],
+    "eventTimestamp": 1784971544338,
+    "event": {
+        "request": {
+            "url": "https://managed-agents.3552d90c.workers.dev/agents/runtime/_attach",
+            "method": "GET",
+            "headers": {
+                "accept-encoding": "gzip, br",
+                "authorization": "REDACTED",
+                "cf-connecting-ip": "209.89.248.119",
+                "cf-ipcountry": "CA",
+                "cf-ray": "a20a1ebb4bd3e813",
+                "cf-visitor": "{\"scheme\":\"https\"}",
+                "connection": "Upgrade",
+                "host": "managed-agents.3552d90c.workers.dev",
+                "sec-websocket-extensions": "permessage-deflate; client_max_window_bits",
+                "sec-websocket-key": "REDACTED",
+                "sec-websocket-version": "13",
+                "upgrade": "websocket",
+                "x-attach-role": "daemon",
+                "x-forwarded-proto": "https",
+                "x-real-ip": "209.89.248.119",
+                "x-runtime-id": "bb84c888-2092-41d7-b18d-618eb1b1758a",
+                "x-runtime-user": "2cPfasTv7CABBHVQdSmvSA9PcFlJ4aWJ"
+            },
+            "cf": {
+                "httpProtocol": "HTTP/1.1",
+                "requestPriority": "",
+                "edgeRequestKeepAliveStatus": 1,
+                "requestHeaderNames": {},
+                "clientTcpRtt": 23,
+                "clientQuicRtt": 0,
+                "colo": "YVR",
+                "asn": 852,
+                "asOrganization": "TELUS-FIBRE-CLGRAB49",
+                "country": "CA",
+                "isEUCountry": false,
+                "city": "Calgary",
+                "continent": "NA",
+                "region": "Alberta",
+                "regionCode": "AB",
+                "timezone": "America/Edmonton",
+                "longitude": "-114.08529",
+                "latitude": "51.05011",
+                "postalCode": "T3S",
+                "tlsVersion": "TLSv1.3",
+                "tlsCipher": "AEAD-AES256-GCM-SHA384",
+                "tlsClientRandom": "8FCaFJUUVr35cFEjbrll0YZvvW+DSp5t6E+qcxzZhkY=",
+                "tlsClientCiphersSha1": "kXrN3VEKDdzz2cPKTQaKzpxVTxQ=",
+                "tlsClientExtensionsSha1": "M5Sm/2qrabCxy8tG1NIWsjf99Ug=",
+                "tlsClientExtensionsSha1Le": "C6UcGP66kPwR41Cyi/I/iPOzh/Q=",
+                "tlsExportedAuthenticator": {
+                    "clientHandshake": "fe997bd742dea2d8e0ce3c32ec83b80e9654455f328dd2ae45ab6a8f7133912733e79395b6e07303b816d02b216827c4",
+                    "serverHandshake": "517c998b1aab63cbbdd45e449307e1884098ce2496d7fd2d907418a065b2a45a64e7d6038fba6f56f0483e00867cb7f9",
+                    "clientFinished": "1ea8d5df81cdd9a2cfc7ca033e8a45ba853f70fb9360f9ff215b818ade87112ca73aaf4a2765226b4f6d7175a3d98aee",
+                    "serverFinished": "dfb1a3636a5950c95f4c55a01c93c41b87dd3dba61d0a9596b7e87afc2e582447e07600a4fa64aec5922b7cf6f516d67"
+                },
+                "tlsClientHelloLength": "1603",
+                "tlsClientAuth": {
+                    "certPresented": "0",
+                    "certVerified": "NONE",
+                    "certRevoked": "0",
+                    "certIssuerDN": "",
+                    "certSubjectDN": "",
+                    "certIssuerDNRFC2253": "",
+                    "certSubjectDNRFC2253": "",
+                    "certIssuerDNLegacy": "",
+                    "certSubjectDNLegacy": "",
+                    "certSerial": "",
+                    "certIssuerSerial": "",
+                    "certSKI": "",
+                    "certIssuerSKI": "",
+                    "certFingerprintSHA1": "",
+                    "certFingerprintSHA256": "",
+                    "certNotBefore": "",
+                    "certNotAfter": "",
+                    "certRFC9440": "",
+                    "certRFC9440TooLarge": false,
+                    "certChainRFC9440": "",
+                    "certChainRFC9440TooLarge": false
+                },
+                "verifiedBotCategory": "",
+                "edgeL4": {
+                    "deliveryRate": 184458
+                }
+            }
+        }
+    }
+}
+{
+    "wallTime": 0,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "exception",
+    "durableObjectId": "bfe5a38410d09b51efa55cfda3f348af99af022c3d27fe4012c1f63318c5133c",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "entrypoint": "RuntimeRoom",
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1784972456169,
+    "event": {
+        "getWebSocketEvent": {
+            "wasClean": false,
+            "code": 1006,
+            "webSocketEventType": "close"
+        }
+    }
+}
+{
+    "wallTime": 147,
+    "cpuTime": 20,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "responseStreamDisconnected",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1784971555082,
+    "event": {
+        "request": {
+            "url": "https://managed-agents.3552d90c.workers.dev/agents/runtime/_attach",
+            "method": "GET",
+            "headers": {
+                "accept-encoding": "gzip, br",
+                "authorization": "REDACTED",
+                "cf-connecting-ip": "209.89.248.119",
+                "cf-ipcountry": "CA",
+                "cf-ray": "a20a1ebb4bd3e813",
+                "cf-visitor": "{\"scheme\":\"https\"}",
+                "connection": "Upgrade",
+                "host": "managed-agents.3552d90c.workers.dev",
+                "sec-websocket-extensions": "permessage-deflate; client_max_window_bits",
+                "sec-websocket-key": "REDACTED",
+                "sec-websocket-version": "13",
+                "upgrade": "websocket",
+                "x-forwarded-proto": "https",
+                "x-real-ip": "209.89.248.119"
+            },
+            "cf": {
+                "httpProtocol": "HTTP/1.1",
+                "requestPriority": "",
+                "edgeRequestKeepAliveStatus": 1,
+                "requestHeaderNames": {},
+                "clientTcpRtt": 23,
+                "clientQuicRtt": 0,
+                "colo": "YVR",
+                "asn": 852,
+                "asOrganization": "TELUS-FIBRE-CLGRAB49",
+                "country": "CA",
+                "isEUCountry": false,
+                "city": "Calgary",
+                "continent": "NA",
+                "region": "Alberta",
+                "regionCode": "AB",
+                "timezone": "America/Edmonton",
+                "longitude": "-114.08529",
+                "latitude": "51.05011",
+                "postalCode": "T3S",
+                "tlsVersion": "TLSv1.3",
+                "tlsCipher": "AEAD-AES256-GCM-SHA384",
+                "tlsClientRandom": "8FCaFJUUVr35cFEjbrll0YZvvW+DSp5t6E+qcxzZhkY=",
+                "tlsClientCiphersSha1": "kXrN3VEKDdzz2cPKTQaKzpxVTxQ=",
+                "tlsClientExtensionsSha1": "M5Sm/2qrabCxy8tG1NIWsjf99Ug=",
+                "tlsClientExtensionsSha1Le": "C6UcGP66kPwR41Cyi/I/iPOzh/Q=",
+                "tlsExportedAuthenticator": {
+                    "clientHandshake": "fe997bd742dea2d8e0ce3c32ec83b80e9654455f328dd2ae45ab6a8f7133912733e79395b6e07303b816d02b216827c4",
+                    "serverHandshake": "517c998b1aab63cbbdd45e449307e1884098ce2496d7fd2d907418a065b2a45a64e7d6038fba6f56f0483e00867cb7f9",
+                    "clientFinished": "1ea8d5df81cdd9a2cfc7ca033e8a45ba853f70fb9360f9ff215b818ade87112ca73aaf4a2765226b4f6d7175a3d98aee",
+                    "serverFinished": "dfb1a3636a5950c95f4c55a01c93c41b87dd3dba61d0a9596b7e87afc2e582447e07600a4fa64aec5922b7cf6f516d67"
+                },
+                "tlsClientHelloLength": "1603",
+                "tlsClientAuth": {
+                    "certPresented": "0",
+                    "certVerified": "NONE",
+                    "certRevoked": "0",
+                    "certIssuerDN": "",
+                    "certSubjectDN": "",
+                    "certIssuerDNRFC2253": "",
+                    "certSubjectDNRFC2253": "",
+                    "certIssuerDNLegacy": "",
+                    "certSubjectDNLegacy": "",
+                    "certSerial": "",
+                    "certIssuerSerial": "",
+                    "certSKI": "",
+                    "certIssuerSKI": "",
+                    "certFingerprintSHA1": "",
+                    "certFingerprintSHA256": "",
+                    "certNotBefore": "",
+                    "certNotAfter": "",
+                    "certRFC9440": "",
+                    "certRFC9440TooLarge": false,
+                    "certChainRFC9440": "",
+                    "certChainRFC9440TooLarge": false
+                },
+                "verifiedBotCategory": "",
+                "edgeL4": {
+                    "deliveryRate": 184458
+                }
+            }
+        }
+    }
+}
+{
+    "wallTime": 47,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "bfe5a38410d09b51efa55cfda3f348af99af022c3d27fe4012c1f63318c5133c",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "entrypoint": "RuntimeRoom",
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1784972479992,
+    "event": {
+        "getWebSocketEvent": {
+            "webSocketEventType": "message"
+        }
+    }
+}
+{
+    "wallTime": 1239,
+    "cpuTime": 30,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1784972482187,
+    "event": {
+        "request": {
+            "url": "http://main/v1/internal/sessions/sess-o7wx0utmafd04xom/events",
+            "method": "POST",
+            "headers": {
+                "content-length": "575",
+                "content-type": "application/json",
+                "x-internal-secret": "REDACTED"
+            }
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 285,
+    "cpuTime": 4,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "entrypoint": "McpProxyRpc",
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "{\"ts\":\"2026-07-25T09:41:23.849Z\",\"level\":\"info\",\"msg\":\"mcp_proxy forward\",\"op\":\"mcp_proxy.forward\",\"caller\":\"rpc-mcp\",\"tenant_id\":\"tn_076fe31510d04f65\",\"session_id\":\"sess-o7wx0utmafd04xom\",\"server\":\"linear\",\"host\":\"mcp.linear.app\",\"method\":\"POST\",\"status\":200,\"refreshed\":false,\"ms\":258}"
+            ],
+            "level": "log",
+            "timestamp": 1784972483849
+        }
+    ],
+    "eventTimestamp": 1784972483578,
+    "event": {
+        "request": {
+            "url": "https://mcp.linear.app/mcp",
+            "method": "POST",
+            "headers": {
+                "accept": "application/json, text/event-stream",
+                "content-type": "application/json",
+                "mcp-protocol-version": "2025-11-25",
+                "user-agent": "ai-sdk/0.0.0-test runtime/cloudflare-workers",
+                "x-oma-mcp-server": "linear",
+                "x-oma-session": "sess-o7wx0utmafd04xom",
+                "x-oma-tenant": "tn_076fe31510d04f65"
+            }
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 271,
+    "cpuTime": 3,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "entrypoint": "McpProxyRpc",
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "{\"ts\":\"2026-07-25T09:41:24.116Z\",\"level\":\"info\",\"msg\":\"mcp_proxy forward\",\"op\":\"mcp_proxy.forward\",\"caller\":\"rpc-mcp\",\"tenant_id\":\"tn_076fe31510d04f65\",\"session_id\":\"sess-o7wx0utmafd04xom\",\"server\":\"linear\",\"host\":\"mcp.linear.app\",\"method\":\"POST\",\"status\":202,\"refreshed\":false,\"ms\":255}"
+            ],
+            "level": "log",
+            "timestamp": 1784972484116
+        }
+    ],
+    "eventTimestamp": 1784972483849,
+    "event": {
+        "request": {
+            "url": "https://mcp.linear.app/mcp",
+            "method": "POST",
+            "headers": {
+                "accept": "application/json, text/event-stream",
+                "content-type": "application/json",
+                "mcp-protocol-version": "2025-11-25",
+                "user-agent": "ai-sdk/0.0.0-test runtime/cloudflare-workers",
+                "x-oma-mcp-server": "linear",
+                "x-oma-session": "sess-o7wx0utmafd04xom",
+                "x-oma-tenant": "tn_076fe31510d04f65"
+            }
+        },
+        "response": {
+            "status": 202
+        }
+    }
+}
+{
+    "wallTime": 294,
+    "cpuTime": 3,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "entrypoint": "McpProxyRpc",
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "{\"ts\":\"2026-07-25T09:41:24.410Z\",\"level\":\"info\",\"msg\":\"mcp_proxy forward\",\"op\":\"mcp_proxy.forward\",\"caller\":\"rpc-mcp\",\"tenant_id\":\"tn_076fe31510d04f65\",\"session_id\":\"sess-o7wx0utmafd04xom\",\"server\":\"linear\",\"host\":\"mcp.linear.app\",\"method\":\"POST\",\"status\":200,\"refreshed\":false,\"ms\":270}"
+            ],
+            "level": "log",
+            "timestamp": 1784972484410
+        }
+    ],
+    "eventTimestamp": 1784972484116,
+    "event": {
+        "request": {
+            "url": "https://mcp.linear.app/mcp",
+            "method": "POST",
+            "headers": {
+                "accept": "application/json, text/event-stream",
+                "content-type": "application/json",
+                "mcp-protocol-version": "2025-11-25",
+                "user-agent": "ai-sdk/0.0.0-test runtime/cloudflare-workers",
+                "x-oma-mcp-server": "linear",
+                "x-oma-session": "sess-o7wx0utmafd04xom",
+                "x-oma-tenant": "tn_076fe31510d04f65"
+            }
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 253,
+    "cpuTime": 7,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "canceled",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "entrypoint": "McpProxyRpc",
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "{\"ts\":\"2026-07-25T09:41:23.812Z\",\"level\":\"info\",\"msg\":\"mcp_proxy forward\",\"op\":\"mcp_proxy.forward\",\"caller\":\"rpc-mcp\",\"tenant_id\":\"tn_076fe31510d04f65\",\"session_id\":\"sess-o7wx0utmafd04xom\",\"server\":\"linear\",\"host\":\"mcp.linear.app\",\"method\":\"GET\",\"status\":405,\"refreshed\":false,\"ms\":224}"
+            ],
+            "level": "log",
+            "timestamp": 1784972483812
+        }
+    ],
+    "eventTimestamp": 1784972483577,
+    "event": {
+        "request": {
+            "url": "https://mcp.linear.app/mcp",
+            "method": "GET",
+            "headers": {
+                "accept": "text/event-stream",
+                "mcp-protocol-version": "2025-11-25",
+                "user-agent": "ai-sdk/0.0.0-test runtime/cloudflare-workers",
+                "x-oma-mcp-server": "linear",
+                "x-oma-session": "sess-o7wx0utmafd04xom",
+                "x-oma-tenant": "tn_076fe31510d04f65"
+            }
+        },
+        "response": {
+            "status": 405
+        }
+    }
+}
+{
+    "wallTime": 333,
+    "cpuTime": 2,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "entrypoint": "McpProxyRpc",
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "{\"ts\":\"2026-07-25T09:41:24.748Z\",\"level\":\"info\",\"msg\":\"mcp_proxy forward\",\"op\":\"mcp_proxy.forward\",\"caller\":\"rpc-mcp\",\"tenant_id\":\"tn_076fe31510d04f65\",\"session_id\":\"sess-o7wx0utmafd04xom\",\"server\":\"linear\",\"host\":\"mcp.linear.app\",\"method\":\"POST\",\"status\":200,\"refreshed\":false,\"ms\":312}"
+            ],
+            "level": "log",
+            "timestamp": 1784972484748
+        }
+    ],
+    "eventTimestamp": 1784972484410,
+    "event": {
+        "request": {
+            "url": "https://managed-agents-integrations.3552d90c.workers.dev/linear/mcp/sess-o7wx0utmafd04xom",
+            "method": "POST",
+            "headers": {
+                "accept": "application/json, text/event-stream",
+                "content-type": "application/json",
+                "mcp-protocol-version": "2025-11-25",
+                "user-agent": "ai-sdk/0.0.0-test runtime/cloudflare-workers",
+                "x-oma-mcp-server": "linear",
+                "x-oma-session": "sess-o7wx0utmafd04xom",
+                "x-oma-tenant": "tn_076fe31510d04f65"
+            }
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 305,
+    "cpuTime": 3,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "entrypoint": "McpProxyRpc",
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "{\"ts\":\"2026-07-25T09:41:25.058Z\",\"level\":\"info\",\"msg\":\"mcp_proxy forward\",\"op\":\"mcp_proxy.forward\",\"caller\":\"rpc-mcp\",\"tenant_id\":\"tn_076fe31510d04f65\",\"session_id\":\"sess-o7wx0utmafd04xom\",\"server\":\"linear\",\"host\":\"mcp.linear.app\",\"method\":\"POST\",\"status\":202,\"refreshed\":false,\"ms\":295}"
+            ],
+            "level": "log",
+            "timestamp": 1784972485058
+        }
+    ],
+    "eventTimestamp": 1784972484748,
+    "event": {
+        "request": {
+            "url": "https://managed-agents-integrations.3552d90c.workers.dev/linear/mcp/sess-o7wx0utmafd04xom",
+            "method": "POST",
+            "headers": {
+                "accept": "application/json, text/event-stream",
+                "content-type": "application/json",
+                "mcp-protocol-version": "2025-11-25",
+                "user-agent": "ai-sdk/0.0.0-test runtime/cloudflare-workers",
+                "x-oma-mcp-server": "linear",
+                "x-oma-session": "sess-o7wx0utmafd04xom",
+                "x-oma-tenant": "tn_076fe31510d04f65"
+            }
+        },
+        "response": {
+            "status": 202
+        }
+    }
+}
+{
+    "wallTime": 456,
+    "cpuTime": 2,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "canceled",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "entrypoint": "McpProxyRpc",
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "{\"ts\":\"2026-07-25T09:41:24.551Z\",\"level\":\"info\",\"msg\":\"mcp_proxy forward\",\"op\":\"mcp_proxy.forward\",\"caller\":\"rpc-mcp\",\"tenant_id\":\"tn_076fe31510d04f65\",\"session_id\":\"sess-o7wx0utmafd04xom\",\"server\":\"linear\",\"host\":\"mcp.linear.app\",\"method\":\"GET\",\"status\":405,\"refreshed\":false,\"ms\":411}"
+            ],
+            "level": "log",
+            "timestamp": 1784972484551
+        }
+    ],
+    "eventTimestamp": 1784972484116,
+    "event": {
+        "request": {
+            "url": "https://mcp.linear.app/mcp",
+            "method": "GET",
+            "headers": {
+                "accept": "text/event-stream",
+                "mcp-protocol-version": "2025-11-25",
+                "user-agent": "ai-sdk/0.0.0-test runtime/cloudflare-workers",
+                "x-oma-mcp-server": "linear",
+                "x-oma-session": "sess-o7wx0utmafd04xom",
+                "x-oma-tenant": "tn_076fe31510d04f65"
+            }
+        },
+        "response": {
+            "status": 405
+        }
+    }
+}
+{
+    "wallTime": 253,
+    "cpuTime": 3,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "canceled",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "entrypoint": "McpProxyRpc",
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "{\"ts\":\"2026-07-25T09:41:25.309Z\",\"level\":\"info\",\"msg\":\"mcp_proxy forward\",\"op\":\"mcp_proxy.forward\",\"caller\":\"rpc-mcp\",\"tenant_id\":\"tn_076fe31510d04f65\",\"session_id\":\"sess-o7wx0utmafd04xom\",\"server\":\"linear\",\"host\":\"mcp.linear.app\",\"method\":\"GET\",\"status\":405,\"refreshed\":false,\"ms\":225}"
+            ],
+            "level": "log",
+            "timestamp": 1784972485309
+        }
+    ],
+    "eventTimestamp": 1784972485058,
+    "event": {
+        "request": {
+            "url": "https://managed-agents-integrations.3552d90c.workers.dev/linear/mcp/sess-o7wx0utmafd04xom",
+            "method": "GET",
+            "headers": {
+                "accept": "text/event-stream",
+                "mcp-protocol-version": "2025-11-25",
+                "user-agent": "ai-sdk/0.0.0-test runtime/cloudflare-workers",
+                "x-oma-mcp-server": "linear",
+                "x-oma-session": "sess-o7wx0utmafd04xom",
+                "x-oma-tenant": "tn_076fe31510d04f65"
+            }
+        },
+        "response": {
+            "status": 405
+        }
+    }
+}
+{
+    "wallTime": 1531,
+    "cpuTime": 3,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "entrypoint": "McpProxyRpc",
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "{\"ts\":\"2026-07-25T09:41:26.639Z\",\"level\":\"info\",\"msg\":\"mcp_proxy forward\",\"op\":\"mcp_proxy.forward\",\"caller\":\"rpc-mcp\",\"tenant_id\":\"tn_076fe31510d04f65\",\"session_id\":\"sess-o7wx0utmafd04xom\",\"server\":\"linear\",\"host\":\"mcp.linear.app\",\"method\":\"POST\",\"status\":200,\"refreshed\":false,\"ms\":1555}"
+            ],
+            "level": "log",
+            "timestamp": 1784972486639
+        }
+    ],
+    "eventTimestamp": 1784972485058,
+    "event": {
+        "request": {
+            "url": "https://managed-agents-integrations.3552d90c.workers.dev/linear/mcp/sess-o7wx0utmafd04xom",
+            "method": "POST",
+            "headers": {
+                "accept": "application/json, text/event-stream",
+                "content-type": "application/json",
+                "mcp-protocol-version": "2025-11-25",
+                "user-agent": "ai-sdk/0.0.0-test runtime/cloudflare-workers",
+                "x-oma-mcp-server": "linear",
+                "x-oma-session": "sess-o7wx0utmafd04xom",
+                "x-oma-tenant": "tn_076fe31510d04f65"
+            }
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 342,
+    "cpuTime": 6,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "canceled",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "entrypoint": "McpProxyRpc",
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "{\"ts\":\"2026-07-25T09:41:24.750Z\",\"level\":\"info\",\"msg\":\"mcp_proxy forward\",\"op\":\"mcp_proxy.forward\",\"caller\":\"rpc-mcp\",\"tenant_id\":\"tn_076fe31510d04f65\",\"session_id\":\"sess-o7wx0utmafd04xom\",\"server\":\"linear\",\"host\":\"mcp.linear.app\",\"method\":\"GET\",\"status\":405,\"refreshed\":false,\"ms\":314}"
+            ],
+            "level": "log",
+            "timestamp": 1784972484750
+        }
+    ],
+    "eventTimestamp": 1784972484410,
+    "event": {
+        "request": {
+            "url": "https://managed-agents-integrations.3552d90c.workers.dev/linear/mcp/sess-o7wx0utmafd04xom",
+            "method": "GET",
+            "headers": {
+                "accept": "text/event-stream",
+                "mcp-protocol-version": "2025-11-25",
+                "user-agent": "ai-sdk/0.0.0-test runtime/cloudflare-workers",
+                "x-oma-mcp-server": "linear",
+                "x-oma-session": "sess-o7wx0utmafd04xom",
+                "x-oma-tenant": "tn_076fe31510d04f65"
+            }
+        },
+        "response": {
+            "status": 405
+        }
+    }
+}
+{
+    "wallTime": 0,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "bfe5a38410d09b51efa55cfda3f348af99af022c3d27fe4012c1f63318c5133c",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "entrypoint": "RuntimeRoom",
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "{\"ts\":\"2026-07-25T09:41:27.693Z\",\"level\":\"info\",\"msg\":\"injected resume.acp_session_id for recovery\",\"op\":\"runtime_room.inject_resume\",\"session_id\":\"sess-o7wx0utmafd04xom\",\"acp_session_id\":\"b644ae76-db24-4df0-884b-10493263d716\"}"
+            ],
+            "level": "log",
+            "timestamp": 1784972487693
+        }
+    ],
+    "eventTimestamp": 1784972487689,
+    "event": {
+        "getWebSocketEvent": {
+            "webSocketEventType": "message"
+        }
+    }
+}
+{
+    "wallTime": 0,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "bfe5a38410d09b51efa55cfda3f348af99af022c3d27fe4012c1f63318c5133c",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "entrypoint": "RuntimeRoom",
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1784972487693,
+    "event": {
+        "getWebSocketEvent": {
+            "webSocketEventType": "message"
+        }
+    }
+}
+{
+    "wallTime": 0,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "bfe5a38410d09b51efa55cfda3f348af99af022c3d27fe4012c1f63318c5133c",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "entrypoint": "RuntimeRoom",
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1784972487693,
+    "event": {
+        "getWebSocketEvent": {
+            "webSocketEventType": "message"
+        }
+    }
+}
+{
+    "wallTime": 0,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "bfe5a38410d09b51efa55cfda3f348af99af022c3d27fe4012c1f63318c5133c",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "entrypoint": "RuntimeRoom",
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1784972487725,
+    "event": {
+        "getWebSocketEvent": {
+            "webSocketEventType": "message"
+        }
+    }
+}
+{
+    "wallTime": 0,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "bfe5a38410d09b51efa55cfda3f348af99af022c3d27fe4012c1f63318c5133c",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "entrypoint": "RuntimeRoom",
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1784972487726,
+    "event": {
+        "getWebSocketEvent": {
+            "webSocketEventType": "message"
+        }
+    }
+}
+{
+    "wallTime": 0,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "bfe5a38410d09b51efa55cfda3f348af99af022c3d27fe4012c1f63318c5133c",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "entrypoint": "RuntimeRoom",
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1784972489054,
+    "event": {
+        "getWebSocketEvent": {
+            "webSocketEventType": "message"
+        }
+    }
+}
+{
+    "wallTime": 0,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "bfe5a38410d09b51efa55cfda3f348af99af022c3d27fe4012c1f63318c5133c",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "entrypoint": "RuntimeRoom",
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1784972490173,
+    "event": {
+        "getWebSocketEvent": {
+            "webSocketEventType": "message"
+        }
+    }
+}
+{
+    "wallTime": 0,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "bfe5a38410d09b51efa55cfda3f348af99af022c3d27fe4012c1f63318c5133c",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "entrypoint": "RuntimeRoom",
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1784972490173,
+    "event": {
+        "getWebSocketEvent": {
+            "webSocketEventType": "message"
+        }
+    }
+}
+{
+    "wallTime": 0,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "bfe5a38410d09b51efa55cfda3f348af99af022c3d27fe4012c1f63318c5133c",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "entrypoint": "RuntimeRoom",
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1784972490393,
+    "event": {
+        "getWebSocketEvent": {
+            "webSocketEventType": "message"
+        }
+    }
+}
+{
+    "wallTime": 680,
+    "cpuTime": 24,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "{\"ts\":\"2026-07-25T09:41:31.261Z\",\"level\":\"info\",\"msg\":\"mcp_proxy forward\",\"op\":\"mcp_proxy.forward\",\"caller\":\"http\",\"tenant_id\":\"tn_076fe31510d04f65\",\"session_id\":\"sess-o7wx0utmafd04xom\",\"server\":\"linear\",\"host\":\"mcp.linear.app\",\"method\":\"POST\",\"status\":200,\"refreshed\":false,\"ms\":531}"
+            ],
+            "level": "log",
+            "timestamp": 1784972491261
+        }
+    ],
+    "eventTimestamp": 1784972490450,
+    "event": {
+        "request": {
+            "url": "https://managed-agents.3552d90c.workers.dev/v1/mcp-proxy/sess-o7wx0utmafd04xom/linear",
+            "method": "POST",
+            "headers": {
+                "accept": "application/json, text/event-stream",
+                "accept-encoding": "gzip, br",
+                "authorization": "REDACTED",
+                "cf-connecting-ip": "209.89.248.119",
+                "cf-ipcountry": "CA",
+                "cf-ray": "a20a35914fbc464b",
+                "cf-visitor": "{\"scheme\":\"https\"}",
+                "connection": "Keep-Alive",
+                "content-length": "241",
+                "content-type": "application/json",
+                "host": "managed-agents.3552d90c.workers.dev",
+                "mcp-protocol-version": "2025-11-25",
+                "user-agent": "claude-code/2.1.219 (sdk-ts, agent-sdk/0.3.219)",
+                "x-forwarded-proto": "https",
+                "x-real-ip": "209.89.248.119"
+            },
+            "cf": {
+                "httpProtocol": "HTTP/1.1",
+                "clientAcceptEncoding": "identity",
+                "requestPriority": "",
+                "edgeRequestKeepAliveStatus": 1,
+                "requestHeaderNames": {},
+                "clientTcpRtt": 22,
+                "clientQuicRtt": 0,
+                "colo": "YVR",
+                "asn": 852,
+                "asOrganization": "TELUS-FIBRE-CLGRAB49",
+                "country": "CA",
+                "isEUCountry": false,
+                "city": "Calgary",
+                "continent": "NA",
+                "region": "Alberta",
+                "regionCode": "AB",
+                "timezone": "America/Edmonton",
+                "longitude": "-114.08529",
+                "latitude": "51.05011",
+                "postalCode": "T3S",
+                "tlsVersion": "TLSv1.3",
+                "tlsCipher": "AEAD-AES128-GCM-SHA256",
+                "tlsClientRandom": "dQV0v4l4lOsAaQPp7ba2Op4UK06eF2TrCxu9YLVeGVo=",
+                "tlsClientCiphersSha1": "z756bn+x21PiebYy319nCdFpEYo=",
+                "tlsClientExtensionsSha1": "WWbSthm5fX2IyMecDOgDUYNG42M=",
+                "tlsClientExtensionsSha1Le": "x3C9wOJ4WRKMb/1vBgvNLe8J+Ok=",
+                "tlsExportedAuthenticator": {
+                    "clientHandshake": "42d1f86b56ebf8198c0cc6ba900e419b146a246a8d37e7c775b6c628d2d528f2",
+                    "serverHandshake": "13f64d10dff6ba38e30e1e7bcc47e1a758a647d22ed29ef340c81482773f3927",
+                    "clientFinished": "14e1cdc767f316861d62c65cf062ad6c659bf559160917dd81eadc7503cb6d3d",
+                    "serverFinished": "a3070dc50f970c7f532495e8a19913c8d41dc6476b2c09492362ce15ba4cec6e"
+                },
+                "tlsClientHelloLength": "508",
+                "tlsClientAuth": {
+                    "certPresented": "0",
+                    "certVerified": "NONE",
+                    "certRevoked": "0",
+                    "certIssuerDN": "",
+                    "certSubjectDN": "",
+                    "certIssuerDNRFC2253": "",
+                    "certSubjectDNRFC2253": "",
+                    "certIssuerDNLegacy": "",
+                    "certSubjectDNLegacy": "",
+                    "certSerial": "",
+                    "certIssuerSerial": "",
+                    "certSKI": "",
+                    "certIssuerSKI": "",
+                    "certFingerprintSHA1": "",
+                    "certFingerprintSHA256": "",
+                    "certNotBefore": "",
+                    "certNotAfter": "",
+                    "certRFC9440": "",
+                    "certRFC9440TooLarge": false,
+                    "certChainRFC9440": "",
+                    "certChainRFC9440TooLarge": false
+                },
+                "verifiedBotCategory": "",
+                "edgeL4": {
+                    "deliveryRate": 128751
+                }
+            }
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 0,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "bfe5a38410d09b51efa55cfda3f348af99af022c3d27fe4012c1f63318c5133c",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "entrypoint": "RuntimeRoom",
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1784972490449,
+    "event": {
+        "getWebSocketEvent": {
+            "webSocketEventType": "message"
+        }
+    }
+}
+{
+    "wallTime": 0,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "bfe5a38410d09b51efa55cfda3f348af99af022c3d27fe4012c1f63318c5133c",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "entrypoint": "RuntimeRoom",
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1784972491317,
+    "event": {
+        "getWebSocketEvent": {
+            "webSocketEventType": "message"
+        }
+    }
+}
+{
+    "wallTime": 0,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "bfe5a38410d09b51efa55cfda3f348af99af022c3d27fe4012c1f63318c5133c",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "entrypoint": "RuntimeRoom",
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1784972491319,
+    "event": {
+        "getWebSocketEvent": {
+            "webSocketEventType": "message"
+        }
+    }
+}
+{
+    "wallTime": 0,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "bfe5a38410d09b51efa55cfda3f348af99af022c3d27fe4012c1f63318c5133c",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "entrypoint": "RuntimeRoom",
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1784972492524,
+    "event": {
+        "getWebSocketEvent": {
+            "webSocketEventType": "message"
+        }
+    }
+}
+{
+    "wallTime": 0,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "bfe5a38410d09b51efa55cfda3f348af99af022c3d27fe4012c1f63318c5133c",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "entrypoint": "RuntimeRoom",
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1784972492525,
+    "event": {
+        "getWebSocketEvent": {
+            "webSocketEventType": "message"
+        }
+    }
+}
+{
+    "wallTime": 0,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "bfe5a38410d09b51efa55cfda3f348af99af022c3d27fe4012c1f63318c5133c",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "entrypoint": "RuntimeRoom",
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1784972492758,
+    "event": {
+        "getWebSocketEvent": {
+            "webSocketEventType": "message"
+        }
+    }
+}
+{
+    "wallTime": 0,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "bfe5a38410d09b51efa55cfda3f348af99af022c3d27fe4012c1f63318c5133c",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "entrypoint": "RuntimeRoom",
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1784972492764,
+    "event": {
+        "getWebSocketEvent": {
+            "webSocketEventType": "message"
+        }
+    }
+}
+{
+    "wallTime": 0,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "bfe5a38410d09b51efa55cfda3f348af99af022c3d27fe4012c1f63318c5133c",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "entrypoint": "RuntimeRoom",
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "{\"ts\":\"2026-07-25T09:41:32.768Z\",\"level\":\"info\",\"msg\":\"harness closed\",\"op\":\"runtime_room.harness_close\",\"session_id\":\"sess-o7wx0utmafd04xom\",\"code\":1000}"
+            ],
+            "level": "log",
+            "timestamp": 1784972492768
+        }
+    ],
+    "eventTimestamp": 1784972492765,
+    "event": {
+        "getWebSocketEvent": {
+            "wasClean": true,
+            "code": 1000,
+            "webSocketEventType": "close"
+        }
+    }
+}
+{
+    "wallTime": 0,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "bfe5a38410d09b51efa55cfda3f348af99af022c3d27fe4012c1f63318c5133c",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "entrypoint": "RuntimeRoom",
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1784972492679,
+    "event": {
+        "getWebSocketEvent": {
+            "webSocketEventType": "message"
+        }
+    }
+}
+{
+    "wallTime": 1948527,
+    "cpuTime": 5,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "2026-07-25T09:09:08.728Z WARN [Better Auth]: [better-auth] Base URL could not be determined. Please set a valid base URL using the baseURL config option or the BETTER_AUTH_URL environment variable. Without this, callbacks and redirects may not work correctly."
+            ],
+            "level": "warn",
+            "timestamp": 1784970548728
+        }
+    ],
+    "eventTimestamp": 1784970548693,
+    "event": {
+        "request": {
+            "url": "https://managed-agents.3552d90c.workers.dev/v1/sessions/sess-e1jfp8e1ymn3wtp1/events/stream?include=chunks&replay=1",
+            "method": "GET",
+            "headers": {
+                "accept": "text/event-stream",
+                "accept-encoding": "gzip, br",
+                "accept-language": "en-US,en;q=0.9,ar;q=0.8",
+                "cache-control": "no-cache",
+                "cf-connecting-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a",
+                "cf-ipcountry": "CA",
+                "cf-ray": "a20a06295da0803b",
+                "cf-visitor": "{\"scheme\":\"https\"}",
+                "connection": "Keep-Alive",
+                "cookie": "REDACTED",
+                "host": "managed-agents.3552d90c.workers.dev",
+                "pragma": "no-cache",
+                "priority": "u=1, i",
+                "referer": "https://managed-agents.3552d90c.workers.dev/sessions/sess-e1jfp8e1ymn3wtp1",
+                "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Google Chrome\";v=\"150\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-ch-ua-platform": "\"Linux\"",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-origin",
+                "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+                "x-active-tenant": "tn_076fe31510d04f65",
+                "x-forwarded-proto": "https",
+                "x-real-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a"
+            },
+            "cf": {
+                "httpProtocol": "HTTP/3",
+                "clientAcceptEncoding": "gzip, deflate, br",
+                "requestPriority": "",
+                "edgeRequestKeepAliveStatus": 1,
+                "requestHeaderNames": {},
+                "clientTcpRtt": 0,
+                "clientQuicRtt": 21,
+                "colo": "YVR",
+                "asn": 852,
+                "asOrganization": "TELUS-FIBRE-CLGRAB49",
+                "country": "CA",
+                "isEUCountry": false,
+                "city": "Calgary",
+                "continent": "NA",
+                "region": "Alberta",
+                "regionCode": "AB",
+                "timezone": "America/Edmonton",
+                "longitude": "-114.08529",
+                "latitude": "51.05011",
+                "postalCode": "T3S",
+                "tlsVersion": "TLSv1.3",
+                "tlsCipher": "AEAD-AES128-GCM-SHA256",
+                "tlsClientRandom": "b8ySz0fICW/NV/+xx/Oo6+W3vn7UQJ4uQJSpZH0Ufc8=",
+                "tlsClientCiphersSha1": "3HTt3+R/6BL3zeALJDSq0pR1yOQ=",
+                "tlsClientExtensionsSha1": "uZGwmsztO8TkyXqfQCHntf2MD9c=",
+                "tlsClientExtensionsSha1Le": "pHT8YHpxS2QIMBlvKj5W0gltZ4o=",
+                "tlsClientHelloLength": "1761",
+                "tlsClientAuth": {
+                    "certPresented": "0",
+                    "certVerified": "NONE",
+                    "certRevoked": "0",
+                    "certIssuerDN": "",
+                    "certSubjectDN": "",
+                    "certIssuerDNRFC2253": "",
+                    "certSubjectDNRFC2253": "",
+                    "certIssuerDNLegacy": "",
+                    "certSubjectDNLegacy": "",
+                    "certSerial": "",
+                    "certIssuerSerial": "",
+                    "certSKI": "",
+                    "certIssuerSKI": "",
+                    "certFingerprintSHA1": "",
+                    "certFingerprintSHA256": "",
+                    "certNotBefore": "",
+                    "certNotAfter": "",
+                    "certRFC9440": "",
+                    "certRFC9440TooLarge": false,
+                    "certChainRFC9440": "",
+                    "certChainRFC9440TooLarge": false
+                },
+                "verifiedBotCategory": "",
+                "edgeL4": {
+                    "deliveryRate": 274985
+                }
+            }
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 1946195,
+    "cpuTime": 4,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "2026-07-25T09:09:11.031Z WARN [Better Auth]: [better-auth] Base URL could not be determined. Please set a valid base URL using the baseURL config option or the BETTER_AUTH_URL environment variable. Without this, callbacks and redirects may not work correctly."
+            ],
+            "level": "warn",
+            "timestamp": 1784970551031
+        }
+    ],
+    "eventTimestamp": 1784970551026,
+    "event": {
+        "request": {
+            "url": "https://managed-agents.3552d90c.workers.dev/v1/sessions/sess-e1jfp8e1ymn3wtp1/events/stream?include=chunks&replay=1",
+            "method": "GET",
+            "headers": {
+                "accept": "text/event-stream",
+                "accept-encoding": "gzip, br",
+                "accept-language": "en-US,en;q=0.9,ar;q=0.8",
+                "cache-control": "no-cache",
+                "cf-connecting-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a",
+                "cf-ipcountry": "CA",
+                "cf-ray": "a20a0637eed7803b",
+                "cf-visitor": "{\"scheme\":\"https\"}",
+                "connection": "Keep-Alive",
+                "cookie": "REDACTED",
+                "host": "managed-agents.3552d90c.workers.dev",
+                "pragma": "no-cache",
+                "priority": "u=1, i",
+                "referer": "https://managed-agents.3552d90c.workers.dev/sessions/sess-e1jfp8e1ymn3wtp1",
+                "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Google Chrome\";v=\"150\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-ch-ua-platform": "\"Linux\"",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-origin",
+                "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+                "x-active-tenant": "tn_076fe31510d04f65",
+                "x-forwarded-proto": "https",
+                "x-real-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a"
+            },
+            "cf": {
+                "httpProtocol": "HTTP/3",
+                "clientAcceptEncoding": "gzip, deflate, br",
+                "requestPriority": "",
+                "edgeRequestKeepAliveStatus": 1,
+                "requestHeaderNames": {},
+                "clientTcpRtt": 0,
+                "clientQuicRtt": 22,
+                "colo": "YVR",
+                "asn": 852,
+                "asOrganization": "TELUS-FIBRE-CLGRAB49",
+                "country": "CA",
+                "isEUCountry": false,
+                "city": "Calgary",
+                "continent": "NA",
+                "region": "Alberta",
+                "regionCode": "AB",
+                "timezone": "America/Edmonton",
+                "longitude": "-114.08529",
+                "latitude": "51.05011",
+                "postalCode": "T3S",
+                "tlsVersion": "TLSv1.3",
+                "tlsCipher": "AEAD-AES128-GCM-SHA256",
+                "tlsClientRandom": "b8ySz0fICW/NV/+xx/Oo6+W3vn7UQJ4uQJSpZH0Ufc8=",
+                "tlsClientCiphersSha1": "3HTt3+R/6BL3zeALJDSq0pR1yOQ=",
+                "tlsClientExtensionsSha1": "uZGwmsztO8TkyXqfQCHntf2MD9c=",
+                "tlsClientExtensionsSha1Le": "pHT8YHpxS2QIMBlvKj5W0gltZ4o=",
+                "tlsClientHelloLength": "1761",
+                "tlsClientAuth": {
+                    "certPresented": "0",
+                    "certVerified": "NONE",
+                    "certRevoked": "0",
+                    "certIssuerDN": "",
+                    "certSubjectDN": "",
+                    "certIssuerDNRFC2253": "",
+                    "certSubjectDNRFC2253": "",
+                    "certIssuerDNLegacy": "",
+                    "certSubjectDNLegacy": "",
+                    "certSerial": "",
+                    "certIssuerSerial": "",
+                    "certSKI": "",
+                    "certIssuerSKI": "",
+                    "certFingerprintSHA1": "",
+                    "certFingerprintSHA256": "",
+                    "certNotBefore": "",
+                    "certNotAfter": "",
+                    "certRFC9440": "",
+                    "certRFC9440TooLarge": false,
+                    "certChainRFC9440": "",
+                    "certChainRFC9440TooLarge": false
+                },
+                "verifiedBotCategory": "",
+                "edgeL4": {
+                    "deliveryRate": 292826
+                }
+            }
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 2178126,
+    "cpuTime": 7,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "2026-07-25T09:05:19.098Z WARN [Better Auth]: [better-auth] Base URL could not be determined. Please set a valid base URL using the baseURL config option or the BETTER_AUTH_URL environment variable. Without this, callbacks and redirects may not work correctly."
+            ],
+            "level": "warn",
+            "timestamp": 1784970319098
+        }
+    ],
+    "eventTimestamp": 1784970319092,
+    "event": {
+        "request": {
+            "url": "https://managed-agents.3552d90c.workers.dev/v1/sessions/sess-e1jfp8e1ymn3wtp1/events/stream?include=chunks&replay=1",
+            "method": "GET",
+            "headers": {
+                "accept": "text/event-stream",
+                "accept-encoding": "gzip, br",
+                "accept-language": "en-US,en;q=0.9,ar;q=0.8",
+                "cache-control": "no-cache",
+                "cf-connecting-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a",
+                "cf-ipcountry": "CA",
+                "cf-ray": "a20a008e4a2d803b",
+                "cf-visitor": "{\"scheme\":\"https\"}",
+                "connection": "Keep-Alive",
+                "cookie": "REDACTED",
+                "host": "managed-agents.3552d90c.workers.dev",
+                "pragma": "no-cache",
+                "priority": "u=1, i",
+                "referer": "https://managed-agents.3552d90c.workers.dev/sessions/sess-e1jfp8e1ymn3wtp1",
+                "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Google Chrome\";v=\"150\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-ch-ua-platform": "\"Linux\"",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-origin",
+                "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+                "x-active-tenant": "tn_076fe31510d04f65",
+                "x-forwarded-proto": "https",
+                "x-real-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a"
+            },
+            "cf": {
+                "httpProtocol": "HTTP/3",
+                "clientAcceptEncoding": "gzip, deflate, br",
+                "requestPriority": "",
+                "edgeRequestKeepAliveStatus": 1,
+                "requestHeaderNames": {},
+                "clientTcpRtt": 0,
+                "clientQuicRtt": 22,
+                "colo": "YVR",
+                "asn": 852,
+                "asOrganization": "TELUS-FIBRE-CLGRAB49",
+                "country": "CA",
+                "isEUCountry": false,
+                "city": "Calgary",
+                "continent": "NA",
+                "region": "Alberta",
+                "regionCode": "AB",
+                "timezone": "America/Edmonton",
+                "longitude": "-114.08529",
+                "latitude": "51.05011",
+                "postalCode": "T3S",
+                "tlsVersion": "TLSv1.3",
+                "tlsCipher": "AEAD-AES128-GCM-SHA256",
+                "tlsClientRandom": "b8ySz0fICW/NV/+xx/Oo6+W3vn7UQJ4uQJSpZH0Ufc8=",
+                "tlsClientCiphersSha1": "3HTt3+R/6BL3zeALJDSq0pR1yOQ=",
+                "tlsClientExtensionsSha1": "uZGwmsztO8TkyXqfQCHntf2MD9c=",
+                "tlsClientExtensionsSha1Le": "pHT8YHpxS2QIMBlvKj5W0gltZ4o=",
+                "tlsClientHelloLength": "1761",
+                "tlsClientAuth": {
+                    "certPresented": "0",
+                    "certVerified": "NONE",
+                    "certRevoked": "0",
+                    "certIssuerDN": "",
+                    "certSubjectDN": "",
+                    "certIssuerDNRFC2253": "",
+                    "certSubjectDNRFC2253": "",
+                    "certIssuerDNLegacy": "",
+                    "certSubjectDNLegacy": "",
+                    "certSerial": "",
+                    "certIssuerSerial": "",
+                    "certSKI": "",
+                    "certIssuerSKI": "",
+                    "certFingerprintSHA1": "",
+                    "certFingerprintSHA256": "",
+                    "certNotBefore": "",
+                    "certNotAfter": "",
+                    "certRFC9440": "",
+                    "certRFC9440TooLarge": false,
+                    "certChainRFC9440": "",
+                    "certChainRFC9440TooLarge": false
+                },
+                "verifiedBotCategory": "",
+                "edgeL4": {
+                    "deliveryRate": 274985
+                }
+            }
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 1818326,
+    "cpuTime": 8,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "2026-07-25T09:11:18.917Z WARN [Better Auth]: [better-auth] Base URL could not be determined. Please set a valid base URL using the baseURL config option or the BETTER_AUTH_URL environment variable. Without this, callbacks and redirects may not work correctly."
+            ],
+            "level": "warn",
+            "timestamp": 1784970678917
+        }
+    ],
+    "eventTimestamp": 1784970678910,
+    "event": {
+        "request": {
+            "url": "https://managed-agents.3552d90c.workers.dev/v1/sessions/sess-e1jfp8e1ymn3wtp1/events/stream?include=chunks&replay=1",
+            "method": "GET",
+            "headers": {
+                "accept": "text/event-stream",
+                "accept-encoding": "gzip, br",
+                "accept-language": "en-US,en;q=0.9,ar;q=0.8",
+                "cache-control": "no-cache",
+                "cf-connecting-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a",
+                "cf-ipcountry": "CA",
+                "cf-ray": "a20a09572adfc55d",
+                "cf-visitor": "{\"scheme\":\"https\"}",
+                "connection": "Keep-Alive",
+                "cookie": "REDACTED",
+                "host": "managed-agents.3552d90c.workers.dev",
+                "pragma": "no-cache",
+                "priority": "u=1, i",
+                "referer": "https://managed-agents.3552d90c.workers.dev/sessions/sess-e1jfp8e1ymn3wtp1",
+                "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Google Chrome\";v=\"150\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-ch-ua-platform": "\"Linux\"",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-origin",
+                "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+                "x-active-tenant": "tn_076fe31510d04f65",
+                "x-forwarded-proto": "https",
+                "x-real-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a"
+            },
+            "cf": {
+                "httpProtocol": "HTTP/3",
+                "clientAcceptEncoding": "gzip, deflate, br",
+                "requestPriority": "",
+                "edgeRequestKeepAliveStatus": 1,
+                "requestHeaderNames": {},
+                "clientTcpRtt": 0,
+                "clientQuicRtt": 22,
+                "colo": "YVR",
+                "asn": 852,
+                "asOrganization": "TELUS-FIBRE-CLGRAB49",
+                "country": "CA",
+                "isEUCountry": false,
+                "city": "Calgary",
+                "continent": "NA",
+                "region": "Alberta",
+                "regionCode": "AB",
+                "timezone": "America/Edmonton",
+                "longitude": "-114.08529",
+                "latitude": "51.05011",
+                "postalCode": "T3S",
+                "tlsVersion": "TLSv1.3",
+                "tlsCipher": "AEAD-AES128-GCM-SHA256",
+                "tlsClientRandom": "vjVNLyLg//Z131Jyo86BM3fPSGB1MbhvjwXVsCKtU4I=",
+                "tlsClientCiphersSha1": "3HTt3+R/6BL3zeALJDSq0pR1yOQ=",
+                "tlsClientExtensionsSha1": "FUNaMzthGG7iSn2xU9XdiFBz2Bs=",
+                "tlsClientExtensionsSha1Le": "mzmiGZEoKQK7unB1e0ahywFsWQc=",
+                "tlsClientHelloLength": "1946",
+                "tlsClientAuth": {
+                    "certPresented": "0",
+                    "certVerified": "NONE",
+                    "certRevoked": "0",
+                    "certIssuerDN": "",
+                    "certSubjectDN": "",
+                    "certIssuerDNRFC2253": "",
+                    "certSubjectDNRFC2253": "",
+                    "certIssuerDNLegacy": "",
+                    "certSubjectDNLegacy": "",
+                    "certSerial": "",
+                    "certIssuerSerial": "",
+                    "certSKI": "",
+                    "certIssuerSKI": "",
+                    "certFingerprintSHA1": "",
+                    "certFingerprintSHA256": "",
+                    "certNotBefore": "",
+                    "certNotAfter": "",
+                    "certRFC9440": "",
+                    "certRFC9440TooLarge": false,
+                    "certChainRFC9440": "",
+                    "certChainRFC9440TooLarge": false
+                },
+                "verifiedBotCategory": "",
+                "edgeL4": {
+                    "deliveryRate": 111118
+                }
+            }
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 2133636,
+    "cpuTime": 4,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "2026-07-25T09:06:03.582Z WARN [Better Auth]: [better-auth] Base URL could not be determined. Please set a valid base URL using the baseURL config option or the BETTER_AUTH_URL environment variable. Without this, callbacks and redirects may not work correctly."
+            ],
+            "level": "warn",
+            "timestamp": 1784970363582
+        }
+    ],
+    "eventTimestamp": 1784970363582,
+    "event": {
+        "request": {
+            "url": "https://managed-agents.3552d90c.workers.dev/v1/sessions/sess-e1jfp8e1ymn3wtp1/events/stream?include=chunks&replay=1",
+            "method": "GET",
+            "headers": {
+                "accept": "text/event-stream",
+                "accept-encoding": "gzip, br",
+                "accept-language": "en-US,en;q=0.9,ar;q=0.8",
+                "cache-control": "no-cache",
+                "cf-connecting-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a",
+                "cf-ipcountry": "CA",
+                "cf-ray": "a20a01a46972803b",
+                "cf-visitor": "{\"scheme\":\"https\"}",
+                "connection": "Keep-Alive",
+                "cookie": "REDACTED",
+                "host": "managed-agents.3552d90c.workers.dev",
+                "pragma": "no-cache",
+                "priority": "u=1, i",
+                "referer": "https://managed-agents.3552d90c.workers.dev/sessions/sess-e1jfp8e1ymn3wtp1",
+                "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Google Chrome\";v=\"150\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-ch-ua-platform": "\"Linux\"",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-origin",
+                "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+                "x-active-tenant": "tn_076fe31510d04f65",
+                "x-forwarded-proto": "https",
+                "x-real-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a"
+            },
+            "cf": {
+                "httpProtocol": "HTTP/3",
+                "clientAcceptEncoding": "gzip, deflate, br",
+                "requestPriority": "",
+                "edgeRequestKeepAliveStatus": 1,
+                "requestHeaderNames": {},
+                "clientTcpRtt": 0,
+                "clientQuicRtt": 22,
+                "colo": "YVR",
+                "asn": 852,
+                "asOrganization": "TELUS-FIBRE-CLGRAB49",
+                "country": "CA",
+                "isEUCountry": false,
+                "city": "Calgary",
+                "continent": "NA",
+                "region": "Alberta",
+                "regionCode": "AB",
+                "timezone": "America/Edmonton",
+                "longitude": "-114.08529",
+                "latitude": "51.05011",
+                "postalCode": "T3S",
+                "tlsVersion": "TLSv1.3",
+                "tlsCipher": "AEAD-AES128-GCM-SHA256",
+                "tlsClientRandom": "b8ySz0fICW/NV/+xx/Oo6+W3vn7UQJ4uQJSpZH0Ufc8=",
+                "tlsClientCiphersSha1": "3HTt3+R/6BL3zeALJDSq0pR1yOQ=",
+                "tlsClientExtensionsSha1": "uZGwmsztO8TkyXqfQCHntf2MD9c=",
+                "tlsClientExtensionsSha1Le": "pHT8YHpxS2QIMBlvKj5W0gltZ4o=",
+                "tlsClientHelloLength": "1761",
+                "tlsClientAuth": {
+                    "certPresented": "0",
+                    "certVerified": "NONE",
+                    "certRevoked": "0",
+                    "certIssuerDN": "",
+                    "certSubjectDN": "",
+                    "certIssuerDNRFC2253": "",
+                    "certSubjectDNRFC2253": "",
+                    "certIssuerDNLegacy": "",
+                    "certSubjectDNLegacy": "",
+                    "certSerial": "",
+                    "certIssuerSerial": "",
+                    "certSKI": "",
+                    "certIssuerSKI": "",
+                    "certFingerprintSHA1": "",
+                    "certFingerprintSHA256": "",
+                    "certNotBefore": "",
+                    "certNotAfter": "",
+                    "certRFC9440": "",
+                    "certRFC9440TooLarge": false,
+                    "certChainRFC9440": "",
+                    "certChainRFC9440TooLarge": false
+                },
+                "verifiedBotCategory": "",
+                "edgeL4": {
+                    "deliveryRate": 274985
+                }
+            }
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 2318691,
+    "cpuTime": 5,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "2026-07-25T09:03:02.320Z WARN [Better Auth]: [better-auth] Base URL could not be determined. Please set a valid base URL using the baseURL config option or the BETTER_AUTH_URL environment variable. Without this, callbacks and redirects may not work correctly."
+            ],
+            "level": "warn",
+            "timestamp": 1784970182320
+        }
+    ],
+    "eventTimestamp": 1784970182317,
+    "event": {
+        "request": {
+            "url": "https://managed-agents.3552d90c.workers.dev/v1/sessions/sess-szt5lkt2eja0w9fh/events/stream?include=chunks&replay=1",
+            "method": "GET",
+            "headers": {
+                "accept": "text/event-stream",
+                "accept-encoding": "gzip, br",
+                "accept-language": "en-US,en;q=0.9,ar;q=0.8",
+                "cache-control": "no-cache",
+                "cf-connecting-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a",
+                "cf-ipcountry": "CA",
+                "cf-ray": "a209fd3779c1803b",
+                "cf-visitor": "{\"scheme\":\"https\"}",
+                "connection": "Keep-Alive",
+                "cookie": "REDACTED",
+                "host": "managed-agents.3552d90c.workers.dev",
+                "pragma": "no-cache",
+                "priority": "u=1, i",
+                "referer": "https://managed-agents.3552d90c.workers.dev/sessions/sess-szt5lkt2eja0w9fh",
+                "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Google Chrome\";v=\"150\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-ch-ua-platform": "\"Linux\"",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-origin",
+                "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+                "x-active-tenant": "tn_076fe31510d04f65",
+                "x-forwarded-proto": "https",
+                "x-real-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a"
+            },
+            "cf": {
+                "httpProtocol": "HTTP/3",
+                "clientAcceptEncoding": "gzip, deflate, br",
+                "requestPriority": "",
+                "edgeRequestKeepAliveStatus": 1,
+                "requestHeaderNames": {},
+                "clientTcpRtt": 0,
+                "clientQuicRtt": 21,
+                "colo": "YVR",
+                "asn": 852,
+                "asOrganization": "TELUS-FIBRE-CLGRAB49",
+                "country": "CA",
+                "isEUCountry": false,
+                "city": "Calgary",
+                "continent": "NA",
+                "region": "Alberta",
+                "regionCode": "AB",
+                "timezone": "America/Edmonton",
+                "longitude": "-114.08529",
+                "latitude": "51.05011",
+                "postalCode": "T3S",
+                "tlsVersion": "TLSv1.3",
+                "tlsCipher": "AEAD-AES128-GCM-SHA256",
+                "tlsClientRandom": "b8ySz0fICW/NV/+xx/Oo6+W3vn7UQJ4uQJSpZH0Ufc8=",
+                "tlsClientCiphersSha1": "3HTt3+R/6BL3zeALJDSq0pR1yOQ=",
+                "tlsClientExtensionsSha1": "uZGwmsztO8TkyXqfQCHntf2MD9c=",
+                "tlsClientExtensionsSha1Le": "pHT8YHpxS2QIMBlvKj5W0gltZ4o=",
+                "tlsClientHelloLength": "1761",
+                "tlsClientAuth": {
+                    "certPresented": "0",
+                    "certVerified": "NONE",
+                    "certRevoked": "0",
+                    "certIssuerDN": "",
+                    "certSubjectDN": "",
+                    "certIssuerDNRFC2253": "",
+                    "certSubjectDNRFC2253": "",
+                    "certIssuerDNLegacy": "",
+                    "certSubjectDNLegacy": "",
+                    "certSerial": "",
+                    "certIssuerSerial": "",
+                    "certSKI": "",
+                    "certIssuerSKI": "",
+                    "certFingerprintSHA1": "",
+                    "certFingerprintSHA256": "",
+                    "certNotBefore": "",
+                    "certNotAfter": "",
+                    "certRFC9440": "",
+                    "certRFC9440TooLarge": false,
+                    "certChainRFC9440": "",
+                    "certChainRFC9440TooLarge": false
+                },
+                "verifiedBotCategory": "",
+                "edgeL4": {
+                    "deliveryRate": 214707
+                }
+            }
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 2755891,
+    "cpuTime": 8,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "2026-07-25T08:55:45.112Z WARN [Better Auth]: [better-auth] Base URL could not be determined. Please set a valid base URL using the baseURL config option or the BETTER_AUTH_URL environment variable. Without this, callbacks and redirects may not work correctly."
+            ],
+            "level": "warn",
+            "timestamp": 1784969745112
+        }
+    ],
+    "eventTimestamp": 1784969745111,
+    "event": {
+        "request": {
+            "url": "https://managed-agents.3552d90c.workers.dev/v1/sessions/sess-szt5lkt2eja0w9fh/events/stream?include=chunks&replay=1",
+            "method": "GET",
+            "headers": {
+                "accept": "text/event-stream",
+                "accept-encoding": "gzip, br",
+                "accept-language": "en-US,en;q=0.9,ar;q=0.8",
+                "cache-control": "no-cache",
+                "cf-connecting-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a",
+                "cf-ipcountry": "CA",
+                "cf-ray": "a209f28ae97defcd",
+                "cf-visitor": "{\"scheme\":\"https\"}",
+                "connection": "Keep-Alive",
+                "cookie": "REDACTED",
+                "host": "managed-agents.3552d90c.workers.dev",
+                "pragma": "no-cache",
+                "priority": "u=1, i",
+                "referer": "https://managed-agents.3552d90c.workers.dev/sessions/sess-szt5lkt2eja0w9fh",
+                "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Google Chrome\";v=\"150\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-ch-ua-platform": "\"Linux\"",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-origin",
+                "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+                "x-active-tenant": "tn_076fe31510d04f65",
+                "x-forwarded-proto": "https",
+                "x-real-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a"
+            },
+            "cf": {
+                "httpProtocol": "HTTP/3",
+                "clientAcceptEncoding": "gzip, deflate, br",
+                "requestPriority": "",
+                "edgeRequestKeepAliveStatus": 1,
+                "requestHeaderNames": {},
+                "clientTcpRtt": 0,
+                "clientQuicRtt": 23,
+                "colo": "YVR",
+                "asn": 852,
+                "asOrganization": "TELUS-FIBRE-CLGRAB49",
+                "country": "CA",
+                "isEUCountry": false,
+                "city": "Calgary",
+                "continent": "NA",
+                "region": "Alberta",
+                "regionCode": "AB",
+                "timezone": "America/Edmonton",
+                "longitude": "-114.08529",
+                "latitude": "51.05011",
+                "postalCode": "T3S",
+                "tlsVersion": "TLSv1.3",
+                "tlsCipher": "AEAD-AES128-GCM-SHA256",
+                "tlsClientRandom": "u1/zYJVhEtc0lN19EWYNKOiJ+eR+Uag59H/3y+18o3U=",
+                "tlsClientCiphersSha1": "3HTt3+R/6BL3zeALJDSq0pR1yOQ=",
+                "tlsClientExtensionsSha1": "r4Cfuxymkrhaw545Qua4+lN199A=",
+                "tlsClientExtensionsSha1Le": "ZFOtYc6QEQ0QInLR6e8ynpHJrJg=",
+                "tlsClientHelloLength": "2012",
+                "tlsClientAuth": {
+                    "certPresented": "0",
+                    "certVerified": "NONE",
+                    "certRevoked": "0",
+                    "certIssuerDN": "",
+                    "certSubjectDN": "",
+                    "certIssuerDNRFC2253": "",
+                    "certSubjectDNRFC2253": "",
+                    "certIssuerDNLegacy": "",
+                    "certSubjectDNLegacy": "",
+                    "certSerial": "",
+                    "certIssuerSerial": "",
+                    "certSKI": "",
+                    "certIssuerSKI": "",
+                    "certFingerprintSHA1": "",
+                    "certFingerprintSHA256": "",
+                    "certNotBefore": "",
+                    "certNotAfter": "",
+                    "certRFC9440": "",
+                    "certRFC9440TooLarge": false,
+                    "certChainRFC9440": "",
+                    "certChainRFC9440TooLarge": false
+                },
+                "verifiedBotCategory": "",
+                "edgeL4": {
+                    "deliveryRate": 476038
+                }
+            }
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 2705402,
+    "cpuTime": 5,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "2026-07-25T08:56:35.616Z WARN [Better Auth]: [better-auth] Base URL could not be determined. Please set a valid base URL using the baseURL config option or the BETTER_AUTH_URL environment variable. Without this, callbacks and redirects may not work correctly."
+            ],
+            "level": "warn",
+            "timestamp": 1784969795616
+        }
+    ],
+    "eventTimestamp": 1784969795613,
+    "event": {
+        "request": {
+            "url": "https://managed-agents.3552d90c.workers.dev/v1/sessions/sess-szt5lkt2eja0w9fh/events/stream?include=chunks&replay=1",
+            "method": "GET",
+            "headers": {
+                "accept": "text/event-stream",
+                "accept-encoding": "gzip, br",
+                "accept-language": "en-US,en;q=0.9,ar;q=0.8",
+                "cache-control": "no-cache",
+                "cf-connecting-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a",
+                "cf-ipcountry": "CA",
+                "cf-ray": "a209f3c68c7a9bc6",
+                "cf-visitor": "{\"scheme\":\"https\"}",
+                "connection": "Keep-Alive",
+                "cookie": "REDACTED",
+                "host": "managed-agents.3552d90c.workers.dev",
+                "pragma": "no-cache",
+                "priority": "u=1, i",
+                "referer": "https://managed-agents.3552d90c.workers.dev/sessions/sess-szt5lkt2eja0w9fh",
+                "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Google Chrome\";v=\"150\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-ch-ua-platform": "\"Linux\"",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-origin",
+                "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+                "x-active-tenant": "tn_076fe31510d04f65",
+                "x-forwarded-proto": "https",
+                "x-real-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a"
+            },
+            "cf": {
+                "httpProtocol": "HTTP/3",
+                "clientAcceptEncoding": "gzip, deflate, br",
+                "requestPriority": "",
+                "edgeRequestKeepAliveStatus": 1,
+                "requestHeaderNames": {},
+                "clientTcpRtt": 0,
+                "clientQuicRtt": 31,
+                "colo": "YVR",
+                "asn": 852,
+                "asOrganization": "TELUS-FIBRE-CLGRAB49",
+                "country": "CA",
+                "isEUCountry": false,
+                "city": "Calgary",
+                "continent": "NA",
+                "region": "Alberta",
+                "regionCode": "AB",
+                "timezone": "America/Edmonton",
+                "longitude": "-114.08529",
+                "latitude": "51.05011",
+                "postalCode": "T3S",
+                "tlsVersion": "TLSv1.3",
+                "tlsCipher": "AEAD-AES128-GCM-SHA256",
+                "tlsClientRandom": "5woHY/qGEOLb4DeqQ6GzQf7Tgw5Tpk7bbttY0B7Bq8Y=",
+                "tlsClientCiphersSha1": "3HTt3+R/6BL3zeALJDSq0pR1yOQ=",
+                "tlsClientExtensionsSha1": "rVJ5hs547ApWMIq2CLa1JgF9nKo=",
+                "tlsClientExtensionsSha1Le": "QXda0jJGTNRnTsJ5kM294xw4bD4=",
+                "tlsClientHelloLength": "1754",
+                "tlsClientAuth": {
+                    "certPresented": "0",
+                    "certVerified": "NONE",
+                    "certRevoked": "0",
+                    "certIssuerDN": "",
+                    "certSubjectDN": "",
+                    "certIssuerDNRFC2253": "",
+                    "certSubjectDNRFC2253": "",
+                    "certIssuerDNLegacy": "",
+                    "certSubjectDNLegacy": "",
+                    "certSerial": "",
+                    "certIssuerSerial": "",
+                    "certSKI": "",
+                    "certIssuerSKI": "",
+                    "certFingerprintSHA1": "",
+                    "certFingerprintSHA256": "",
+                    "certNotBefore": "",
+                    "certNotAfter": "",
+                    "certRFC9440": "",
+                    "certRFC9440TooLarge": false,
+                    "certChainRFC9440": "",
+                    "certChainRFC9440TooLarge": false
+                },
+                "verifiedBotCategory": "",
+                "edgeL4": {
+                    "deliveryRate": 235810
+                }
+            }
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 2706375,
+    "cpuTime": 11,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "2026-07-25T08:56:34.644Z WARN [Better Auth]: [better-auth] Base URL could not be determined. Please set a valid base URL using the baseURL config option or the BETTER_AUTH_URL environment variable. Without this, callbacks and redirects may not work correctly."
+            ],
+            "level": "warn",
+            "timestamp": 1784969794644
+        }
+    ],
+    "eventTimestamp": 1784969794640,
+    "event": {
+        "request": {
+            "url": "https://managed-agents.3552d90c.workers.dev/v1/sessions/sess-szt5lkt2eja0w9fh/events/stream?include=chunks&replay=1",
+            "method": "GET",
+            "headers": {
+                "accept": "text/event-stream",
+                "accept-encoding": "gzip, br",
+                "accept-language": "en-US,en;q=0.9,ar;q=0.8",
+                "cache-control": "no-cache",
+                "cf-connecting-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a",
+                "cf-ipcountry": "CA",
+                "cf-ray": "a209f3c07c079bc6",
+                "cf-visitor": "{\"scheme\":\"https\"}",
+                "connection": "Keep-Alive",
+                "cookie": "REDACTED",
+                "host": "managed-agents.3552d90c.workers.dev",
+                "pragma": "no-cache",
+                "priority": "u=1, i",
+                "referer": "https://managed-agents.3552d90c.workers.dev/sessions/sess-szt5lkt2eja0w9fh",
+                "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Google Chrome\";v=\"150\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-ch-ua-platform": "\"Linux\"",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-origin",
+                "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+                "x-active-tenant": "tn_076fe31510d04f65",
+                "x-forwarded-proto": "https",
+                "x-real-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a"
+            },
+            "cf": {
+                "httpProtocol": "HTTP/3",
+                "clientAcceptEncoding": "gzip, deflate, br",
+                "requestPriority": "",
+                "edgeRequestKeepAliveStatus": 1,
+                "requestHeaderNames": {},
+                "clientTcpRtt": 0,
+                "clientQuicRtt": 30,
+                "colo": "YVR",
+                "asn": 852,
+                "asOrganization": "TELUS-FIBRE-CLGRAB49",
+                "country": "CA",
+                "isEUCountry": false,
+                "city": "Calgary",
+                "continent": "NA",
+                "region": "Alberta",
+                "regionCode": "AB",
+                "timezone": "America/Edmonton",
+                "longitude": "-114.08529",
+                "latitude": "51.05011",
+                "postalCode": "T3S",
+                "tlsVersion": "TLSv1.3",
+                "tlsCipher": "AEAD-AES128-GCM-SHA256",
+                "tlsClientRandom": "5woHY/qGEOLb4DeqQ6GzQf7Tgw5Tpk7bbttY0B7Bq8Y=",
+                "tlsClientCiphersSha1": "3HTt3+R/6BL3zeALJDSq0pR1yOQ=",
+                "tlsClientExtensionsSha1": "rVJ5hs547ApWMIq2CLa1JgF9nKo=",
+                "tlsClientExtensionsSha1Le": "QXda0jJGTNRnTsJ5kM294xw4bD4=",
+                "tlsClientHelloLength": "1754",
+                "tlsClientAuth": {
+                    "certPresented": "0",
+                    "certVerified": "NONE",
+                    "certRevoked": "0",
+                    "certIssuerDN": "",
+                    "certSubjectDN": "",
+                    "certIssuerDNRFC2253": "",
+                    "certSubjectDNRFC2253": "",
+                    "certIssuerDNLegacy": "",
+                    "certSubjectDNLegacy": "",
+                    "certSerial": "",
+                    "certIssuerSerial": "",
+                    "certSKI": "",
+                    "certIssuerSKI": "",
+                    "certFingerprintSHA1": "",
+                    "certFingerprintSHA256": "",
+                    "certNotBefore": "",
+                    "certNotAfter": "",
+                    "certRFC9440": "",
+                    "certRFC9440TooLarge": false,
+                    "certChainRFC9440": "",
+                    "certChainRFC9440TooLarge": false
+                },
+                "verifiedBotCategory": "",
+                "edgeL4": {
+                    "deliveryRate": 152988
+                }
+            }
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 2185633,
+    "cpuTime": 7,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "2026-07-25T09:05:15.394Z WARN [Better Auth]: [better-auth] Base URL could not be determined. Please set a valid base URL using the baseURL config option or the BETTER_AUTH_URL environment variable. Without this, callbacks and redirects may not work correctly."
+            ],
+            "level": "warn",
+            "timestamp": 1784970315394
+        }
+    ],
+    "eventTimestamp": 1784970315394,
+    "event": {
+        "request": {
+            "url": "https://managed-agents.3552d90c.workers.dev/v1/sessions/sess-hw5gadfyuffnz874/events/stream?include=chunks&replay=1",
+            "method": "GET",
+            "headers": {
+                "accept": "text/event-stream",
+                "accept-encoding": "gzip, br",
+                "accept-language": "en-US,en;q=0.9,ar;q=0.8",
+                "cache-control": "no-cache",
+                "cf-connecting-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a",
+                "cf-ipcountry": "CA",
+                "cf-ray": "a20a00773870803b",
+                "cf-visitor": "{\"scheme\":\"https\"}",
+                "connection": "Keep-Alive",
+                "cookie": "REDACTED",
+                "host": "managed-agents.3552d90c.workers.dev",
+                "pragma": "no-cache",
+                "priority": "u=1, i",
+                "referer": "https://managed-agents.3552d90c.workers.dev/sessions/sess-hw5gadfyuffnz874",
+                "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Google Chrome\";v=\"150\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-ch-ua-platform": "\"Linux\"",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-origin",
+                "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+                "x-active-tenant": "tn_076fe31510d04f65",
+                "x-forwarded-proto": "https",
+                "x-real-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a"
+            },
+            "cf": {
+                "httpProtocol": "HTTP/3",
+                "clientAcceptEncoding": "gzip, deflate, br",
+                "requestPriority": "",
+                "edgeRequestKeepAliveStatus": 1,
+                "requestHeaderNames": {},
+                "clientTcpRtt": 0,
+                "clientQuicRtt": 22,
+                "colo": "YVR",
+                "asn": 852,
+                "asOrganization": "TELUS-FIBRE-CLGRAB49",
+                "country": "CA",
+                "isEUCountry": false,
+                "city": "Calgary",
+                "continent": "NA",
+                "region": "Alberta",
+                "regionCode": "AB",
+                "timezone": "America/Edmonton",
+                "longitude": "-114.08529",
+                "latitude": "51.05011",
+                "postalCode": "T3S",
+                "tlsVersion": "TLSv1.3",
+                "tlsCipher": "AEAD-AES128-GCM-SHA256",
+                "tlsClientRandom": "b8ySz0fICW/NV/+xx/Oo6+W3vn7UQJ4uQJSpZH0Ufc8=",
+                "tlsClientCiphersSha1": "3HTt3+R/6BL3zeALJDSq0pR1yOQ=",
+                "tlsClientExtensionsSha1": "uZGwmsztO8TkyXqfQCHntf2MD9c=",
+                "tlsClientExtensionsSha1Le": "pHT8YHpxS2QIMBlvKj5W0gltZ4o=",
+                "tlsClientHelloLength": "1761",
+                "tlsClientAuth": {
+                    "certPresented": "0",
+                    "certVerified": "NONE",
+                    "certRevoked": "0",
+                    "certIssuerDN": "",
+                    "certSubjectDN": "",
+                    "certIssuerDNRFC2253": "",
+                    "certSubjectDNRFC2253": "",
+                    "certIssuerDNLegacy": "",
+                    "certSubjectDNLegacy": "",
+                    "certSerial": "",
+                    "certIssuerSerial": "",
+                    "certSKI": "",
+                    "certIssuerSKI": "",
+                    "certFingerprintSHA1": "",
+                    "certFingerprintSHA256": "",
+                    "certNotBefore": "",
+                    "certNotAfter": "",
+                    "certRFC9440": "",
+                    "certRFC9440TooLarge": false,
+                    "certChainRFC9440": "",
+                    "certChainRFC9440TooLarge": false
+                },
+                "verifiedBotCategory": "",
+                "edgeL4": {
+                    "deliveryRate": 245983
+                }
+            }
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 2253923,
+    "cpuTime": 5,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "2026-07-25T09:04:07.104Z WARN [Better Auth]: [better-auth] Base URL could not be determined. Please set a valid base URL using the baseURL config option or the BETTER_AUTH_URL environment variable. Without this, callbacks and redirects may not work correctly."
+            ],
+            "level": "warn",
+            "timestamp": 1784970247104
+        }
+    ],
+    "eventTimestamp": 1784970247104,
+    "event": {
+        "request": {
+            "url": "https://managed-agents.3552d90c.workers.dev/v1/sessions/sess-hw5gadfyuffnz874/events/stream?include=chunks&replay=1",
+            "method": "GET",
+            "headers": {
+                "accept": "text/event-stream",
+                "accept-encoding": "gzip, br",
+                "accept-language": "en-US,en;q=0.9,ar;q=0.8",
+                "cache-control": "no-cache",
+                "cf-connecting-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a",
+                "cf-ipcountry": "CA",
+                "cf-ray": "a209fecc6fdd803b",
+                "cf-visitor": "{\"scheme\":\"https\"}",
+                "connection": "Keep-Alive",
+                "cookie": "REDACTED",
+                "host": "managed-agents.3552d90c.workers.dev",
+                "pragma": "no-cache",
+                "priority": "u=1, i",
+                "referer": "https://managed-agents.3552d90c.workers.dev/sessions/sess-hw5gadfyuffnz874",
+                "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Google Chrome\";v=\"150\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-ch-ua-platform": "\"Linux\"",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-origin",
+                "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+                "x-active-tenant": "tn_076fe31510d04f65",
+                "x-forwarded-proto": "https",
+                "x-real-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a"
+            },
+            "cf": {
+                "httpProtocol": "HTTP/3",
+                "clientAcceptEncoding": "gzip, deflate, br",
+                "requestPriority": "",
+                "edgeRequestKeepAliveStatus": 1,
+                "requestHeaderNames": {},
+                "clientTcpRtt": 0,
+                "clientQuicRtt": 23,
+                "colo": "YVR",
+                "asn": 852,
+                "asOrganization": "TELUS-FIBRE-CLGRAB49",
+                "country": "CA",
+                "isEUCountry": false,
+                "city": "Calgary",
+                "continent": "NA",
+                "region": "Alberta",
+                "regionCode": "AB",
+                "timezone": "America/Edmonton",
+                "longitude": "-114.08529",
+                "latitude": "51.05011",
+                "postalCode": "T3S",
+                "tlsVersion": "TLSv1.3",
+                "tlsCipher": "AEAD-AES128-GCM-SHA256",
+                "tlsClientRandom": "b8ySz0fICW/NV/+xx/Oo6+W3vn7UQJ4uQJSpZH0Ufc8=",
+                "tlsClientCiphersSha1": "3HTt3+R/6BL3zeALJDSq0pR1yOQ=",
+                "tlsClientExtensionsSha1": "uZGwmsztO8TkyXqfQCHntf2MD9c=",
+                "tlsClientExtensionsSha1Le": "pHT8YHpxS2QIMBlvKj5W0gltZ4o=",
+                "tlsClientHelloLength": "1761",
+                "tlsClientAuth": {
+                    "certPresented": "0",
+                    "certVerified": "NONE",
+                    "certRevoked": "0",
+                    "certIssuerDN": "",
+                    "certSubjectDN": "",
+                    "certIssuerDNRFC2253": "",
+                    "certSubjectDNRFC2253": "",
+                    "certIssuerDNLegacy": "",
+                    "certSubjectDNLegacy": "",
+                    "certSerial": "",
+                    "certIssuerSerial": "",
+                    "certSKI": "",
+                    "certIssuerSKI": "",
+                    "certFingerprintSHA1": "",
+                    "certFingerprintSHA256": "",
+                    "certNotBefore": "",
+                    "certNotAfter": "",
+                    "certRFC9440": "",
+                    "certRFC9440TooLarge": false,
+                    "certChainRFC9440": "",
+                    "certChainRFC9440TooLarge": false
+                },
+                "verifiedBotCategory": "",
+                "edgeL4": {
+                    "deliveryRate": 245983
+                }
+            }
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 1946731,
+    "cpuTime": 4,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "2026-07-25T09:09:14.299Z WARN [Better Auth]: [better-auth] Base URL could not be determined. Please set a valid base URL using the baseURL config option or the BETTER_AUTH_URL environment variable. Without this, callbacks and redirects may not work correctly."
+            ],
+            "level": "warn",
+            "timestamp": 1784970554299
+        }
+    ],
+    "eventTimestamp": 1784970554298,
+    "event": {
+        "request": {
+            "url": "https://managed-agents.3552d90c.workers.dev/v1/sessions/sess-hw5gadfyuffnz874/events/stream?include=chunks&replay=1",
+            "method": "GET",
+            "headers": {
+                "accept": "text/event-stream",
+                "accept-encoding": "gzip, br",
+                "accept-language": "en-US,en;q=0.9,ar;q=0.8",
+                "cache-control": "no-cache",
+                "cf-connecting-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a",
+                "cf-ipcountry": "CA",
+                "cf-ray": "a20a064c580c803b",
+                "cf-visitor": "{\"scheme\":\"https\"}",
+                "connection": "Keep-Alive",
+                "cookie": "REDACTED",
+                "host": "managed-agents.3552d90c.workers.dev",
+                "pragma": "no-cache",
+                "priority": "u=1, i",
+                "referer": "https://managed-agents.3552d90c.workers.dev/sessions/sess-hw5gadfyuffnz874",
+                "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Google Chrome\";v=\"150\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-ch-ua-platform": "\"Linux\"",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-origin",
+                "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+                "x-active-tenant": "tn_076fe31510d04f65",
+                "x-forwarded-proto": "https",
+                "x-real-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a"
+            },
+            "cf": {
+                "httpProtocol": "HTTP/3",
+                "clientAcceptEncoding": "gzip, deflate, br",
+                "requestPriority": "",
+                "edgeRequestKeepAliveStatus": 1,
+                "requestHeaderNames": {},
+                "clientTcpRtt": 0,
+                "clientQuicRtt": 22,
+                "colo": "YVR",
+                "asn": 852,
+                "asOrganization": "TELUS-FIBRE-CLGRAB49",
+                "country": "CA",
+                "isEUCountry": false,
+                "city": "Calgary",
+                "continent": "NA",
+                "region": "Alberta",
+                "regionCode": "AB",
+                "timezone": "America/Edmonton",
+                "longitude": "-114.08529",
+                "latitude": "51.05011",
+                "postalCode": "T3S",
+                "tlsVersion": "TLSv1.3",
+                "tlsCipher": "AEAD-AES128-GCM-SHA256",
+                "tlsClientRandom": "b8ySz0fICW/NV/+xx/Oo6+W3vn7UQJ4uQJSpZH0Ufc8=",
+                "tlsClientCiphersSha1": "3HTt3+R/6BL3zeALJDSq0pR1yOQ=",
+                "tlsClientExtensionsSha1": "uZGwmsztO8TkyXqfQCHntf2MD9c=",
+                "tlsClientExtensionsSha1Le": "pHT8YHpxS2QIMBlvKj5W0gltZ4o=",
+                "tlsClientHelloLength": "1761",
+                "tlsClientAuth": {
+                    "certPresented": "0",
+                    "certVerified": "NONE",
+                    "certRevoked": "0",
+                    "certIssuerDN": "",
+                    "certSubjectDN": "",
+                    "certIssuerDNRFC2253": "",
+                    "certSubjectDNRFC2253": "",
+                    "certIssuerDNLegacy": "",
+                    "certSubjectDNLegacy": "",
+                    "certSerial": "",
+                    "certIssuerSerial": "",
+                    "certSKI": "",
+                    "certIssuerSKI": "",
+                    "certFingerprintSHA1": "",
+                    "certFingerprintSHA256": "",
+                    "certNotBefore": "",
+                    "certNotAfter": "",
+                    "certRFC9440": "",
+                    "certRFC9440TooLarge": false,
+                    "certChainRFC9440": "",
+                    "certChainRFC9440TooLarge": false
+                },
+                "verifiedBotCategory": "",
+                "edgeL4": {
+                    "deliveryRate": 292826
+                }
+            }
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 0,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "bfe5a38410d09b51efa55cfda3f348af99af022c3d27fe4012c1f63318c5133c",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "entrypoint": "RuntimeRoom",
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1784972480108,
+    "event": {
+        "request": {
+            "url": "http://runtime-room/_attach_harness",
+            "method": "GET",
+            "headers": {
+                "upgrade": "websocket",
+                "x-attach-role": "harness",
+                "x-harness-tenant": "tn_076fe31510d04f65",
+                "x-session-id": "sess-o7wx0utmafd04xom"
+            }
+        }
+    }
+}
+{
+    "wallTime": 50,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "bfe5a38410d09b51efa55cfda3f348af99af022c3d27fe4012c1f63318c5133c",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "entrypoint": "RuntimeRoom",
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1784972492768,
+    "event": {
+        "getWebSocketEvent": {
+            "webSocketEventType": "message"
+        }
+    }
+}
+{
+    "wallTime": 3213326,
+    "cpuTime": 9,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "2026-07-25T08:48:14.168Z WARN [Better Auth]: [better-auth] Base URL could not be determined. Please set a valid base URL using the baseURL config option or the BETTER_AUTH_URL environment variable. Without this, callbacks and redirects may not work correctly."
+            ],
+            "level": "warn",
+            "timestamp": 1784969294168
+        }
+    ],
+    "eventTimestamp": 1784969294166,
+    "event": {
+        "request": {
+            "url": "https://managed-agents.3552d90c.workers.dev/v1/sessions/sess-dhqail760zftdae8/events/stream?include=chunks&replay=1",
+            "method": "GET",
+            "headers": {
+                "accept": "text/event-stream",
+                "accept-encoding": "gzip, br",
+                "accept-language": "en-US,en;q=0.9,ar;q=0.8",
+                "cache-control": "no-cache",
+                "cf-connecting-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a",
+                "cf-ipcountry": "CA",
+                "cf-ray": "a209e7888c0e95a2",
+                "cf-visitor": "{\"scheme\":\"https\"}",
+                "connection": "Keep-Alive",
+                "cookie": "REDACTED",
+                "host": "managed-agents.3552d90c.workers.dev",
+                "pragma": "no-cache",
+                "priority": "u=1, i",
+                "referer": "https://managed-agents.3552d90c.workers.dev/sessions/sess-dhqail760zftdae8",
+                "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Google Chrome\";v=\"150\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-ch-ua-platform": "\"Linux\"",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-origin",
+                "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+                "x-active-tenant": "tn_076fe31510d04f65",
+                "x-forwarded-proto": "https",
+                "x-real-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a"
+            },
+            "cf": {
+                "httpProtocol": "HTTP/3",
+                "clientAcceptEncoding": "gzip, deflate, br",
+                "requestPriority": "",
+                "edgeRequestKeepAliveStatus": 1,
+                "requestHeaderNames": {},
+                "clientTcpRtt": 0,
+                "clientQuicRtt": 28,
+                "colo": "YVR",
+                "asn": 852,
+                "asOrganization": "TELUS-FIBRE-CLGRAB49",
+                "country": "CA",
+                "isEUCountry": false,
+                "city": "Calgary",
+                "continent": "NA",
+                "region": "Alberta",
+                "regionCode": "AB",
+                "timezone": "America/Edmonton",
+                "longitude": "-114.08529",
+                "latitude": "51.05011",
+                "postalCode": "T3S",
+                "tlsVersion": "TLSv1.3",
+                "tlsCipher": "AEAD-AES128-GCM-SHA256",
+                "tlsClientRandom": "8wJxCZ+T7vWhGjX+lMUJFodE3kv/iQTmG7HOhBrkmt8=",
+                "tlsClientCiphersSha1": "3HTt3+R/6BL3zeALJDSq0pR1yOQ=",
+                "tlsClientExtensionsSha1": "/WalfTEVehu7PM2DLvQvgqo9r3Q=",
+                "tlsClientExtensionsSha1Le": "9ncPi5p4G4XVY3LosC+hcvO4wJs=",
+                "tlsClientHelloLength": "1751",
+                "tlsClientAuth": {
+                    "certPresented": "0",
+                    "certVerified": "NONE",
+                    "certRevoked": "0",
+                    "certIssuerDN": "",
+                    "certSubjectDN": "",
+                    "certIssuerDNRFC2253": "",
+                    "certSubjectDNRFC2253": "",
+                    "certIssuerDNLegacy": "",
+                    "certSubjectDNLegacy": "",
+                    "certSerial": "",
+                    "certIssuerSerial": "",
+                    "certSKI": "",
+                    "certIssuerSKI": "",
+                    "certFingerprintSHA1": "",
+                    "certFingerprintSHA256": "",
+                    "certNotBefore": "",
+                    "certNotAfter": "",
+                    "certRFC9440": "",
+                    "certRFC9440TooLarge": false,
+                    "certChainRFC9440": "",
+                    "certChainRFC9440TooLarge": false
+                },
+                "verifiedBotCategory": "",
+                "edgeL4": {
+                    "deliveryRate": 4207469
+                }
+            }
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 2830019,
+    "cpuTime": 9,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "2026-07-25T08:54:37.443Z WARN [Better Auth]: [better-auth] Base URL could not be determined. Please set a valid base URL using the baseURL config option or the BETTER_AUTH_URL environment variable. Without this, callbacks and redirects may not work correctly."
+            ],
+            "level": "warn",
+            "timestamp": 1784969677443
+        }
+    ],
+    "eventTimestamp": 1784969677439,
+    "event": {
+        "request": {
+            "url": "https://managed-agents.3552d90c.workers.dev/v1/sessions/sess-dhqail760zftdae8/events/stream?include=chunks&replay=1",
+            "method": "GET",
+            "headers": {
+                "accept": "text/event-stream",
+                "accept-encoding": "gzip, br",
+                "accept-language": "en-US,en;q=0.9,ar;q=0.8",
+                "cache-control": "no-cache",
+                "cf-connecting-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a",
+                "cf-ipcountry": "CA",
+                "cf-ray": "a209f0e3fc94efcd",
+                "cf-visitor": "{\"scheme\":\"https\"}",
+                "connection": "Keep-Alive",
+                "cookie": "REDACTED",
+                "host": "managed-agents.3552d90c.workers.dev",
+                "pragma": "no-cache",
+                "priority": "u=1, i",
+                "referer": "https://managed-agents.3552d90c.workers.dev/sessions/sess-dhqail760zftdae8",
+                "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Google Chrome\";v=\"150\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-ch-ua-platform": "\"Linux\"",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-origin",
+                "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+                "x-active-tenant": "tn_076fe31510d04f65",
+                "x-forwarded-proto": "https",
+                "x-real-ip": "2001:56a:7e3b:c500:9c97:104d:52ba:af6a"
+            },
+            "cf": {
+                "httpProtocol": "HTTP/3",
+                "clientAcceptEncoding": "gzip, deflate, br",
+                "requestPriority": "",
+                "edgeRequestKeepAliveStatus": 1,
+                "requestHeaderNames": {},
+                "clientTcpRtt": 0,
+                "clientQuicRtt": 22,
+                "colo": "YVR",
+                "asn": 852,
+                "asOrganization": "TELUS-FIBRE-CLGRAB49",
+                "country": "CA",
+                "isEUCountry": false,
+                "city": "Calgary",
+                "continent": "NA",
+                "region": "Alberta",
+                "regionCode": "AB",
+                "timezone": "America/Edmonton",
+                "longitude": "-114.08529",
+                "latitude": "51.05011",
+                "postalCode": "T3S",
+                "tlsVersion": "TLSv1.3",
+                "tlsCipher": "AEAD-AES128-GCM-SHA256",
+                "tlsClientRandom": "u1/zYJVhEtc0lN19EWYNKOiJ+eR+Uag59H/3y+18o3U=",
+                "tlsClientCiphersSha1": "3HTt3+R/6BL3zeALJDSq0pR1yOQ=",
+                "tlsClientExtensionsSha1": "r4Cfuxymkrhaw545Qua4+lN199A=",
+                "tlsClientExtensionsSha1Le": "ZFOtYc6QEQ0QInLR6e8ynpHJrJg=",
+                "tlsClientHelloLength": "2012",
+                "tlsClientAuth": {
+                    "certPresented": "0",
+                    "certVerified": "NONE",
+                    "certRevoked": "0",
+                    "certIssuerDN": "",
+                    "certSubjectDN": "",
+                    "certIssuerDNRFC2253": "",
+                    "certSubjectDNRFC2253": "",
+                    "certIssuerDNLegacy": "",
+                    "certSubjectDNLegacy": "",
+                    "certSerial": "",
+                    "certIssuerSerial": "",
+                    "certSKI": "",
+                    "certIssuerSKI": "",
+                    "certFingerprintSHA1": "",
+                    "certFingerprintSHA256": "",
+                    "certNotBefore": "",
+                    "certNotAfter": "",
+                    "certRFC9440": "",
+                    "certRFC9440TooLarge": false,
+                    "certChainRFC9440": "",
+                    "certChainRFC9440TooLarge": false
+                },
+                "verifiedBotCategory": "",
+                "edgeL4": {
+                    "deliveryRate": 476038
+                }
+            }
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 215,
+    "cpuTime": 8,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1784972519182,
+    "event": {
+        "request": {
+            "url": "http://main/v1/internal/sessions/sess-o7wx0utmafd04xom/events",
+            "method": "POST",
+            "headers": {
+                "content-length": "471",
+                "content-type": "application/json",
+                "x-internal-secret": "REDACTED"
+            }
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 267,
+    "cpuTime": 3,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "canceled",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "entrypoint": "McpProxyRpc",
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "{\"ts\":\"2026-07-25T09:41:59.740Z\",\"level\":\"info\",\"msg\":\"mcp_proxy forward\",\"op\":\"mcp_proxy.forward\",\"caller\":\"rpc-mcp\",\"tenant_id\":\"tn_076fe31510d04f65\",\"session_id\":\"sess-o7wx0utmafd04xom\",\"server\":\"linear\",\"host\":\"mcp.linear.app\",\"method\":\"GET\",\"status\":405,\"refreshed\":false,\"ms\":242}"
+            ],
+            "level": "log",
+            "timestamp": 1784972519740
+        }
+    ],
+    "eventTimestamp": 1784972519480,
+    "event": {
+        "request": {
+            "url": "https://mcp.linear.app/mcp",
+            "method": "GET",
+            "headers": {
+                "accept": "text/event-stream",
+                "mcp-protocol-version": "2025-11-25",
+                "user-agent": "ai-sdk/0.0.0-test runtime/cloudflare-workers",
+                "x-oma-mcp-server": "linear",
+                "x-oma-session": "sess-o7wx0utmafd04xom",
+                "x-oma-tenant": "tn_076fe31510d04f65"
+            }
+        },
+        "response": {
+            "status": 405
+        }
+    }
+}
+{
+    "wallTime": 691,
+    "cpuTime": 2,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "entrypoint": "McpProxyRpc",
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "{\"ts\":\"2026-07-25T09:42:00.175Z\",\"level\":\"info\",\"msg\":\"mcp_proxy forward\",\"op\":\"mcp_proxy.forward\",\"caller\":\"rpc-mcp\",\"tenant_id\":\"tn_076fe31510d04f65\",\"session_id\":\"sess-o7wx0utmafd04xom\",\"server\":\"linear\",\"host\":\"mcp.linear.app\",\"method\":\"POST\",\"status\":200,\"refreshed\":false,\"ms\":677}"
+            ],
+            "level": "log",
+            "timestamp": 1784972520175
+        }
+    ],
+    "eventTimestamp": 1784972519480,
+    "event": {
+        "request": {
+            "url": "https://mcp.linear.app/mcp",
+            "method": "POST",
+            "headers": {
+                "accept": "application/json, text/event-stream",
+                "content-type": "application/json",
+                "mcp-protocol-version": "2025-11-25",
+                "user-agent": "ai-sdk/0.0.0-test runtime/cloudflare-workers",
+                "x-oma-mcp-server": "linear",
+                "x-oma-session": "sess-o7wx0utmafd04xom",
+                "x-oma-tenant": "tn_076fe31510d04f65"
+            }
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 332,
+    "cpuTime": 3,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "entrypoint": "McpProxyRpc",
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "{\"ts\":\"2026-07-25T09:42:00.502Z\",\"level\":\"info\",\"msg\":\"mcp_proxy forward\",\"op\":\"mcp_proxy.forward\",\"caller\":\"rpc-mcp\",\"tenant_id\":\"tn_076fe31510d04f65\",\"session_id\":\"sess-o7wx0utmafd04xom\",\"server\":\"linear\",\"host\":\"mcp.linear.app\",\"method\":\"POST\",\"status\":202,\"refreshed\":false,\"ms\":313}"
+            ],
+            "level": "log",
+            "timestamp": 1784972520502
+        }
+    ],
+    "eventTimestamp": 1784972520175,
+    "event": {
+        "request": {
+            "url": "https://mcp.linear.app/mcp",
+            "method": "POST",
+            "headers": {
+                "accept": "application/json, text/event-stream",
+                "content-type": "application/json",
+                "mcp-protocol-version": "2025-11-25",
+                "user-agent": "ai-sdk/0.0.0-test runtime/cloudflare-workers",
+                "x-oma-mcp-server": "linear",
+                "x-oma-session": "sess-o7wx0utmafd04xom",
+                "x-oma-tenant": "tn_076fe31510d04f65"
+            }
+        },
+        "response": {
+            "status": 202
+        }
+    }
+}
+{
+    "wallTime": 354,
+    "cpuTime": 2,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "entrypoint": "McpProxyRpc",
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "{\"ts\":\"2026-07-25T09:42:00.856Z\",\"level\":\"info\",\"msg\":\"mcp_proxy forward\",\"op\":\"mcp_proxy.forward\",\"caller\":\"rpc-mcp\",\"tenant_id\":\"tn_076fe31510d04f65\",\"session_id\":\"sess-o7wx0utmafd04xom\",\"server\":\"linear\",\"host\":\"mcp.linear.app\",\"method\":\"POST\",\"status\":200,\"refreshed\":false,\"ms\":333}"
+            ],
+            "level": "log",
+            "timestamp": 1784972520856
+        }
+    ],
+    "eventTimestamp": 1784972520502,
+    "event": {
+        "request": {
+            "url": "https://mcp.linear.app/mcp",
+            "method": "POST",
+            "headers": {
+                "accept": "application/json, text/event-stream",
+                "content-type": "application/json",
+                "mcp-protocol-version": "2025-11-25",
+                "user-agent": "ai-sdk/0.0.0-test runtime/cloudflare-workers",
+                "x-oma-mcp-server": "linear",
+                "x-oma-session": "sess-o7wx0utmafd04xom",
+                "x-oma-tenant": "tn_076fe31510d04f65"
+            }
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 300,
+    "cpuTime": 3,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "entrypoint": "McpProxyRpc",
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "{\"ts\":\"2026-07-25T09:42:01.155Z\",\"level\":\"info\",\"msg\":\"mcp_proxy forward\",\"op\":\"mcp_proxy.forward\",\"caller\":\"rpc-mcp\",\"tenant_id\":\"tn_076fe31510d04f65\",\"session_id\":\"sess-o7wx0utmafd04xom\",\"server\":\"linear\",\"host\":\"mcp.linear.app\",\"method\":\"POST\",\"status\":200,\"refreshed\":false,\"ms\":276}"
+            ],
+            "level": "log",
+            "timestamp": 1784972521155
+        }
+    ],
+    "eventTimestamp": 1784972520856,
+    "event": {
+        "request": {
+            "url": "https://managed-agents-integrations.3552d90c.workers.dev/linear/mcp/sess-o7wx0utmafd04xom",
+            "method": "POST",
+            "headers": {
+                "accept": "application/json, text/event-stream",
+                "content-type": "application/json",
+                "mcp-protocol-version": "2025-11-25",
+                "user-agent": "ai-sdk/0.0.0-test runtime/cloudflare-workers",
+                "x-oma-mcp-server": "linear",
+                "x-oma-session": "sess-o7wx0utmafd04xom",
+                "x-oma-tenant": "tn_076fe31510d04f65"
+            }
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 309,
+    "cpuTime": 2,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "entrypoint": "McpProxyRpc",
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "{\"ts\":\"2026-07-25T09:42:01.469Z\",\"level\":\"info\",\"msg\":\"mcp_proxy forward\",\"op\":\"mcp_proxy.forward\",\"caller\":\"rpc-mcp\",\"tenant_id\":\"tn_076fe31510d04f65\",\"session_id\":\"sess-o7wx0utmafd04xom\",\"server\":\"linear\",\"host\":\"mcp.linear.app\",\"method\":\"POST\",\"status\":202,\"refreshed\":false,\"ms\":299}"
+            ],
+            "level": "log",
+            "timestamp": 1784972521469
+        }
+    ],
+    "eventTimestamp": 1784972521155,
+    "event": {
+        "request": {
+            "url": "https://managed-agents-integrations.3552d90c.workers.dev/linear/mcp/sess-o7wx0utmafd04xom",
+            "method": "POST",
+            "headers": {
+                "accept": "application/json, text/event-stream",
+                "content-type": "application/json",
+                "mcp-protocol-version": "2025-11-25",
+                "user-agent": "ai-sdk/0.0.0-test runtime/cloudflare-workers",
+                "x-oma-mcp-server": "linear",
+                "x-oma-session": "sess-o7wx0utmafd04xom",
+                "x-oma-tenant": "tn_076fe31510d04f65"
+            }
+        },
+        "response": {
+            "status": 202
+        }
+    }
+}
+{
+    "wallTime": 354,
+    "cpuTime": 2,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "entrypoint": "McpProxyRpc",
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "{\"ts\":\"2026-07-25T09:42:01.827Z\",\"level\":\"info\",\"msg\":\"mcp_proxy forward\",\"op\":\"mcp_proxy.forward\",\"caller\":\"rpc-mcp\",\"tenant_id\":\"tn_076fe31510d04f65\",\"session_id\":\"sess-o7wx0utmafd04xom\",\"server\":\"linear\",\"host\":\"mcp.linear.app\",\"method\":\"POST\",\"status\":200,\"refreshed\":false,\"ms\":333}"
+            ],
+            "level": "log",
+            "timestamp": 1784972521827
+        }
+    ],
+    "eventTimestamp": 1784972521469,
+    "event": {
+        "request": {
+            "url": "https://managed-agents-integrations.3552d90c.workers.dev/linear/mcp/sess-o7wx0utmafd04xom",
+            "method": "POST",
+            "headers": {
+                "accept": "application/json, text/event-stream",
+                "content-type": "application/json",
+                "mcp-protocol-version": "2025-11-25",
+                "user-agent": "ai-sdk/0.0.0-test runtime/cloudflare-workers",
+                "x-oma-mcp-server": "linear",
+                "x-oma-session": "sess-o7wx0utmafd04xom",
+                "x-oma-tenant": "tn_076fe31510d04f65"
+            }
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 0,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "bfe5a38410d09b51efa55cfda3f348af99af022c3d27fe4012c1f63318c5133c",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "entrypoint": "RuntimeRoom",
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "{\"ts\":\"2026-07-25T09:42:02.682Z\",\"level\":\"info\",\"msg\":\"injected resume.acp_session_id for recovery\",\"op\":\"runtime_room.inject_resume\",\"session_id\":\"sess-o7wx0utmafd04xom\",\"acp_session_id\":\"b644ae76-db24-4df0-884b-10493263d716\"}"
+            ],
+            "level": "log",
+            "timestamp": 1784972522682
+        }
+    ],
+    "eventTimestamp": 1784972522678,
+    "event": {
+        "getWebSocketEvent": {
+            "webSocketEventType": "message"
+        }
+    }
+}
+{
+    "wallTime": 0,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "bfe5a38410d09b51efa55cfda3f348af99af022c3d27fe4012c1f63318c5133c",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "entrypoint": "RuntimeRoom",
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1784972522682,
+    "event": {
+        "getWebSocketEvent": {
+            "webSocketEventType": "message"
+        }
+    }
+}
+{
+    "wallTime": 10,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "bfe5a38410d09b51efa55cfda3f348af99af022c3d27fe4012c1f63318c5133c",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "entrypoint": "RuntimeRoom",
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1784972522682,
+    "event": {
+        "getWebSocketEvent": {
+            "webSocketEventType": "message"
+        }
+    }
+}
+{
+    "wallTime": 0,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "bfe5a38410d09b51efa55cfda3f348af99af022c3d27fe4012c1f63318c5133c",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "entrypoint": "RuntimeRoom",
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1784972523661,
+    "event": {
+        "getWebSocketEvent": {
+            "webSocketEventType": "message"
+        }
+    }
+}
+{
+    "wallTime": 0,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "bfe5a38410d09b51efa55cfda3f348af99af022c3d27fe4012c1f63318c5133c",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "entrypoint": "RuntimeRoom",
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1784972522722,
+    "event": {
+        "getWebSocketEvent": {
+            "webSocketEventType": "message"
+        }
+    }
+}
+{
+    "wallTime": 15,
+    "cpuTime": 1,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "{\"ts\":\"2026-07-25T09:42:03.774Z\",\"level\":\"info\",\"msg\":\"tickEvalRuns ok\",\"op\":\"cron.tick_eval_runs\",\"advanced\":0,\"total\":0}"
+            ],
+            "level": "log",
+            "timestamp": 1784972523774
+        }
+    ],
+    "eventTimestamp": 1784972523765,
+    "event": {
+        "cron": "* * * * *",
+        "scheduledTime": 1784972523000
+    }
+}
+{
+    "wallTime": 0,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "bfe5a38410d09b51efa55cfda3f348af99af022c3d27fe4012c1f63318c5133c",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "entrypoint": "RuntimeRoom",
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1784972523661,
+    "event": {
+        "getWebSocketEvent": {
+            "webSocketEventType": "message"
+        }
+    }
+}
+{
+    "wallTime": 0,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "bfe5a38410d09b51efa55cfda3f348af99af022c3d27fe4012c1f63318c5133c",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "entrypoint": "RuntimeRoom",
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1784972524051,
+    "event": {
+        "getWebSocketEvent": {
+            "webSocketEventType": "message"
+        }
+    }
+}
+{
+    "wallTime": 0,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "bfe5a38410d09b51efa55cfda3f348af99af022c3d27fe4012c1f63318c5133c",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "entrypoint": "RuntimeRoom",
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1784972524394,
+    "event": {
+        "getWebSocketEvent": {
+            "webSocketEventType": "message"
+        }
+    }
+}
+{
+    "wallTime": 0,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "bfe5a38410d09b51efa55cfda3f348af99af022c3d27fe4012c1f63318c5133c",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "entrypoint": "RuntimeRoom",
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1784972524418,
+    "event": {
+        "getWebSocketEvent": {
+            "webSocketEventType": "message"
+        }
+    }
+}
+{
+    "wallTime": 0,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "bfe5a38410d09b51efa55cfda3f348af99af022c3d27fe4012c1f63318c5133c",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "entrypoint": "RuntimeRoom",
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1784972524427,
+    "event": {
+        "getWebSocketEvent": {
+            "webSocketEventType": "message"
+        }
+    }
+}
+{
+    "wallTime": 0,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "bfe5a38410d09b51efa55cfda3f348af99af022c3d27fe4012c1f63318c5133c",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "entrypoint": "RuntimeRoom",
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "{\"ts\":\"2026-07-25T09:42:04.431Z\",\"level\":\"info\",\"msg\":\"harness closed\",\"op\":\"runtime_room.harness_close\",\"session_id\":\"sess-o7wx0utmafd04xom\",\"code\":1000}"
+            ],
+            "level": "log",
+            "timestamp": 1784972524431
+        }
+    ],
+    "eventTimestamp": 1784972524427,
+    "event": {
+        "getWebSocketEvent": {
+            "wasClean": true,
+            "code": 1000,
+            "webSocketEventType": "close"
+        }
+    }
+}
+{
+    "wallTime": 45,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "bfe5a38410d09b51efa55cfda3f348af99af022c3d27fe4012c1f63318c5133c",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "entrypoint": "RuntimeRoom",
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1784972524431,
+    "event": {
+        "getWebSocketEvent": {
+            "webSocketEventType": "message"
+        }
+    }
+}
+{
+    "wallTime": 1,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "bfe5a38410d09b51efa55cfda3f348af99af022c3d27fe4012c1f63318c5133c",
+    "scriptTags": [
+        "cf:service=managed-agents"
+    ],
+    "scriptVersion": {
+        "id": "0fde0af8-a64e-485c-a2e3-4f8b3c4895a3"
+    },
+    "entrypoint": "RuntimeRoom",
+    "scriptName": "managed-agents",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1784972505126,
+    "event": {
+        "request": {
+            "url": "http://runtime-room/_attach_harness",
+            "method": "GET",
+            "headers": {
+                "upgrade": "websocket",
+                "x-attach-role": "harness",
+                "x-harness-tenant": "tn_076fe31510d04f65",
+                "x-session-id": "sess-o7wx0utmafd04xom"
+            }
+        }
+    }
+}
