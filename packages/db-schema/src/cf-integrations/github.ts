@@ -92,9 +92,13 @@ export const github_publications = sqliteTable(
     tenant_id: text("tenant_id").notNull(),
     user_id: text("user_id").notNull(),
     agent_id: text("agent_id").notNull(),
-    installation_id: text("installation_id")
-      .notNull()
-      .references(() => github_installations.id),
+    // NOT NULL with the empty-string sentinel for pending publications
+    // (publication-first flow inserts the shell BEFORE any installation
+    // exists — see SqlGitHubPublicationRepo.insertShell). No FK on purpose:
+    // "" can never satisfy REFERENCES github_installations(id), which made
+    // every startPublication insert fail on FK-enforcing databases — the
+    // same bug fixed for linear_publications in #121 (migration 0008).
+    installation_id: text("installation_id").notNull(),
     mode: text("mode").notNull(),
     status: text("status").notNull(),
     persona_name: text("persona_name").notNull(),
